@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "source_file": "texts/inputs/galen_passages_20251001_091209.txt",
+    "processed_at": "2025-10-01T09:13:53.478029",
+    "chunking_mode": "medium",
+    "models_used": [
+      "openai",
+      "claude",
+      "gemini"
+    ],
+    "analytics": {
+      "total_chunks": 1,
+      "total_source_words": 217,
+      "models": {
+        "openai": {
+          "completed": 1,
+          "errors": 0,
+          "success_rate": 100.0,
+          "total_translation_words": 290,
+          "avg_words_per_chunk": 290.0
+        },
+        "claude": {
+          "completed": 1,
+          "errors": 0,
+          "success_rate": 100.0,
+          "total_translation_words": 276,
+          "avg_words_per_chunk": 276.0
+        },
+        "gemini": {
+          "completed": 1,
+          "errors": 0,
+          "success_rate": 100.0,
+          "total_translation_words": 291,
+          "avg_words_per_chunk": 291.0
+        }
+      }
+    }
+  },
+  "chunks": [
+    {
+      "id": "1",
+      "content": "1. Ὅτι μὲν ἐκ θερμοῦ καὶ ψυχροῦ καὶ ξηροῦ καὶ ὑγροῦ τὰ τῶν ζῴων σώματα κέκραται καὶ ὡς οὐκ ἴση πάντων ἐστὶν ἐν τῇ κράσει μοῖρα, παλαιοῖς ἀνδράσιν ἱκανῶς ἀποδέδεικται φιλοσόφων τε καὶ ἰατρῶν τοῖς ἀρίστοις· εἴρηται δὲ καὶ πρὸς ἡμῶν ὑπὲρ αὐτῶν τὰ εἰκότα δι’ ἑτέρου γράμματος, ἐν ᾦ περὶ τῶν καθ’ Ἱπποκράτην στοιχείων ἐσκοπούμεθα. νυνὶ δ’, ὅπερ ἐστὶν ἐφεξῆς ἐκείνῳ, ἁπάσας ἐξευρεῖν τῶν κράσεων τὰς διαφοράς, ὁπόσαι τ’ εἰσὶ καὶ ὁποῖαι κατ’ εἴδη τε καὶ γένη διαιρουμένοις, ἐν τῷδε τῷ γράμματι δίειμι τὴν ἀρχὴν ἀπὸ τῆς τῶν ὀνομάτων ἐξηγήσεως ποιησάμενος. ἐπειδὰν μὲν γὰρ ἐκ θερμοῦ καὶ ψυχροῦ καὶ ξηροῦ καὶ ὑγροῦ κεκρᾶσθαι λέγωσι τὰ σώματα, τῶν ἄκρως τοιούτων ἀκούειν φασὶ χρῆναι, τουτέστι τῶν στοιχείων αὐτῶν, ἀέρος καὶ πυρὸς καὶ ὕδατος καὶ γῆς· ἐπειδὰν δὲ ζῷον ἢ φυτὸν ἤτοι θερμὸν ἢ ψυχρὸν ἢ ξηρὸν ἢ ὑγρὸν εἶναι λέγωσιν, οὐκέθ’ ὡσαύτως. οὐδὲ γὰρ δύνασθαι ζῷον οὐδὲν οὔτ’ ἄκρως θερμὸν ὑπάρχειν ὡς πῦρ οὔτ’ ἄκρως ὑγρὸν ὡς ὕδωρ. ὡσαύτως δ’ οὐδὲ ψυχρὸν ἢ ξηρὸν ἐσχάτως, ἀλλ’ ἀπὸ τοῦ πλεονεκτοῦντος ἐν τῇ κράσει γίγνεσθαι τὰς προσηγορίας, ὑγρὸν μὲν καλούντων ἡμῶν, ἐν ᾧ πλείων ὑγρότητός ἐστι μοῖρα, ξηρὸν δ’, ἐν ᾧ ξηρότητος· οὕτω δὲ καὶ θερμὸν μέν, ἐν ᾧ τὸ θερμὸν τοῦ ψυχροῦ πλεονεκτεῖ, ψυχρὸν δ’, ἐν ᾧ τὸ ψυχρὸν τοῦ θερμοῦ. αὕτη μὲν ἡ τῶν ὀνομάτων χρῆσις. (Helmreich ed.)",
+      "source_file": "galen_passages_20251001_091209.txt",
+      "chunk_type": "medium",
+      "word_count": 217,
+      "claude_translation": "# Translation\n\nThat the bodies of living creatures are compounded from hot and cold and dry and moist, and that the proportion in the mixture is not equal for all, has been adequately demonstrated by the ancient men, both the best of the philosophers and the physicians; and plausible arguments concerning these matters have also been stated by us in another work, in which we examined the elements according to Hippocrates. But now, which is the next topic following that one, I shall proceed in this present work to discover all the differences of mixtures [or temperaments], both how many they are and of what kind when divided into species and genera, having made a beginning from the explanation of the terms. For whenever they say that bodies are mixed from hot and cold and dry and moist, they assert that one must understand these in their extreme form, that is, the elements themselves—air and fire and water and earth; but whenever they say that an animal or plant is hot or cold or dry or moist, it is no longer in the same way. For no animal can be extremely hot like fire nor extremely moist like water. Similarly, neither can it be cold or dry in the extreme, but the designations arise from what predominates in the mixture, we calling \"moist\" that in which there is a greater portion of moisture, and \"dry\" that in which there is a greater portion of dryness; and likewise \"hot\" that in which the hot predominates over the cold, and \"cold\" that in which the cold predominates over the hot. This, then, is the usage of the terms.",
+      "claude_model": "claude-sonnet-4-5-20250929",
+      "claude_translated_at": "2025-10-01T09:12:37.729367",
+      "claude_status": "completed",
+      "gemini_translation": "That the bodies of animals are composed of a mixture of the hot, the cold, the dry, and the wet, and that the proportion of each is not equal in the mixture [krasis], has been sufficiently demonstrated by the ancients, the best of both philosophers and physicians. And I have also discussed what is appropriate concerning these matters in another treatise, in which I examined the elements according to Hippocrates. But now, in this present treatise, I shall proceed to the next topic, which is to discover all the differences among the mixtures—how many there are and of what sort, when divided by species and genera—beginning with an explanation of the terms.\n\nFor whenever they say that bodies are composed of a mixture of the hot, the cold, the dry, and the wet, they state that one must understand this to refer to these qualities in their absolute form [akrōs], that is, to the elements themselves: air, fire, water, and earth. But whenever they say that an animal or a plant is either hot or cold or dry or wet, this is no longer to be understood in the same way. For, they say, no animal can exist that is absolutely hot like fire, nor absolutely wet like water. And likewise, it cannot be cold or dry to the extreme; rather, the designations arise from the quality that predominates in the mixture, so that we call ‘wet’ that in which the proportion of wetness is greater, and ‘dry’ that in which the proportion of dryness is greater. And so also, we call ‘hot’ that in which the hot prevails over the cold, and ‘cold’ that in which the cold prevails over the hot. This, then, is the use of the terms.",
+      "gemini_model": "gemini-2.5-pro",
+      "gemini_translated_at": "2025-10-01T09:13:10.441946",
+      "gemini_status": "completed",
+      "openai_translation": "That the bodies of animals are blended out of the hot, the cold, the dry, and the moist [the so‑called primary qualities], and that in the blend the share of each is not equal in all cases, has been sufficiently demonstrated by the ancients, both the best of the philosophers and of the physicians; and I too have set forth what is plausible on their behalf in another treatise, in which I examined the elements according to Hippocrates [the Elements]. Now then, as what follows upon that, I will in this treatise go through the discovery of all the differences of mixtures [krasis: mixture/temperament], how many they are and of what sort, when they are divided into species and genera, beginning from an explanation of the terms.\n\nFor whenever they say that bodies are mixed out of hot and cold and dry and moist, they say one ought to understand these in their extreme form, that is, the elements themselves—air, fire, water, and earth; but whenever they say that an animal or a plant is either hot or cold or dry or moist, not so in the same way. For no living thing can be at the extreme of heat like fire, nor at the extreme of moistness like water; and likewise neither at the uttermost cold nor at the uttermost dryness. Rather, the designations arise from what predominates in the mixture, so that we call moist that in which there is a greater share of moistness, and dry, that in which there is dryness; and in the same way, hot is that in which the hot predominates over the cold, and cold, that in which the cold predominates over the hot. Such, then, is the usage of the terms.",
+      "openai_model": "gpt-5",
+      "openai_translated_at": "2025-10-01T09:13:52.972566",
+      "openai_status": "completed"
+    }
+  ]
+}

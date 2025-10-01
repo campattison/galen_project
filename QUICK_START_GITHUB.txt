@@ -1,0 +1,61 @@
+═══════════════════════════════════════════════════════════
+  UPLOAD TO GITHUB - 3 COMMANDS
+═══════════════════════════════════════════════════════════
+
+Step 1: RUN SETUP SCRIPT
+-------------------------
+cd "/Users/cameronpattison/Desktop/Galen Project"
+./setup_github.sh
+
+
+Step 2: CREATE REPO ON GITHUB
+------------------------------
+Go to: https://github.com/new
+
+  Repository name: galen-translation-evaluation
+  Description: AI translation evaluation for Ancient Greek
+  Public or Private: (your choice)
+  DON'T check "Add a README"
+  
+Click "Create repository"
+
+
+Step 3: CONNECT AND PUSH
+-------------------------
+git remote add origin https://github.com/campattison/galen-translation-evaluation
+git push -u origin main
+
+
+
+
+DONE! 🎉
+--------
+Your project is on GitHub at:
+https://github.com/YOUR_USERNAME/galen-translation-evaluation
+
+
+═══════════════════════════════════════════════════════════
+  SECURITY CHECK
+═══════════════════════════════════════════════════════════
+
+✅ .env file is excluded (your API keys are safe)
+✅ venv folder is excluded (saves space)
+✅ Only public research data is uploaded
+
+
+═══════════════════════════════════════════════════════════
+  FUTURE UPDATES
+═══════════════════════════════════════════════════════════
+
+After making changes:
+
+git add .
+git commit -m "Description of changes"
+git push
+
+
+═══════════════════════════════════════════════════════════
+
+For detailed help: See UPLOAD_TO_GITHUB.md
+For full guide: See GITHUB_SETUP.md
+
