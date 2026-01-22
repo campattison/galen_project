@@ -1,0 +1,58 @@
+================================================================================
+TRANSLATION EVALUATION SUMMARY
+================================================================================
+
+🏆 OVERALL MODEL RANKINGS
+--------------------------------------------------------------------------------
+🥇 1. GEMINI          0.5501
+🥈 2. CLAUDE          0.5392
+🥉 3. OPENAI          0.5223
+
+📊 BEST MODEL PER METRIC
+--------------------------------------------------------------------------------
+  BERTScore       → GEMINI     (0.8988)
+  BLEU-4          → GEMINI     (0.1943)
+  COMET           → GEMINI     (0.7728)
+  METEOR          → GEMINI     (0.4442)
+  ROUGE-L         → GEMINI     (0.4783)
+  chrF++          → GEMINI     (0.5121)
+
+📈 DETAILED SCORES BY MODEL
+--------------------------------------------------------------------------------
+
+CLAUDE:
+  BERTScore       0.8965 ± 0.0151 (min=0.867, max=0.912, n=10)
+  BLEU-4          0.1722 ± 0.0466 (min=0.064, max=0.250, n=10)
+  COMET           0.7653 ± 0.0218 (min=0.725, max=0.799, n=10)
+  METEOR          0.4293 ± 0.0417 (min=0.313, max=0.472, n=10)
+  ROUGE-L         0.4779 ± 0.0258 (min=0.429, max=0.525, n=10)
+  chrF++          0.4938 ± 0.0231 (min=0.458, max=0.524, n=10)
+
+GEMINI:
+  BERTScore       0.8988 ± 0.0126 (min=0.872, max=0.913, n=10)
+  BLEU-4          0.1943 ± 0.0384 (min=0.147, max=0.272, n=10)
+  COMET           0.7728 ± 0.0219 (min=0.729, max=0.801, n=10)
+  METEOR          0.4442 ± 0.0448 (min=0.382, max=0.529, n=10)
+  ROUGE-L         0.4783 ± 0.0366 (min=0.415, max=0.548, n=10)
+  chrF++          0.5121 ± 0.0292 (min=0.469, max=0.548, n=10)
+
+OPENAI:
+  BERTScore       0.8908 ± 0.0201 (min=0.850, max=0.908, n=10)
+  BLEU-4          0.1601 ± 0.0495 (min=0.067, max=0.221, n=10)
+  COMET           0.7508 ± 0.0377 (min=0.646, max=0.780, n=10)
+  METEOR          0.4008 ± 0.0644 (min=0.292, max=0.525, n=10)
+  ROUGE-L         0.4575 ± 0.0588 (min=0.335, max=0.566, n=10)
+  chrF++          0.4740 ± 0.0497 (min=0.364, max=0.549, n=10)
+
+📋 METHODOLOGY
+--------------------------------------------------------------------------------
+  Multi-reference evaluation:
+  • BLEU-4, chrF++, METEOR: n-grams matched against ANY reference
+  • ROUGE-L, BERTScore, COMET: MAX across references
+
+ℹ️  EVALUATION INFO
+--------------------------------------------------------------------------------
+  Chunks evaluated: 10
+  Models: claude, gemini, openai
+  Reference translations: 1
+  Total evaluations: 30

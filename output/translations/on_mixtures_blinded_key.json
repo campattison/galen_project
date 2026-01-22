@@ -1,0 +1,66 @@
+{
+  "models_in_data": [
+    "claude",
+    "gemini",
+    "openai"
+  ],
+  "base_permutation": [
+    "gemini",
+    "claude",
+    "openai"
+  ],
+  "order_per_chunk": {
+    "1": [
+      "gemini",
+      "claude",
+      "openai"
+    ],
+    "2": [
+      "claude",
+      "openai",
+      "gemini"
+    ],
+    "3": [
+      "openai",
+      "gemini",
+      "claude"
+    ],
+    "4": [
+      "gemini",
+      "claude",
+      "openai"
+    ],
+    "5": [
+      "claude",
+      "openai",
+      "gemini"
+    ],
+    "6": [
+      "openai",
+      "gemini",
+      "claude"
+    ],
+    "7": [
+      "gemini",
+      "claude",
+      "openai"
+    ],
+    "8": [
+      "claude",
+      "openai",
+      "gemini"
+    ],
+    "9": [
+      "openai",
+      "gemini",
+      "claude"
+    ],
+    "10": [
+      "gemini",
+      "claude",
+      "openai"
+    ]
+  },
+  "seed": 2025,
+  "source": "/Users/cameronpattison/Desktop/Galen Project/galen_eval/output/translations/on_mixtures_translations.json"
+}
