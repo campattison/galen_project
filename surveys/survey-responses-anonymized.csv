@@ -1,0 +1,207 @@
+ID,Expert Name,Areas of Expertise,Other Expertise (Specify),Galen Experience Level,Chunk ID,Preference Score,Preferred Source,Left Translation,Right Translation,Time Spent (s),Comment,Completed At
+c2589c94f3ab2f33,Expert_08,Other,,2,1,-1,human2,human2,openai,528,,2025-12-07T23:24:31.717Z
+7a90ca367f2596d1,Expert_08,Other,,2,10,-2,gemini,gemini,human1,320,,2025-12-07T23:24:31.717Z
+aeb2f58dd65ef983,Expert_08,Other,,2,3,0,neutral,human2,claude,373,,2025-12-07T23:24:31.717Z
+ccd2e6e6b56f8529,Expert_08,Other,,2,5,0,neutral,openai,human2,219,,2025-12-07T23:24:31.717Z
+bc372c28098cbbd2,Expert_08,Other,,2,9,-1,gemini,gemini,human1,197,,2025-12-07T23:24:31.717Z
+1711359404138ee9,Expert_08,Other,,2,4,1,claude,human1,claude,220,,2025-12-07T23:24:31.717Z
+a40be8a402e155bf,Expert_08,Other,,2,7,1,openai,human1,openai,136,,2025-12-07T23:24:31.717Z
+1318619c1162caf7,Expert_08,Other,,2,8,0,neutral,human2,gemini,147,,2025-12-07T23:24:31.717Z
+eb5dad6517c4f8c4,Expert_08,Other,,2,6,0,neutral,claude,human2,3660,,2025-12-07T23:24:31.717Z
+5fb8e8bbf0ebaf9c,Expert_08,Other,,2,2,0,neutral,human2,openai,145,,2025-12-07T23:24:31.717Z
+cd262c71e094f065,Expert_05,Greek Science,,4,4,-1,human2,human2,claude,113,,2025-12-18T07:26:06.944Z
+a9e2bbe42be2885f,Expert_05,Greek Science,,4,2,1,openai,human2,openai,37,,2025-12-18T07:26:06.944Z
+1fe098b872ac98bd,Expert_05,Greek Science,,4,8,-1,gemini,gemini,human2,23,,2025-12-18T07:26:06.944Z
+a9aaa487d1bb1ade,Expert_05,Greek Science,,4,10,-1,human1,human1,claude,84,,2025-12-18T07:26:06.944Z
+740d8690f44ed95d,Expert_05,Greek Science,,4,5,1,human1,openai,human1,119,,2025-12-18T07:26:06.944Z
+cc584ed9451c5652,Expert_05,Greek Science,,4,7,-1,gemini,gemini,human2,53,,2025-12-18T07:26:06.944Z
+b3cf43f6098d3b84,Expert_05,Greek Science,,4,1,1,claude,human2,claude,66,,2025-12-18T07:26:06.944Z
+47f6c3f2f9f296a7,Expert_05,Greek Science,,4,6,-1,openai,openai,human1,55,,2025-12-18T07:26:06.944Z
+feaad0191045e7b9,Expert_05,Greek Science,,4,9,-1,gemini,gemini,human2,47,,2025-12-18T07:26:06.944Z
+9c49289111f1c489,Expert_05,Greek Science,,4,3,-1,human2,human2,claude,49,,2025-12-18T07:26:06.944Z
+1ac9111bd81bc573,Expert_11,Greek Medicine; Post-Antique History of Medicine; Galen,,5,3,1,human1,gemini,human1,288,,2025-12-23T15:28:30.738Z
+cbde33e67a59619e,Expert_11,Greek Medicine; Post-Antique History of Medicine; Galen,,5,6,1,claude,human2,claude,27,,2025-12-23T15:28:30.738Z
+c2062e8f2bf7e163,Expert_11,Greek Medicine; Post-Antique History of Medicine; Galen,,5,7,1,openai,human2,openai,186,,2025-12-23T15:28:30.738Z
+7d00c7a7669e5edf,Expert_11,Greek Medicine; Post-Antique History of Medicine; Galen,,5,2,-1,human1,human1,gemini,23,,2025-12-23T15:28:30.738Z
+9c086f0b9f0534fc,Expert_11,Greek Medicine; Post-Antique History of Medicine; Galen,,5,10,-2,claude,claude,human1,22,,2025-12-23T15:28:30.738Z
+085f1f0524b11d37,Expert_11,Greek Medicine; Post-Antique History of Medicine; Galen,,5,4,2,openai,human2,openai,16,,2025-12-23T15:28:30.738Z
+69070444a7fcaccd,Expert_11,Greek Medicine; Post-Antique History of Medicine; Galen,,5,8,-1,gemini,gemini,human1,30,,2025-12-23T15:28:30.738Z
+1e50f046754ecd4f,Expert_02,Greek Philosophy; Greek Medicine; Galen,,5,4,-1,human2,human2,claude,153,,2025-11-30T23:31:03.023Z
+144f4fb893a91037,Expert_02,Greek Philosophy; Greek Medicine; Galen,,5,7,1,human1,gemini,human1,45,,2025-11-30T23:31:03.023Z
+82413f341399cc4a,Expert_02,Greek Philosophy; Greek Medicine; Galen,,5,3,0,neutral,openai,human1,86,,2025-11-30T23:31:03.023Z
+6d3d1e2434151e93,Expert_02,Greek Philosophy; Greek Medicine; Galen,,5,1,-2,claude,claude,human1,69,,2025-11-30T23:31:03.023Z
+ff9938594b9fd7c9,Expert_02,Greek Philosophy; Greek Medicine; Galen,,5,6,0,neutral,gemini,human1,63,,2025-11-30T23:31:03.023Z
+b79ae3f87748a7ed,Expert_02,Greek Philosophy; Greek Medicine; Galen,,5,5,2,openai,human1,openai,97,,2025-11-30T23:31:03.023Z
+2e7e2a7e8e73436c,Expert_02,Greek Philosophy; Greek Medicine; Galen,,5,2,0,neutral,human1,claude,82,,2025-11-30T23:31:03.023Z
+bd4a64584e7c3cd6,Expert_02,Greek Philosophy; Greek Medicine; Galen,,5,8,2,gemini,human1,gemini,32,,2025-11-30T23:31:03.023Z
+b28599752fe4d2f0,Expert_02,Greek Philosophy; Greek Medicine; Galen,,5,9,1,openai,human1,openai,135,,2025-11-30T23:31:03.023Z
+bd1233496d611c20,Expert_02,Greek Philosophy; Greek Medicine; Galen,,5,10,-2,claude,claude,human1,80,,2025-11-30T23:31:03.023Z
+7f989f55a1cf292e,Expert_13,Greek Science,,4,6,2,gemini,human2,gemini,55,,2025-12-01T09:45:56.859Z
+765dc4f41230f8ba,Expert_13,Greek Science,,4,5,-2,human1,human1,claude,28,,2025-12-01T09:45:56.859Z
+f8138a2f00a8163d,Expert_13,Greek Science,,4,8,-2,human2,human2,openai,8,,2025-12-01T09:45:56.859Z
+940281ff34abeb99,Expert_13,Greek Science,,4,10,1,human2,gemini,human2,11,,2025-12-01T09:45:56.859Z
+285aae904b945ce4,Expert_13,Greek Science,,4,9,1,claude,human1,claude,32,,2025-12-01T09:45:56.859Z
+debd3065851dcd77,Expert_13,Greek Science,,4,1,-1,human2,human2,openai,13,,2025-12-01T09:45:56.859Z
+8671bb29f4273394,Expert_13,Greek Science,,4,3,1,human1,gemini,human1,15,,2025-12-01T09:45:56.859Z
+51a4a3e8a42f6cbe,Expert_13,Greek Science,,4,2,-1,human2,human2,claude,7,,2025-12-01T09:45:56.859Z
+27ed08b365749cda,Expert_13,Greek Science,,4,4,0,neutral,openai,human2,27,,2025-12-01T09:45:56.859Z
+bca5d8a30caaa04f,Expert_13,Greek Science,,4,7,-2,human1,human1,gemini,5,,2025-12-01T09:45:56.859Z
+2db29ea651d8b37a,Expert_11,Greek Medicine; Post-Antique History of Medicine; Galen,,5,9,-1,claude,claude,human2,8,,2025-12-23T15:28:30.738Z
+d9003cb79107e519,Expert_11,Greek Medicine; Post-Antique History of Medicine; Galen,,5,1,-1,human1,human1,openai,16,,2025-12-23T15:28:30.738Z
+40e7b3f5f8cad4c0,Expert_11,Greek Medicine; Post-Antique History of Medicine; Galen,,5,5,-1,gemini,gemini,human1,14,,2025-12-23T15:28:30.738Z
+8e819f9b78784a09,Expert_10,Greek Medicine,,5,8,-1,human2,human2,gemini,61,,2026-01-02T22:04:46.086Z
+2b87e3cb27c6d0e5,Expert_01,Greek Medicine,,5,3,-2,claude,claude,human1,336,"B has some awkward bits, doesn't translate eukratic which it perfectly can, 'equal coming together of the opposites' is unclear and 'characteristic nature' also needs unpacking",2026-01-04T11:48:45.219Z
+f4803c4c3b3bc3e5,Expert_01,Greek Medicine,,5,5,2,openai,human1,openai,367,"A just has misunderstandings ('from the functions'?), and less good word choices (e.g. 'wet')",2026-01-04T11:48:45.219Z
+0ca871804cf1f848,Expert_01,Greek Medicine,,5,10,2,human2,gemini,human2,127,A has mistakes and awkward choices - first sentence is very much misunderstood,2026-01-04T11:48:45.219Z
+f4254b705de364de,Expert_01,Greek Medicine,,5,4,2,claude,human1,claude,590,just better written than A; A translates dryness of the skin instead of hardness at the beginning and leaves eukratic untranslated/uninterpreted,2026-01-04T11:48:45.219Z
+da6a76bcbbc92714,Expert_01,Greek Medicine,,5,8,1,openai,human2,openai,268,"A mixes hard and dry; but I prefer the automatic 'like ceramic pots' for ostrakodermos which is the first meaning of ostracon, a piece of pottery-clay; 'shell' is already a metaphor",2026-01-04T11:48:45.219Z
+941c76ed5cac5571,Expert_01,Greek Medicine,,5,1,0,neutral,gemini,human2,436,"A says 'ancient men' for ancients, which is worse than 'men of ancient times' - both not great. Also '(the argument continues)' is not needed ",2026-01-04T11:48:45.219Z
+4d4fc63dddb45539,Expert_01,Greek Medicine,,5,6,2,claude,human2,claude,155,"A translates chumoi with fluids which is not good, especially as 'fluid' is a quality later; and in fact, at the end 'fluid' is better than 'wet' for the object of sensorial appraisal, and the English 'reasoning faculty' is too specific-philosophical for what logismos means here.",2026-01-04T11:48:45.219Z
+7ada041f098be230,Expert_15,Post-Antique History of Medicine,,7,9,0,neutral,human2,claude,218,,2026-01-06T18:27:05.567Z
+af18619ccdd245d1,Expert_14,Greek Philosophy,,3,6,-1,openai,openai,human2,179,"B is interesting in that it takes τι μέσον ἀμφοῖν σῶμα to be distinct from cartilage, but I don't really think that's right.",2025-12-05T16:59:21.904Z
+289ce85bcace0c7c,Expert_14,Greek Philosophy,,3,8,-2,human2,human2,claude,7,"""A"" mistranslates dry as hard at one point, but this seems to be a translation slip caused by the reasoning of the argument itself. I also don't like how A begins, switching from sharp and hooked nose as subject to possessors of snub noses as subject. But it is still much better than B, which misconstrues physis and doesn't get the etymology of ostrakoderma.",2025-12-05T16:59:21.904Z
+532f40ff5a264bbb,Expert_14,Greek Philosophy,,3,2,1,human2,gemini,human2,590,"I think both passages get the sense of the arguments, but B has better word choice and is more adaptive (so more fluent).",2025-12-05T16:59:21.904Z
+8d5d65fe3459e70c,Expert_14,Greek Philosophy,,3,3,-2,human2,human2,openai,78,The freer translation of A makes it easier to follow the argument,2025-12-05T16:59:21.904Z
+c194833d3213d2cc,Expert_14,Greek Philosophy,,3,1,-1,claude,claude,human1,47,"I think A correctly translates οὐκ ἴση πάντων ἐστὶν ἐν τῇ κράσει μοῖρα, though B is better elsewhere (ὁπόσαι τ’ εἰσὶ καὶ ὁποῖαι κατ’ εἴδη τε καὶ γένη διαιρουμένοις) and more fluent throughout.",2025-12-05T16:59:21.904Z
+34be8780771f26bf,Expert_14,Greek Philosophy,,3,10,2,gemini,human1,gemini,338,"B better follows the argument (e.g. at εὐκαταφρόνητα δήπουθέν ἐστι καὶ τῷ μηδ’ εἶναι φάσκοντι τὰ τοιαῦτα συγχωρητέον and at ὥστ’ εὐλόγως ἄμφω τοῖς τοιούτοις ἐδέσμασιν ὑπάρχει τὸ θ’ ὡς φαρμάκοις διατιθέναι τὰ σώμαθ’ ἡμῶν καὶ τὸ τρέφειν, παρ’ ὅλον μὲν τὸν χρόνον τῆς πέψεως ὡς φαρμάκοις)",2025-12-05T16:59:21.904Z
+54ba6cfaf62dc055,Expert_14,Greek Philosophy,,3,5,2,openai,human1,openai,104,"Didn't know why B translates ὑγρῶν as thin at one point (maybe in the sense of watery as loose?), but A on that line weirdly overtranslates as ablative absolute and ἀχυμώτων as not yet having changed flavor (which I didn't think it can mean). Also didn't know why B translates ἀποψυχομένων transitively as cooling rather than passively as being cooled, but I'm completely ignorant of Galen's view on this. But B follows the flow of the argument (proton, epeita) while A does not.",2025-12-05T16:59:21.904Z
+071e3f2996bded75,Expert_14,Greek Philosophy,,3,7,2,human2,claude,human2,126,I agree with B on how to take πλέον ἢ δεῖ ξηρανθέν. ,2025-12-05T16:59:21.904Z
+2f2efea1851fdc11,Expert_14,Greek Philosophy,,3,9,2,gemini,human1,gemini,307,B better narrates the thauma,2025-12-05T16:59:21.904Z
+06f80b15471c2959,Expert_14,Greek Philosophy,,3,4,2,openai,human1,openai,80,A misunderstands μυελὸς ἐγκέφαλός τε καὶ νωτιαῖος,2025-12-05T16:59:21.904Z
+23dad2b2c27f4935,Expert_12,Galen; Other; Greek Philosophy,,7,5,-1,gemini,gemini,human2,799,,2025-12-24T13:23:00.993Z
+bd2a1b92a0637c39,Expert_12,Galen; Other; Greek Philosophy,,7,10,2,openai,human2,openai,508,,2025-12-24T13:23:00.993Z
+4ac7f3c41e2a5df0,Expert_12,Galen; Other; Greek Philosophy,,7,1,-1,claude,claude,human2,391,,2025-12-24T13:23:00.993Z
+0fdfca43438c9968,Expert_12,Galen; Other; Greek Philosophy,,7,3,1,gemini,human1,gemini,593,,2025-12-24T13:23:00.993Z
+6c8421011120bc1d,Expert_12,Galen; Other; Greek Philosophy,,7,6,0,neutral,human2,openai,1279,,2025-12-24T13:23:00.993Z
+41e9612898ef5c5f,Expert_12,Galen; Other; Greek Philosophy,,7,2,1,human2,claude,human2,1348,,2025-12-24T13:23:00.993Z
+cd55354d86879e62,Expert_12,Galen; Other; Greek Philosophy,,7,7,1,gemini,human1,gemini,732,,2025-12-24T13:23:00.993Z
+3048276836e33762,Expert_12,Galen; Other; Greek Philosophy,,7,4,0,neutral,human2,openai,403,,2025-12-24T13:23:00.993Z
+9977424a2aefe2e8,Expert_12,Galen; Other; Greek Philosophy,,7,9,1,claude,human1,claude,2181,,2025-12-24T13:23:00.993Z
+ff56c9683ff5ae68,Expert_12,Galen; Other; Greek Philosophy,,7,8,-1,gemini,gemini,human2,510,,2025-12-24T13:23:00.993Z
+3f3dca7d5247ce29,Expert_04,Greek Philosophy,,3,2,1,gemini,human1,gemini,10,,2025-12-27T23:42:47.500Z
+b19583e18ec880ad,Expert_04,Greek Philosophy,,3,7,-1,claude,claude,human1,1640,,2025-12-27T23:42:47.500Z
+6b48ed7791d377e5,Expert_04,Greek Philosophy,,3,10,-1,human2,human2,openai,519,,2025-12-27T23:42:47.500Z
+3edfc8c605ca44dd,Expert_04,Greek Philosophy,,3,8,1,gemini,human1,gemini,471,,2025-12-27T23:42:47.500Z
+a5302d3ca5dd2377,Expert_04,Greek Philosophy,,3,9,1,human2,claude,human2,129,,2025-12-27T23:42:47.500Z
+ef427b350f8f775f,Expert_04,Greek Philosophy,,3,4,-1,openai,openai,human1,236,,2025-12-27T23:42:47.500Z
+fc2a532be76ea5de,Expert_04,Greek Philosophy,,3,5,-1,human2,human2,gemini,784,,2025-12-27T23:42:47.500Z
+01f52a78071bb63f,Expert_04,Greek Philosophy,,3,6,0,neutral,human2,claude,306,,2025-12-27T23:42:47.500Z
+78d94b0058b930a6,Expert_04,Greek Philosophy,,3,1,-1,human2,human2,openai,188,,2025-12-27T23:42:47.500Z
+dfa5d743348e06d4,Expert_04,Greek Philosophy,,3,3,1,human1,gemini,human1,7,,2025-12-27T23:42:47.500Z
+bea79f176e1da1fe,Expert_10,Greek Medicine,,5,3,0,neutral,gemini,human1,73,"I don't like the choice of including ""eukratic"" in B. But I like other aspects of this translation better than A, particularly its final sentence.",2026-01-02T22:04:46.086Z
+cf26019ea08143de,Expert_10,Greek Medicine,,5,10,1,human2,claude,human2,57,,2026-01-02T22:04:46.086Z
+2a52e5af20a4de4c,Expert_10,Greek Medicine,,5,9,-2,openai,openai,human2,51,,2026-01-02T22:04:46.086Z
+80343e2b52d074a4,Expert_10,Greek Medicine,,5,1,-1,gemini,gemini,human2,63,I don't like the insertions in square brackets in Passage b.,2026-01-02T22:04:46.086Z
+782bae1ffca15ee6,Expert_10,Greek Medicine,,5,6,-1,claude,claude,human1,74,,2026-01-02T22:04:46.086Z
+d939bffbf3af2f5a,Expert_10,Greek Medicine,,5,4,0,neutral,human1,openai,46,,2026-01-02T22:04:46.086Z
+3d3272150fd40bc3,Expert_10,Greek Medicine,,5,5,-1,gemini,gemini,human1,45,,2026-01-02T22:04:46.086Z
+dbfd32d8f2fbcefb,Expert_10,Greek Medicine,,5,7,-1,claude,claude,human2,48,,2026-01-02T22:04:46.086Z
+8a2a4d955e6c462e,Expert_10,Greek Medicine,,5,2,2,openai,human1,openai,36,,2026-01-02T22:04:46.086Z
+e5b6ca010dc4538a,Expert_16,Galen,,7,2,0,neutral,human2,openai,6767,,2026-01-22T12:20:26.163Z
+be2d87f07f92d722,Expert_01,Greek Medicine,,5,9,-2,human2,human2,openai,299,"the translation of trauma as trick is better; the less literal 'analogy of fire' at the end also better than 'image of fire' for eikon pyros. B also uses post-antique chemical terms (sulphur?). BTW: since I made a mistake and didn't save my results, I am now seeing this Greek passage for the second time in a week: I have to say that the AI (I suppose) translation has got much better, as I remember before one of the two was pretty awful, while neither of these is.   ",2026-01-04T11:48:45.219Z
+d4b41d56b1fea463,Expert_01,Greek Medicine,,5,7,-2,gemini,gemini,human1,203,'Like earthenware' in A better than 'like shell' (which is a metaphor); 'superfluity is small' in B just meaningless; in the last para 'unwittingly hear something carelessly and erroneously'  also doesn't sound good and doesn't express the point.,2026-01-04T11:48:45.219Z
+3916aa4e501f60e2,Expert_01,Greek Medicine,,5,2,0,neutral,claude,human1,713,"A understands 'diseased condition of autumn' which makes no sense; but the following sentence about comparative coldness is better translated in A actually; and the last para too.  In B (which does not translate krisis for no reason), it just doesn't flow very well and one needs to read it twice (apportion, conjunction are not very good choices in my view for dianemo, syzygia in this context)",2026-01-04T11:48:45.219Z
+f3e095b08af65fd1,Expert_03,Other,,2,1,1,human2,openai,human2,118,"Passage A has a nicer flow and the idiom sounds better (it also interprets the text more), but for example in φιλοσόφων τε καὶ ἰατρῶν τοῖς ἀρίστοις, both categories are dependent on τοῖς ἀρίστοις, which is only correctly rendered by B. ",2026-01-05T13:10:14.819Z
+63938a45cecae202,Expert_03,Other,,2,6,2,human2,claude,human2,491,I think B correctly uses ἤδη emphatically rather than temporarily. 'Irrational' reads weirdly considering Galen is making a neutral distinction here. I like the rendering of συμφύτῳ with connate rather than innate since it is biologically more apt and conveys the preposition. It is clunky to reuse cartilaginous to explain something called 'neuro-cartilaginous'.,2026-01-05T13:10:14.819Z
+f5ccb86bbab44230,Expert_03,Other,,2,9,-1,gemini,gemini,human1,18,"Medication reads oddly, when Medea is not associated with healing, but drugs. It seems easier to conceive of a wall being smeared with sulphur than prepared with brimstone. ",2026-01-05T13:10:14.819Z
+1f04706772105d51,Expert_03,Other,,2,2,0,neutral,openai,human2,131,,2026-01-05T13:10:14.819Z
+fe10285530044880,Expert_03,Other,,2,4,-2,human2,human2,claude,288,It seems clunky to include the 'and' in every enumeration in B. δεῖ δὲ συνδραμεῖν ἐς ταὐτὸν ἐπὶ τοῦδε πολλὰ γνωρίσματα sounds more logical in A since Galen seems to be taking stock here rather than making another point about the mixtures coming together in man.,2026-01-05T13:10:14.819Z
+9177edb9f9cf6dd7,Expert_03,Other,,2,8,1,human2,gemini,human2,111,"I think there might be a mistake in B, towards the middle of the passage, when the ξηρὸν is translated as 'hard'.I have never heard the name malacostracans used and believe crustaceans reads more naturally for the average reader.",2026-01-05T13:10:14.819Z
+2473ed917109f540,Expert_03,Other,,2,5,1,openai,human2,openai,88,"B sounds more natural, e.g. 'handle', instead of 'dominate, as does the last sentence. 'Undigested vomitings' is very literal and clunky though.",2026-01-05T13:10:14.819Z
+e8ff9a850c474e9f,Expert_03,Other,,2,7,-1,human2,human2,claude,91,"ὑποτέτακται is rendered better. I prefer 'palm' over 'the inner parts of the hands'. As in many other cases, I prefer to stay close to the original texts, so prefer the rendering of κρᾶσις as mixture rather than temperament.",2026-01-05T13:10:14.819Z
+8d47053106ca6dda,Expert_03,Other,,2,3,1,gemini,human2,gemini,83,ὁτιοῦν is only reflected in B. ,2026-01-05T13:10:14.819Z
+3f25c7a10d77e8ab,Expert_03,Other,,2,10,0,neutral,human2,openai,301,,2026-01-05T13:10:14.819Z
+f327e3e74f5c6bdf,Expert_09,Greek Science; Other,,4,10,-1,gemini,gemini,human1,3875,"B was okay, but its word-choices sometimes don't seem plugged into the medical context of Galen, and it misconstrues a few phrases.
+
+B translates εἰσάπαξ in a definitive sense, but A’s rendering of it as denoting immediacy fits the context better.
+B translates ἐγκαιομένους as “burning,” but A’s “over-heated” fits the medical context better.
+The way B renders ὡς φαρμάκοις in the phrase “παρ’ ὅλον μὲν τὸν χρόνον τῆς πέψεως ὡς φαρμάκοις” is ambiguous and confusing.
+B’s rendering of οὐ χρὴ θαυμάζειν is imprecise.",2026-01-06T02:34:23.463Z
+189b82dff3036098,Expert_09,Greek Science; Other,,4,4,0,neutral,human1,openai,3394,"Both seem okay.
+But why does A translate ἄριστα κέκραται twice?",2026-01-06T02:34:23.463Z
+3e555a9f17b73cee,Expert_09,Greek Science; Other,,4,1,2,claude,human2,claude,17,"I (once again) quibble with A for mixing the declension of ""krasis"" which they import as a technical term into English. Initially it is ""krasis"", then later it seems to become an invented first declension form, ""krasia"".
+A translates ὁπόσαι τ’ εἰσὶ καὶ ὁποῖαι κατ’ εἴδη τε καὶ γένη διαιρουμένοις as “how many there are and of what kinds, divided according to class and kind”. I am not up on the literature to know whether “class and kind” or the “species and genera” of B is more in keeping with how most scholars handle εἴδη τε καὶ γένη, but A is made confusing by rendering ὁποῖαι as “of what KINDs”. The long sentence from which this clause is taken is also broken up in two in A’s translation, so we lose something of Galen’s style.
+I prefer B’s “in the extreme” to A’s “completely” for ἄκρως.
+In rendering ὑγρὸν μὲν καλούντων ἡμῶν, ἐν ᾧ πλείων ὑγρότητός ἐστι μοῖρα and the following clauses, A imports “part” as the antecedent of the relative clause, but this is not necessary and misconstrues the Greek with interpretive consequences (“part” of what?). The syntax here is a little compressed but basically clear, and B handles it very well.",2026-01-06T02:34:23.463Z
+79bbfaf3c107fc0e,Expert_09,Greek Science; Other,,4,2,1,gemini,human1,gemini,1193,"I think these were both clear and competent. I quibble with A for mixing the declension of ""krasis"" which they import as a technical term into English. Initially it is ""krasis"", then later it seems to become an invented first declension form, ""krasia"".",2026-01-06T02:34:23.463Z
+d59e7785faa61b0c,Expert_09,Greek Science; Other,,4,3,0,neutral,human1,openai,2929,"Stylistically, A reads a little more fluently. But B I think renders the genitive at the beginning of the phrase ""ταύτης δέ τις ἑτέρα"" correctly as a gen. of comparison, whereas A does renders it more as partitive.",2026-01-06T02:34:23.463Z
+6cb5637c89ef4ebb,Expert_09,Greek Science; Other,,4,5,-2,claude,claude,human1,2008,"A, much better than B, captures Galen's syntax and technical idiom. With regard to the latter, B's renderings of certain words (krateō, polu) are supported by LSJ, but not judiciously chosen.
+Some particular points:
+-- “Consume” of A for κρατοῦσιν is better than “have power over” of B, but something like “digest” (sv. LSJ II.3.b) would seem to better convey the physiological process implied here.
+-- “the wetness” of B feels clumsy.
+-- A better conveys Galen’s “polu” as a matter of degree, compared to B, which makes it a matter of consistency.
+-- A better handles the compressed syntax (e.g. the genitives at the end of the clause) and technical idiom (e.g. ἀχυμώτων) of ἐμέτους τε γὰρ ἀπέπτων αὐτοῖς γίγνεσθαι σιτίων καὶ διαχωρήσεις ὑγρῶν καὶ τραχέων καὶ ἀχυμώτων.",2026-01-06T02:34:23.463Z
+9898897c5b7cb5b6,Expert_09,Greek Science; Other,,4,9,2,human2,gemini,human2,83382,"Passage A is notably loose and imprecise throughout, both on the lexical level (e.g. ἐπαλειφθῇ as “rubbed into”) and but also on larger sense units. It struggles to render the syntax of a passage like καὶ μὲν δὴ καὶ ὡς θαῦμά τις ἐδείκνυ· ἀποσβεννὺς λύχνον αὖθις ἧπτε τοίχῳ προσφέρων· ἕτερος δὲ λίθῳ προσέφερεν.
+Passage A is also out of step with modern, conventional idiom, with interpretive consequences: e.g. ""magic trick"" is anachronistic and misses the affective significance of θαῦμά; ""plantain"" for θρυαλλίδι is now confusingly archaic (at least to an American reader), what with the global offerings that have been on offer in the produce aisle for the last few decades.",2026-01-06T02:34:23.463Z
+36917fe412c1a041,Expert_09,Greek Science; Other,,4,8,-2,openai,openai,human1,1100,"In the first line, B renders a particular nose as dry, but it is the people who are dry.
+B’s rendering of “τοιοῦτον δέ τι τοὺς πλείστους αὐτῶν ἠπάτησεν, οὐχ ὑπὲρ τῶν ἀνθρώπων μόνον, ἀλλὰ καὶ περὶ τῶν ἄλλων ζῴων ἀποφήνασθαι τολμήσαντας ὑπὲρ ὅλης τῆς κράσεως ἐκ μόνων τῶν κατὰ τὸ δέρμα γνωρισμάτων.” is confusing: by separating the participle into its own, independent clause, the translation offers no syntactical connection to the τοὺς πλείστους, and so the latter is vaguely and ambiguously rendered.
+B renders ξηρὸν as “hard”, which is inaccurate.
+B’s translation of “ὀστρακοδέρμων” as “testacean” is awkward here, when Galen is explaining etymology.",2026-01-06T02:34:23.463Z
+0241e6ba0ad7dca0,Expert_09,Greek Science; Other,,4,7,-1,human1,human1,claude,2278,"A is better than B, but I don't think B makes mistakes that significantly distort the Greek.
+
+Some specific points:
+- A retains the cultural connection of ostrakodes.
+- B adds specificity that I don’t see in the Greek (e.g. “which is located IMMEDIATELY below the skin” for ὃς ὑποτέτακται τῷ δέρματι)
+- B misses clauses like ἐν τῷδε.
+- B translates ὑγρότεροι as “wetter”, but to my mind, “wetness” implies the condition of a surface, whereas something like A’s “moist” may imply something more essential.
+- A renders the syntax of ὅπως μὴ λάθωμεν ἡμᾶς αὐτοὺς παρακούσαντές τι more precisely than B, but B basically gets the point across.
+- Both A and B could better construe the εὐθὺς: neither connects it specifically to the doctors’ action of οἰόμενοι, but that seems to me to be what Galen is getting at.
+
+",2026-01-06T02:34:23.463Z
+7c7929ab8fbbba04,Expert_09,Greek Science; Other,,4,6,0,neutral,gemini,human1,3166,"There is something unscholarly about both A and B...
+
+- A makes a mistake with anatomical consequences in its rendering of καὶ τι μέσον ἀμφοῖν σῶμα.
+- B is clumsy in its rendering of κριτήριον δὲ καὶ τῆς τούτου διαγνώσεως ἡ ἁφή: e.g. strange that it renders κριτήριον as ""judge"" (rather than the obvious ""criterion"") and I don’t see why it adds “by reason” (in brackets) in the following passage.
+",2026-01-06T02:34:23.463Z
+35746180dcabef72,Expert_15,Post-Antique History of Medicine,,7,10,-2,gemini,gemini,human1,140,,2026-01-06T18:27:05.567Z
+4f74009288d3f661,Expert_15,Post-Antique History of Medicine,,7,8,-1,openai,openai,human2,93,,2026-01-06T18:27:05.567Z
+fcb3c99ad8a15ea9,Expert_15,Post-Antique History of Medicine,,7,3,-1,claude,claude,human1,75,,2026-01-06T18:27:05.567Z
+e5ae54d5c7456ab5,Expert_15,Post-Antique History of Medicine,,7,7,1,human2,gemini,human2,51,,2026-01-06T18:27:05.567Z
+f8e20fe1f042934d,Expert_15,Post-Antique History of Medicine,,7,4,-1,openai,openai,human1,32,,2026-01-06T18:27:05.567Z
+484f5873d643b32a,Expert_15,Post-Antique History of Medicine,,7,6,-1,claude,claude,human2,50,,2026-01-06T18:27:05.567Z
+390ba3c4c9897a26,Expert_15,Post-Antique History of Medicine,,7,1,1,human1,gemini,human1,41,,2026-01-06T18:27:05.567Z
+64e62dc466b9f77e,Expert_15,Post-Antique History of Medicine,,7,2,0,neutral,openai,human1,46,,2026-01-06T18:27:05.567Z
+bfec74c416ea1156,Expert_15,Post-Antique History of Medicine,,7,5,0,neutral,human2,claude,69,,2026-01-06T18:27:05.567Z
+24a2275484a0c7fe,Expert_06,Other,,2,10,1,gemini,human1,gemini,80,,2026-01-10T08:47:49.645Z
+4cd717bdd5f9cbe2,Expert_06,Other,,2,2,1,openai,human1,openai,45,,2026-01-10T08:47:49.645Z
+4f08dfbe5a026c68,Expert_06,Other,,2,4,-1,human1,human1,claude,39,,2026-01-10T08:47:49.645Z
+15bec8a48b7b9605,Expert_06,Other,,2,1,-1,gemini,gemini,human2,48,,2026-01-10T08:47:49.645Z
+6506ef2da6079465,Expert_06,Other,,2,5,-1,human1,human1,openai,34,,2026-01-10T08:47:49.645Z
+a8cc25adb4c3a9bd,Expert_06,Other,,2,8,1,claude,human2,claude,29,,2026-01-10T08:47:49.645Z
+ddcf45d5f40041d0,Expert_06,Other,,2,9,-1,gemini,gemini,human2,20,,2026-01-10T08:47:49.645Z
+790523bf5f47e593,Expert_06,Other,,2,6,-1,openai,openai,human2,2,,2026-01-10T08:47:49.645Z
+2269ceda72ff66aa,Expert_06,Other,,2,7,1,claude,human1,claude,26,,2026-01-10T08:47:49.645Z
+d68016b7854189f9,Expert_06,Other,,2,3,1,gemini,human2,gemini,33,,2026-01-10T08:47:49.645Z
+4f409e7f2fe9f32b,Expert_07,Greek Medicine,,5,4,-1,human2,human2,claude,49,,2026-01-17T13:19:31.969Z
+b9443be855af0f4c,Expert_07,Greek Medicine,,5,6,-1,openai,openai,human2,14,,2026-01-17T13:19:31.969Z
+a4e5259ef77b6500,Expert_07,Greek Medicine,,5,5,1,gemini,human2,gemini,9,,2026-01-17T13:19:31.969Z
+cc98d08381cabfc8,Expert_07,Greek Medicine,,5,3,-1,claude,claude,human1,20,,2026-01-17T13:19:31.969Z
+b6f06a732fcdf350,Expert_07,Greek Medicine,,5,1,-1,openai,openai,human2,11,,2026-01-17T13:19:31.969Z
+acd9caaf8d13778f,Expert_07,Greek Medicine,,5,7,1,gemini,human2,gemini,15,,2026-01-17T13:19:31.969Z
+5ad760cd2b8f873a,Expert_07,Greek Medicine,,5,8,1,claude,human1,claude,15,,2026-01-17T13:19:31.969Z
+4da9cd8fcbd04dbc,Expert_07,Greek Medicine,,5,10,1,human1,openai,human1,11,,2026-01-17T13:19:31.969Z
+7c9a2dd0913edc68,Expert_07,Greek Medicine,,5,9,1,gemini,human2,gemini,16,,2026-01-17T13:19:31.969Z
+efef8c6db4fa60cc,Expert_07,Greek Medicine,,5,2,1,claude,human1,claude,19,,2026-01-17T13:19:31.969Z
+a315f63ce3be3187,Expert_16,Galen,,7,1,-1,claude,claude,human1,849,"A is more accurate than B (e.g. compounded instead of mixed for κέκραται; the ancients instead of ancient men): I’d say somewhere between somewhat better and much better. 
+A provides an interpretation of the text, B confines itself to a literal translation, which sometimes is not entirely clear.
+τὰ εἰκότα is rendered as “the probabilities” by A, whereas it is translated (perhaps too) literally in B (“what is fitting”). 
+B’s “they say one must understand this to mean those things that are so in the extreme” is not entirely clear to me (better A: “they say it is necessary to understand such things completely”).
+B’s “And likewise, neither cold nor dry in the ultimate degree” has no verb like Tacitus.",2026-01-22T12:20:26.163Z
+80e38fd0cb94ee1e,Expert_16,Galen,,7,9,0,neutral,gemini,human1,374,,2026-01-22T12:20:26.163Z
+dbfadd7b4bc559c1,Expert_16,Galen,,7,5,0,neutral,openai,human2,2,,2026-01-22T12:20:26.163Z
+896714783fa8d8e3,Expert_16,Galen,,7,8,-1,claude,claude,human2,12364,"Passage A is, in my view, only slightly better than Passage B. I prefer 'moist' to wet; I think that the bit ""they have been deceived: they presume"" of Passage B is rendered better in Passage A (although perhpas the lack of context is misleading me); I can't decide between 'shell' and 'ceramic pot' to translate ὀστράκῳ in the final lines (both seem equally good, I should make some research into this analogy in Galen and other writers). Both passages represent very good translations.",2026-01-22T12:20:26.163Z
+f3a1d4c40173e720,Expert_16,Galen,,7,3,1,human2,gemini,human2,24,"Although B has a mistake (haplos translated as ""simple"" [substance]; A has the correct translation, ""in an absolute sense""), I think that B is more elegant whereas A is sometimess too literal and even slightly inelegant (i.e. ""the precisely equal coming together of the opposites"").",2026-01-22T12:20:26.163Z
+7685a493424d3e53,Expert_16,Galen,,7,10,1,human1,openai,human1,3316,,2026-01-22T12:20:26.163Z
+bcab0cf0a2b178f6,Expert_16,Galen,,7,7,0,neutral,human2,claude,13411,"Translation A is quite literal and correct; same for translation B. I would say that they are equivalent (both are very good).
+
+Tr. A: “due to dryness...” perhaps not very elegant. 
+
+Tr. A: “immediately” for ἐυθὺς: better “automatically” of B.
+
+Τοῦ κατ’αὐτὰ τένοντος: I can’t decide between A and B, as the question should be analysed from a medical/scientific point of view. Both “beneath” and “in” seem grammatically possible, although “beneath” is perhaps more adequate.",2026-01-22T12:20:26.163Z
+25a1f53e714e1511,Expert_16,Galen,,7,6,0,neutral,human1,gemini,7136,"B: “already” for hede is not very correct (at the beginning: cf. A “certainly”, not very correct but better than B); but after a few lines, B translates hede more correctly (“at any rate”). 
+B seems more correct in this case: “Cartilages come next after the ligaments and constitute a substance intermediate between the two; some anatomists call this a tendino-cartilaginous ligament”. A translates perhaps literally (“Cartilage comes after ligament; and there is a kind of body which is midway between the two”) but also somehow vaguely.
+B translates hoion as “as it were”, which is not entirely clear to me; A has “a kind of” which looks better.
+A translates diorisamenos as “make the distinction”: conceptually correct (Galen insisted on diorismoi), but B’s “by determining” is more natural and definitely not incorrect.
+",2026-01-22T12:20:26.163Z
+65af0156d1b1e8a1,Expert_16,Galen,,7,4,0,neutral,human2,openai,5231,Both translations seem correct and accurate. No substantial difference is found.,2026-01-22T12:20:26.163Z

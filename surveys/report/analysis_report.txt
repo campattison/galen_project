@@ -1,0 +1,144 @@
+
+================================================================================
+SURVEY ANALYSIS REPORT: AI vs HUMAN TRANSLATION OF GALEN'S GREEK MEDICAL TEXTS
+================================================================================
+
+STUDY OVERVIEW
+--------------
+This analysis examines survey responses comparing translations of Galen's ancient 
+Greek medical texts. Experts evaluated pairs of translations in a blinded comparison,
+rating their preference on a 5-point Likert scale (-2 to +2).
+
+METHODOLOGY
+-----------
+- Participants compared pairs of translations without knowing which was AI or human
+- Each comparison showed two translations (Left vs Right) in randomized order
+- Preference scores: -2 (Strongly prefer left) to +2 (Strongly prefer right)
+- Scores were normalized to be source-centric (not position-dependent)
+
+TRANSLATION SOURCES
+-------------------
+AI Models:
+  - Claude (Anthropic)
+  - Gemini (Google)
+  - ChatGPT (OpenAI)
+
+Human Translators:
+  - human1 (assumed: Johnston)
+  - human2 (assumed: Singer-van der Eijk)
+
+Note: The mapping of human1/human2 to specific translators should be verified 
+against the original study design.
+
+================================================================================
+KEY FINDINGS
+================================================================================
+
+
+1. DATASET SUMMARY
+------------------
+- Total survey responses: 170
+- Unique expert reviewers: 17
+- Text chunks evaluated: 10
+- AI vs Human comparisons: 170
+
+2. OVERALL TRANSLATION QUALITY RANKINGS
+---------------------------------------
+(Ranked by average preference score across all comparisons)
+
+  Gemini                    [AI]: Avg=+0.36, WinRate=56.9%
+  ChatGPT                   [AI]: Avg=+0.33, WinRate=47.3%
+  Claude                    [AI]: Avg=+0.21, WinRate=49.1%
+  Singer-van der Eijk       [HUMAN]: Avg=-0.01, WinRate=36.3%
+  Johnston                  [HUMAN]: Avg=-0.63, WinRate=20.3%
+
+
+3. AI MODEL PERFORMANCE VS HUMAN TRANSLATIONS
+---------------------------------------------
+When AI translations were directly compared with human translations:
+
+
+Claude:
+  - Comparisons with human translations: 57
+  - Mean preference toward human: -0.211
+  - Human preferred: 19 times (33.3%)
+  - AI preferred: 28 times (49.1%)
+  - Neutral: 10 times (17.5%)
+  - Statistical test (vs neutral): t=-1.30, p=0.1983
+    → No significant difference
+
+Gemini:
+  - Comparisons with human translations: 58
+  - Mean preference toward human: -0.362
+  - Human preferred: 16 times (27.6%)
+  - AI preferred: 33 times (56.9%)
+  - Neutral: 9 times (15.5%)
+  - Statistical test (vs neutral): t=-2.46, p=0.0168
+    → AI significantly preferred
+
+ChatGPT:
+  - Comparisons with human translations: 55
+  - Mean preference toward human: -0.327
+  - Human preferred: 14 times (25.5%)
+  - AI preferred: 26 times (47.3%)
+  - Neutral: 15 times (27.3%)
+  - Statistical test (vs neutral): t=-2.13, p=0.0377
+    → AI significantly preferred
+
+
+4. HEAD-TO-HEAD STATISTICAL COMPARISONS
+---------------------------------------
+Pairwise comparisons showing which source was preferred (excluding neutral ratings):
+
+
+Claude vs Johnston:
+  - Record: 18-4-2 (W-L-T, n=24)
+  - Winner: Claude (81.8% win rate)
+  - p-value: 0.0043 (Very significant (p<0.01))
+
+Claude vs Singer-van der Eijk:
+  - Record: 10-15-8 (W-L-T, n=33)
+  - Winner: Singer-van der Eijk (60.0% win rate)
+  - p-value: 0.4244 (Not significant)
+
+Gemini vs Johnston:
+  - Record: 18-7-6 (W-L-T, n=31)
+  - Winner: Gemini (72.0% win rate)
+  - p-value: 0.0433 (Significant (p<0.05))
+
+Gemini vs Singer-van der Eijk:
+  - Record: 15-9-3 (W-L-T, n=27)
+  - Winner: Gemini (62.5% win rate)
+  - p-value: 0.3075 (Not significant)
+
+ChatGPT vs Johnston:
+  - Record: 14-5-5 (W-L-T, n=24)
+  - Winner: ChatGPT (73.7% win rate)
+  - p-value: 0.0636 (Not significant)
+
+ChatGPT vs Singer-van der Eijk:
+  - Record: 12-9-10 (W-L-T, n=31)
+  - Winner: ChatGPT (57.1% win rate)
+  - p-value: 0.6636 (Not significant)
+
+
+5. INTERPRETATION NOTES
+-----------------------
+• Higher average preference scores indicate the translation was more frequently 
+  preferred by experts.
+• Win rate represents the percentage of non-neutral comparisons where the source
+  was preferred.
+• Statistical significance was tested using binomial tests (head-to-head) and 
+  one-sample t-tests (vs neutral).
+• The blinded design controls for bias, as reviewers did not know which 
+  translation was human or AI-generated.
+
+================================================================================
+GENERATED FILES
+================================================================================
+1. chart1_llm_vs_human_preference.png - Likert distribution by AI model
+2. chart1b_win_rate.png - Win rate comparison (Human vs AI)
+3. chart2_head_to_head.png - Pairwise comparison matrix
+4. chart3_overall_ranking.png - Overall model rankings
+
+================================================================================

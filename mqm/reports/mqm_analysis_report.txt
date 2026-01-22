@@ -1,0 +1,178 @@
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║     MQM ANALYSIS REPORT: AI TRANSLATION QUALITY OF GALEN'S MEDICAL TEXTS     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+EXECUTIVE SUMMARY
+─────────────────
+This report presents a Multidimensional Quality Metrics (MQM) analysis of AI 
+translations of Galen's ancient Greek medical texts. Three leading AI models 
+were evaluated: Claude (Anthropic), Gemini (Google), and ChatGPT (OpenAI).
+
+Key Metrics:
+• TQS (Translation Quality Score): 0-100 scale where higher = better quality
+• APT (Accumulated Penalty Total): Sum of weighted error penalties
+• Error categories: Neutral, Minor, Major, Critical severity levels
+
+═══════════════════════════════════════════════════════════════════════════════
+                              DATASET OVERVIEW
+═══════════════════════════════════════════════════════════════════════════════
+
+    Source Texts:        Comp, Mixtures
+    Chunks per Text:     10
+    Total Evaluations:   60
+    Overall Mean TQS:    87.54
+    Overall Std Dev:     20.25
+
+═══════════════════════════════════════════════════════════════════════════════
+                           1. OVERALL MODEL RANKINGS
+═══════════════════════════════════════════════════════════════════════════════
+
+    ┌─────────────┬──────────┬──────────┬─────────────────┐
+    │ Model       │ Mean TQS │ Std Dev  │ Range           │
+    ├─────────────┼──────────┼──────────┼─────────────────┤
+    │ Gemini      │    90.27 │    17.15 │   25.2 - 100.0  │
+    │ Claude      │    88.73 │    18.61 │   21.8 - 100.0  │
+    │ ChatGPT     │    83.61 │    24.63 │    0.0 - 99.3   │
+    └─────────────┴──────────┴──────────┴─────────────────┘
+
+Interpretation: Gemini achieves the highest mean TQS, followed by Claude and ChatGPT.
+
+═══════════════════════════════════════════════════════════════════════════════
+                          2. PERFORMANCE BY SOURCE TEXT
+═══════════════════════════════════════════════════════════════════════════════
+
+    Comp (De Compositione / On Mixtures):
+    ─────────────────────────────────────
+    Gemini     │████████████████░░░░│ 83.4 (±22.5)
+    Claude     │████████████████░░░░│ 81.2 (±24.5)
+    ChatGPT    │██████████████░░░░░░│ 74.9 (±32.7)
+
+    Mixtures (De Compositione / On Mixtures):
+    ─────────────────────────────────────
+    Gemini     │███████████████████░│ 97.1 (±3.3)
+    Claude     │███████████████████░│ 96.3 (±2.3)
+    ChatGPT    │██████████████████░░│ 92.3 (±6.6)
+
+═══════════════════════════════════════════════════════════════════════════════
+                        3. CHUNK-BY-CHUNK TQS BREAKDOWN
+═══════════════════════════════════════════════════════════════════════════════
+
+    Comp:
+    ┌────────┬──────────┬──────────┬──────────┬────────────┐
+    │ Chunk  │  Claude  │  Gemini  │ ChatGPT  │   Winner   │
+    ├────────┼──────────┼──────────┼──────────┼────────────┤
+    │   1    │  100.0   │   99.4   │   99.3   │ Claude     │
+    │   2    │   88.8   │   85.4   │   86.0   │ Claude     │
+    │   3    │   83.0   │   88.3   │   65.9*  │ Gemini     │
+    │   4    │   89.8   │   95.2   │   97.1   │ ChatGPT    │
+    │   5    │   89.7   │   90.5   │   88.4   │ Gemini     │
+    │   6    │   97.9   │   95.8   │   95.7   │ Claude     │
+    │   7    │   94.2   │   93.9   │   97.8   │ ChatGPT    │
+    │   8    │   21.8*  │   65.8*  │    0.0*  │ Gemini     │
+    │   9    │   92.8   │   95.0   │   82.8   │ Gemini     │
+    │   10   │   54.1*  │   25.2*  │   36.0*  │ Claude     │
+    └────────┴──────────┴──────────┴──────────┴────────────┘
+    (* indicates TQS below 70 - potential quality concern)
+
+    Mixtures:
+    ┌────────┬──────────┬──────────┬──────────┬────────────┐
+    │ Chunk  │  Claude  │  Gemini  │ ChatGPT  │   Winner   │
+    ├────────┼──────────┼──────────┼──────────┼────────────┤
+    │   1    │   96.7   │   99.3   │   97.0   │ Gemini     │
+    │   2    │   92.0   │   99.7   │   77.8   │ Gemini     │
+    │   3    │  100.0   │  100.0   │   97.5   │ Gemini     │
+    │   4    │   96.5   │   99.1   │   96.7   │ Gemini     │
+    │   5    │   97.0   │   97.1   │   89.6   │ Gemini     │
+    │   6    │   98.0   │   90.1   │   87.6   │ Claude     │
+    │   7    │   97.1   │   97.5   │   97.9   │ ChatGPT    │
+    │   8    │   94.8   │   98.9   │   97.9   │ Gemini     │
+    │   9    │   93.3   │   92.7   │   93.1   │ Claude     │
+    │   10   │   97.1   │   96.7   │   88.1   │ Claude     │
+    └────────┴──────────┴──────────┴──────────┴────────────┘
+    (* indicates TQS below 70 - potential quality concern)
+
+═══════════════════════════════════════════════════════════════════════════════
+                             4. MODEL WIN COUNTS
+═══════════════════════════════════════════════════════════════════════════════
+
+    Number of chunks where each model achieved the highest TQS:
+    Gemini     │█████████░░░░░░░░░░░│ 9 chunks (45%)
+    Claude     │███████░░░░░░░░░░░░░│ 7 chunks (35%)
+    ChatGPT    │███░░░░░░░░░░░░░░░░░│ 3 chunks (15%)
+    Ties: 1 chunks
+
+═══════════════════════════════════════════════════════════════════════════════
+                              5. ERROR ANALYSIS
+═══════════════════════════════════════════════════════════════════════════════
+
+    Total Errors by Severity (across all 20 chunks):
+
+    ┌─────────────┬──────────┬────────┬────────┬──────────┬─────────┐
+    │ Model       │ Neutral  │ Minor  │ Major  │ Critical │  TOTAL  │
+    ├─────────────┼──────────┼────────┼────────┼──────────┼─────────┤
+    │ Claude      │       22 │     79 │     33 │       18 │     152 │
+    │ Gemini      │       29 │     75 │     30 │       16 │     150 │
+    │ ChatGPT     │       28 │     97 │     37 │       28 │     190 │
+    └─────────────┴──────────┴────────┴────────┴──────────┴─────────┘
+
+    Error Categories:
+    
+    ┌─────────────┬─────────────────┬──────────────┐
+    │ Model       │ Terminology     │ Accuracy     │
+    ├─────────────┼─────────────────┼──────────────┤
+    │ Claude      │             554 │          107 │
+    │ Gemini      │             460 │          144 │
+    │ ChatGPT     │             741 │          205 │
+    └─────────────┴─────────────────┴──────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+                          6. STATISTICAL COMPARISONS
+═══════════════════════════════════════════════════════════════════════════════
+
+    Claude vs Gemini:
+    ──────────────────────────────
+    • Mean difference: 1.54 points (favors Gemini)
+    • t-statistic: -0.272
+    • p-value: 0.7873
+    • Result: Not statistically significant
+
+    Claude vs ChatGPT:
+    ──────────────────────────────
+    • Mean difference: 5.12 points (favors Claude)
+    • t-statistic: 0.742
+    • p-value: 0.4625
+    • Result: Not statistically significant
+
+    Gemini vs ChatGPT:
+    ──────────────────────────────
+    • Mean difference: 6.66 points (favors Gemini)
+    • t-statistic: 0.993
+    • p-value: 0.3272
+    • Result: Not statistically significant
+
+═══════════════════════════════════════════════════════════════════════════════
+                         7. CHUNKS REQUIRING ATTENTION
+═══════════════════════════════════════════════════════════════════════════════
+
+    The following chunks had at least one model score below 70 (potential issues):
+    • Comp Chunk 8: lowest TQS = 0.0
+    • Comp Chunk 10: lowest TQS = 25.2
+    • Comp Chunk 3: lowest TQS = 65.9
+
+═══════════════════════════════════════════════════════════════════════════════
+                              GENERATED OUTPUTS
+═══════════════════════════════════════════════════════════════════════════════
+
+    Charts (in charts/ folder):
+    ─────────────────────────────
+    1. chart1_tqs_boxplot.png    - TQS distribution by model
+    2. chart2_tqs_heatmap.png    - Chunk-by-chunk TQS heatmap
+    3. chart3_tqs_lineplot.png   - TQS trajectory across chunks
+    4. chart4_error_breakdown.png - Error analysis by severity/category
+
+    Reports (in reports/ folder):
+    ─────────────────────────────
+    1. mqm_analysis_report.txt   - This report
+
+═══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,4 @@
+# Private data - DO NOT COMMIT
+survey-responses-*.csv
+!survey-responses-anonymized.csv
+expert_mapping_PRIVATE.csv

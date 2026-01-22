@@ -1,0 +1,109 @@
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              METRICS CORRELATION ANALYSIS REPORT                             ║
+║          Automated MT Metrics vs Human Evaluations                           ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+EXECUTIVE SUMMARY
+─────────────────
+This analysis examines how well automated machine translation metrics correlate
+with human evaluation scores. We compare:
+
+  • Automated MT Metrics: BLEU-4, chrF++, METEOR, ROUGE-L, BERTScore, COMET
+  • Human Evaluations: 
+    - MQM TQS (Translation Quality Score from expert annotation)
+    - Survey Preferences (blind expert preferences)
+
+═══════════════════════════════════════════════════════════════════════════════
+                              DATA SOURCES
+═══════════════════════════════════════════════════════════════════════════════
+
+    1. Automated MT Metrics
+       - Source: mt_eval/output/reports/
+       - Texts: Comp (De Compositione), Mixtures (De Temperamentis)
+       - Chunks: 10 per text
+       - Models: Claude, Gemini, ChatGPT (OpenAI)
+       - N = 60 chunk-model observations
+
+    2. MQM Expert Annotation
+       - Source: mqm/
+       - Metric: TQS (Translation Quality Score, 0-100)
+       - Methodology: Professional MQM annotation
+
+    3. Blind Expert Survey
+       - Source: surveys/
+       - Metric: Preference score (-2 to +2)
+       - N = 160 pairwise comparisons
+
+═══════════════════════════════════════════════════════════════════════════════
+                    CORRELATION COEFFICIENTS SUMMARY
+═══════════════════════════════════════════════════════════════════════════════
+
+    ┌─────────────┬────────────────────┬────────────────────┬──────────────────┐
+    │ Metric      │ Pearson r (TQS)    │ Spearman ρ (TQS)   │ Kendall τ (Surv) │
+    ├─────────────┼────────────────────┼────────────────────┼──────────────────┤
+    │ BERTScore   │ +0.7530***         │ +0.4341***         │ -0.0100          │
+    │ BLEU-4      │ +0.4471***         │ +0.4163***         │ +0.0000          │
+    │ COMET       │ +0.6050***         │ +0.5130***         │ +0.0100          │
+    │ METEOR      │ +0.5330***         │ +0.2604*           │ -0.0100          │
+    │ ROUGE-L     │ +0.3448**          │ +0.3145*           │ -0.0450          │
+    │ chrF++      │ +0.5303***         │ +0.3759**          │ +0.0450          │
+    └─────────────┴────────────────────┴────────────────────┴──────────────────┘
+    
+    Significance: * p<0.05, ** p<0.01, *** p<0.001
+
+═══════════════════════════════════════════════════════════════════════════════
+                            INTERPRETATION
+═══════════════════════════════════════════════════════════════════════════════
+
+    Correlation Strength Guidelines:
+    ─────────────────────────────────
+    |r| < 0.3   : Weak correlation
+    |r| 0.3-0.7 : Moderate correlation  
+    |r| > 0.7   : Strong correlation
+
+    Key Findings:
+    ─────────────
+
+    1. Best TQS Predictor: BERTScore
+       - Pearson r = 0.7530
+       - This metric best predicts the expert MQM quality scores.
+
+    2. Best Survey Predictor: chrF++
+       - Kendall's τ = 0.0450
+       - This metric best predicts blind expert preferences.
+
+    3. Statistically Significant Correlations with TQS:
+       BLEU-4, chrF++, METEOR, ROUGE-L, BERTScore, COMET
+    
+    4. Statistically Significant Correlations with Survey:
+       None at p<0.05
+
+═══════════════════════════════════════════════════════════════════════════════
+                              CONCLUSIONS
+═══════════════════════════════════════════════════════════════════════════════
+
+    • Automated metrics show MODERATE TO STRONG correlation with MQM expert
+      annotation, suggesting they can serve as reasonable proxies for
+      translation quality assessment.
+
+    • Automated metrics show limited correlation with blind expert
+      preferences, suggesting human evaluation remains essential for
+      this specialized domain (ancient Greek medical texts).
+
+═══════════════════════════════════════════════════════════════════════════════
+                            GENERATED OUTPUTS
+═══════════════════════════════════════════════════════════════════════════════
+
+    Charts (in charts/ folder):
+    ─────────────────────────────
+    1. chart1_correlation_heatmap.png - Correlation coefficient heatmap
+    2. chart2_scatter_tqs.png         - Scatter plots: metrics vs TQS
+    3. chart3_correlation_bars.png    - Bar chart comparing correlations
+
+    Reports (in reports/ folder):
+    ─────────────────────────────
+    1. correlation_analysis_report.txt - This report
+    2. correlation_data.csv            - Raw correlation data
+
+═══════════════════════════════════════════════════════════════════════════════

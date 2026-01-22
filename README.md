@@ -1,165 +1,164 @@
-# Galen Translation Evaluation Pipeline
+# Evaluating AI Translation of Ancient Greek Medical Texts
 
-A streamlined system for translating Ancient Greek texts and evaluating translation quality using state-of-the-art NLP metrics.
+A comparative evaluation of large language model (LLM) translations of Galen's ancient Greek medical texts against professional human translations.
 
-## 🎯 What This Does
+## Overview
 
-1. **Parses** your input document (Greek + reference translations)
-2. **Translates** Greek text using 3 AI models (OpenAI GPT, Claude, Gemini)
-3. **Evaluates** translations against references using 6 metric families
-4. **Reports** clear, actionable results
+This project evaluates translations from three LLMs (Claude, Gemini, ChatGPT) using multiple evaluation methodologies:
 
-## 📁 Project Structure
+1. **Blind Expert Survey** - Classicists and medical historians compared translations without knowing their source
+2. **MQM Annotation** - Professional Multidimensional Quality Metrics scoring
+3. **Automated MT Metrics** - BLEU, chrF++, BERTScore, COMET, and others
+
+The source texts are excerpts from Galen's *De Temperamentis* (On Mixtures) and *De Compositione Medicamentorum* (On the Composition of Drugs).
+
+## Key Findings
+
+### AI vs Human Translation Quality
+
+In blind expert comparisons, AI translations were generally preferred over human translations:
+
+| Source | Mean Preference | Win Rate |
+|--------|-----------------|----------|
+| Gemini | +0.36 | 56.9% |
+| ChatGPT | +0.33 | 47.3% |
+| Claude | +0.21 | 49.1% |
+| Human (Singer-van der Eijk) | -0.01 | 36.3% |
+| Human (Johnston) | -0.63 | 20.3% |
+
+### Automated Metrics vs Human Judgment
+
+| Metric | Correlation with MQM (Pearson r) | Correlation with Survey (Kendall τ) |
+|--------|----------------------------------|-------------------------------------|
+| BERTScore | 0.753*** | -0.010 |
+| COMET | 0.605*** | +0.010 |
+| chrF++ | 0.530*** | +0.045 |
+| BLEU-4 | 0.447*** | 0.000 |
+
+**Key insight:** Automated metrics correlate well with formal quality annotation but fail to predict expert preferences in blind comparisons (no metric achieved significance). This validates the continued need for human evaluation in specialized translation domains.
+
+## Repository Structure
 
 ```
-galen_eval/
-├── input/              # Place your input documents here
-├── output/            
-│   ├── translations/   # Raw translation outputs
-│   ├── evaluations/    # Evaluation scores
-│   └── reports/        # Human-readable reports
-├── src/               
-│   ├── parser.py       # Parse input documents
-│   ├── translator.py   # Call translation APIs
-│   ├── evaluator.py    # Run evaluation metrics
-│   └── reporter.py     # Generate reports
-├── config/
-│   └── .env            # API keys (not in git)
-├── requirements.txt
-├── pipeline.py         # Main workflow script
-└── README.md          # This file
+.
+├── surveys/                    # Blind expert preference survey
+│   ├── src/
+│   │   └── analysis.py
+│   ├── charts/                 # Generated visualizations
+│   ├── reports/
+│   └── survey-responses-anonymized.csv
+│
+├── mqm/                        # MQM quality annotation analysis
+│   ├── mqm_analysis.py
+│   ├── charts/
+│   ├── reports/
+│   └── *.csv                   # MQM data exports
+│
+├── metrics_correlation/        # Correlation analysis
+│   ├── correlation_analysis.py
+│   ├── data_sources/           # Symlinks to source data
+│   ├── charts/
+│   └── reports/
+│
+├── mt_eval/                    # MT evaluation pipeline
+│   ├── src/
+│   ├── input/                  # Source Greek texts
+│   └── output/
+│       ├── translations/
+│       ├── evaluations/
+│       └── reports/
+│
+└── WORKLOG_2026-01-22_analysis.md
 ```
 
-## 🚀 Quick Start
+## Running the Analyses
 
-### 1. Setup (one time)
+### Requirements
 
 ```bash
-cd galen_eval
-
-# Run setup script (creates venv, installs dependencies)
-./setup.sh
-
-# The pipeline will look for .env in project root (../.env) or config/.env
-# Make sure your .env file has your API keys
+pip install pandas numpy matplotlib scipy
 ```
 
-### 2. Run Pipeline
+### Survey Analysis
 
 ```bash
-# Activate virtual environment
-source venv/bin/activate
-
-# Run the full pipeline
-python3 pipeline.py input/10_chunks.txt
-
-# When done
-deactivate
+cd surveys
+python3 src/analysis.py
 ```
 
-This will:
-- Parse the document
-- Get translations from all 3 APIs
-- Evaluate against both reference translations
-- Generate a comprehensive report
+Generates preference distributions, win rates, and head-to-head comparisons.
 
-## 📊 Evaluation Metrics
+### MQM Analysis
 
-### Lexical Metrics (word/character level)
-- **BLEU-4** - N-gram precision (4-gram)
-- **chrF++** - Character n-gram F-score with word bigrams
-- **METEOR** - Incorporates stemming and synonyms
-- **ROUGE-L** - Longest common subsequence
-
-### Neural/Semantic Metrics (meaning level)
-- **BERTScore** - Contextual word embeddings
-- **COMET** - Neural MT evaluation (requires source text)
-- **BLEURT** - Learned evaluation metric (Linux only)
-
-## 📋 Input Format
-
-Your input file should have chunks with this structure:
-
-```
-Chunk 1
-
-[Greek text]
-
-[Reference Translation 1]
-
-[Reference Translation 2]
-
-Chunk 2
-
-[Greek text]
-
-[Reference Translation 1]
-
-[Reference Translation 2]
-
-...
+```bash
+cd mqm
+MPLBACKEND=Agg python3 mqm_analysis.py
 ```
 
-The parser automatically:
-- Identifies chunks
-- Extracts Greek text (lines with Greek characters)
-- Extracts reference translations (English lines)
-- Associates each chunk's translations
+Generates TQS distributions, chunk-by-chunk heatmaps, and error breakdowns.
 
-## 📤 Output
+### Metrics Correlation
 
-### 1. Translations JSON (`output/translations/`)
-```json
-{
-  "chunk_1": {
-    "greek": "...",
-    "openai": "...",
-    "claude": "...",
-    "gemini": "..."
-  }
-}
+```bash
+cd metrics_correlation
+
+# Set up data source symlinks (optional, for transparency)
+chmod +x setup_data_links.sh
+./setup_data_links.sh
+
+# Run analysis
+MPLBACKEND=Agg python3 correlation_analysis.py
 ```
 
-### 2. Evaluation JSON (`output/evaluations/`)
-```json
-{
-  "chunk_1": {
-    "vs_reference_1": {
-      "openai": {"BLEU-4": 0.45, ...},
-      "claude": {"BLEU-4": 0.52, ...},
-      "gemini": {"BLEU-4": 0.48, ...}
-    },
-    "vs_reference_2": {...}
-  }
-}
+Computes Pearson, Spearman, and Kendall correlations between automated metrics and human evaluations.
+
+## Data
+
+### Survey Data
+- **Format:** CSV with anonymized expert IDs
+- **Fields:** Chunk ID, Preference Score (-2 to +2), Left/Right Translation sources, Expert comments
+- **Note:** Original data with expert names is excluded from this repository
+
+### MQM Data
+- **Format:** CSV exports from MQM annotation spreadsheets
+- **Metrics:** TQS (Translation Quality Score), error counts by severity (Neutral, Minor, Major, Critical)
+
+### Automated Metrics
+- **Computed using:** SacreBLEU, BERTScore, COMET
+- **Reference translations:** Johnston (1997), Singer & van der Eijk
+
+## Source Texts
+
+| Text | Description | Chunks |
+|------|-------------|--------|
+| *De Temperamentis* | On Mixtures/Temperaments | 10 |
+| *De Compositione Medicamentorum* | On the Composition of Drugs | 10 |
+
+## Models Evaluated
+
+| Model | Provider | Version |
+|-------|----------|---------|
+| Claude | Anthropic | Claude 3.5 Sonnet |
+| Gemini | Google | Gemini 1.5 Pro |
+| ChatGPT | OpenAI | GPT-4 |
+
+## Human Reference Translations
+
+1. **Johnston** - I. Johnston, *Galen: On Temperaments* (1997)
+2. **Singer-van der Eijk** - P.N. Singer & P.J. van der Eijk, *Galen: Works on Human Nature* (2018)
+
+## Citation
+
+If you use this data or methodology, please cite:
+
+```
+[Citation information to be added]
 ```
 
-### 3. Summary Report (`output/reports/`)
-Clear, human-readable summary with:
-- Overall model rankings
-- Best model per metric
-- Statistical summaries
-- Example translations
+## License
 
-## ⚙️ Configuration
+[License information to be added]
 
-Edit `pipeline.py` to customize:
-- Which models to use
-- Which metrics to compute
-- Parallel processing options
-- Output verbosity
+## Acknowledgments
 
-## 💡 Tips
-
-- **For best results**: Keep chunks to 1-2 sentences (parser handles this)
-- **Multiple references**: Evaluating against 2 references increases reliability
-- **GPU recommended**: For neural metrics (BERTScore, COMET)
-- **Rate limits**: Pipeline includes delays to respect API limits
-
-## 📚 Requirements
-
-- Python 3.8+
-- API keys for: OpenAI, Anthropic (Claude), Google (Gemini)
-- ~2GB disk space for evaluation models
-- GPU optional but recommended for neural metrics
-
+We thank the classicists and medical historians who participated in the blind evaluation survey.
