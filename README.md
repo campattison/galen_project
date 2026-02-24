@@ -1,8 +1,6 @@
 # AI Translation Evaluation of Ancient Greek Medical Texts
 
-Code and data for evaluating AI-generated translations of Galen's medical works against expert human translations. Companion repository to:
-
-> [Author(s)]. "**[Paper Title]**." *Proceedings of the National Academy of Sciences* (forthcoming).
+Code and data for evaluating AI-generated translations of Galen's medical works against expert human translations.
 
 ## Source Texts
 
