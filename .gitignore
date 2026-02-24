@@ -1,0 +1,47 @@
+# Environment and secrets
+.env
+*.env
+config/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+
+# Models and large assets
+models/
+checkpoints/
+cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Agent/editor config
+.claude/
+CLAUDE.md
+LOG.md
+WORKLOG*.md
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Archives and drafts
+archive/
+*.docx
+~$*.docx
+*.log
+
+# Diorisis corpus (download via download_diorisis.sh)
+corpus_metrics/Diorisis/
+
+# Excluded pipeline components (not part of this release)
+mt_eval copy/

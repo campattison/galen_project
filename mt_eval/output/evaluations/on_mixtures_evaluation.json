@@ -1,0 +1,2698 @@
+{
+  "methodology": "multi-reference",
+  "methodology_details": {
+    "bleu-4": "multi-reference (n-grams matched against any reference)",
+    "chrf++": "multi-reference (native support, includes word bigrams)",
+    "meteor": "multi-reference (native support, includes synonyms/stems)",
+    "rouge-l": "max across references",
+    "bertscore": "max across references",
+    "comet": "max across references",
+    "bleurt": "max across references"
+  },
+  "by_model": {
+    "claude": {
+      "BLEU-4": {
+        "mean": 0.3419757689970717,
+        "std": 0.05869527392731118,
+        "min": 0.2442006325356828,
+        "max": 0.45720892160390597,
+        "count": 10
+      },
+      "chrF++": {
+        "mean": 0.5536234979894866,
+        "std": 0.032300456562486056,
+        "min": 0.5079508194217557,
+        "max": 0.6243511200058942,
+        "count": 10
+      },
+      "METEOR": {
+        "mean": 0.4845862517656195,
+        "std": 0.03204530819929453,
+        "min": 0.43089628275496095,
+        "max": 0.5578790705961099,
+        "count": 10
+      },
+      "ROUGE-L": {
+        "mean": 0.5532174763466073,
+        "std": 0.05333819324471596,
+        "min": 0.499108734402852,
+        "max": 0.6744639376218323,
+        "count": 10
+      },
+      "BERTScore": {
+        "mean": 0.9159475922584533,
+        "std": 0.008863916394821033,
+        "min": 0.9023823738098145,
+        "max": 0.9326525330543518,
+        "count": 10
+      },
+      "BLEURT": {
+        "mean": 0.503631716966629,
+        "std": 0.03668341652341901,
+        "min": 0.4502583146095276,
+        "max": 0.5628882646560669,
+        "count": 10
+      },
+      "COMET": {
+        "mean": 0.7976282238960266,
+        "std": 0.019544463114425446,
+        "min": 0.7722128629684448,
+        "max": 0.8297576904296875,
+        "count": 10
+      }
+    },
+    "gemini": {
+      "BLEU-4": {
+        "mean": 0.3420702587375172,
+        "std": 0.04736053041002048,
+        "min": 0.2852461880146896,
+        "max": 0.4281693964039956,
+        "count": 10
+      },
+      "chrF++": {
+        "mean": 0.5702366905089117,
+        "std": 0.026823092302884367,
+        "min": 0.5415504153168635,
+        "max": 0.6318697530082567,
+        "count": 10
+      },
+      "METEOR": {
+        "mean": 0.4999037586587364,
+        "std": 0.03734975029571381,
+        "min": 0.4470516353256441,
+        "max": 0.5497407283548726,
+        "count": 10
+      },
+      "ROUGE-L": {
+        "mean": 0.559687755951872,
+        "std": 0.046460634931272976,
+        "min": 0.5051546391752577,
+        "max": 0.6703910614525139,
+        "count": 10
+      },
+      "BERTScore": {
+        "mean": 0.9153633356094361,
+        "std": 0.009594618600307818,
+        "min": 0.9030231833457947,
+        "max": 0.9338334202766418,
+        "count": 10
+      },
+      "BLEURT": {
+        "mean": 0.5132341742515564,
+        "std": 0.04062100014222362,
+        "min": 0.4700329303741455,
+        "max": 0.5903801918029785,
+        "count": 10
+      },
+      "COMET": {
+        "mean": 0.8066198885440826,
+        "std": 0.01681121587135473,
+        "min": 0.7760372161865234,
+        "max": 0.8323825597763062,
+        "count": 10
+      }
+    },
+    "openai": {
+      "BLEU-4": {
+        "mean": 0.31432248517430483,
+        "std": 0.0581333838520221,
+        "min": 0.24208756157263367,
+        "max": 0.42164808391738773,
+        "count": 10
+      },
+      "chrF++": {
+        "mean": 0.5342981691646248,
+        "std": 0.03465140263588569,
+        "min": 0.4968145842425597,
+        "max": 0.6182622761249436,
+        "count": 10
+      },
+      "METEOR": {
+        "mean": 0.4643593608258211,
+        "std": 0.05076611082827008,
+        "min": 0.36544385027931525,
+        "max": 0.5474211725145438,
+        "count": 10
+      },
+      "ROUGE-L": {
+        "mean": 0.509231318544536,
+        "std": 0.05004473008833501,
+        "min": 0.45569620253164556,
+        "max": 0.6209523809523808,
+        "count": 10
+      },
+      "BERTScore": {
+        "mean": 0.910113251209259,
+        "std": 0.011084840600128265,
+        "min": 0.8959963321685791,
+        "max": 0.9308294057846069,
+        "count": 10
+      },
+      "BLEURT": {
+        "mean": 0.49762027263641356,
+        "std": 0.03226482084229021,
+        "min": 0.46019017696380615,
+        "max": 0.5746767520904541,
+        "count": 10
+      },
+      "COMET": {
+        "mean": 0.7990404605865479,
+        "std": 0.018473264417481736,
+        "min": 0.7652939558029175,
+        "max": 0.8284248113632202,
+        "count": 10
+      }
+    }
+  },
+  "by_metric": {
+    "BLEU-4": {
+      "claude": 0.3419757689970717,
+      "gemini": 0.3420702587375172,
+      "openai": 0.31432248517430483,
+      "best_model": {
+        "name": "gemini",
+        "score": 0.3420702587375172
+      }
+    },
+    "chrF++": {
+      "claude": 0.5536234979894866,
+      "gemini": 0.5702366905089117,
+      "openai": 0.5342981691646248,
+      "best_model": {
+        "name": "gemini",
+        "score": 0.5702366905089117
+      }
+    },
+    "METEOR": {
+      "claude": 0.4845862517656195,
+      "gemini": 0.4999037586587364,
+      "openai": 0.4643593608258211,
+      "best_model": {
+        "name": "gemini",
+        "score": 0.4999037586587364
+      }
+    },
+    "ROUGE-L": {
+      "claude": 0.5532174763466073,
+      "gemini": 0.559687755951872,
+      "openai": 0.509231318544536,
+      "best_model": {
+        "name": "gemini",
+        "score": 0.559687755951872
+      }
+    },
+    "BERTScore": {
+      "claude": 0.9159475922584533,
+      "gemini": 0.9153633356094361,
+      "openai": 0.910113251209259,
+      "best_model": {
+        "name": "claude",
+        "score": 0.9159475922584533
+      }
+    },
+    "BLEURT": {
+      "claude": 0.503631716966629,
+      "gemini": 0.5132341742515564,
+      "openai": 0.49762027263641356,
+      "best_model": {
+        "name": "gemini",
+        "score": 0.5132341742515564
+      }
+    },
+    "COMET": {
+      "claude": 0.7976282238960266,
+      "gemini": 0.8066198885440826,
+      "openai": 0.7990404605865479,
+      "best_model": {
+        "name": "gemini",
+        "score": 0.8066198885440826
+      }
+    }
+  },
+  "by_reference": {
+    "claude": {
+      "BLEU-4": {
+        "ref1": {
+          "mean": 0.24318307223742597,
+          "std": 0.05788258017901028,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.20618325167136167,
+          "std": 0.04644356481947092,
+          "count": 10
+        }
+      },
+      "chrF++": {
+        "ref1": {
+          "mean": 0.552711046230103,
+          "std": 0.03169652927535184,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.519521523846963,
+          "std": 0.032582346198816975,
+          "count": 10
+        }
+      },
+      "METEOR": {
+        "ref1": {
+          "mean": 0.47649236909077597,
+          "std": 0.03593968745260428,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.4536796909183848,
+          "std": 0.05029444938414688,
+          "count": 10
+        }
+      },
+      "ROUGE-L": {
+        "ref1": {
+          "mean": 0.5477292737137971,
+          "std": 0.058643079578220104,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.5012270435352663,
+          "std": 0.049413318654698495,
+          "count": 10
+        }
+      },
+      "BERTScore": {
+        "ref1": {
+          "mean": 0.9143694519996644,
+          "std": 0.009213191969222935,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.9094752788543701,
+          "std": 0.009440447011940278,
+          "count": 10
+        }
+      },
+      "BLEURT": {
+        "ref1": {
+          "mean": 0.49369866251945493,
+          "std": 0.04095400992495473,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.47860472202301024,
+          "std": 0.034927832838987205,
+          "count": 10
+        }
+      },
+      "COMET": {
+        "ref1": {
+          "mean": 0.7862649738788605,
+          "std": 0.020472757761290247,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.7943190217018128,
+          "std": 0.018746764011334967,
+          "count": 10
+        }
+      }
+    },
+    "gemini": {
+      "BLEU-4": {
+        "ref1": {
+          "mean": 0.25107394254654525,
+          "std": 0.0524066790336011,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.2129311397529745,
+          "std": 0.04023842253095277,
+          "count": 10
+        }
+      },
+      "chrF++": {
+        "ref1": {
+          "mean": 0.5622706021385858,
+          "std": 0.027653214827805844,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.5304227745146756,
+          "std": 0.03131915244272939,
+          "count": 10
+        }
+      },
+      "METEOR": {
+        "ref1": {
+          "mean": 0.4977118407871578,
+          "std": 0.038450493683481524,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.4655226649453906,
+          "std": 0.03442357519368803,
+          "count": 10
+        }
+      },
+      "ROUGE-L": {
+        "ref1": {
+          "mean": 0.5502049395299791,
+          "std": 0.05144742979912224,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.49521198939711314,
+          "std": 0.055527075925191335,
+          "count": 10
+        }
+      },
+      "BERTScore": {
+        "ref1": {
+          "mean": 0.9114305555820466,
+          "std": 0.009717110668268636,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.909217220544815,
+          "std": 0.00943335416211935,
+          "count": 10
+        }
+      },
+      "BLEURT": {
+        "ref1": {
+          "mean": 0.5040091037750244,
+          "std": 0.03439161039334519,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.4935236692428589,
+          "std": 0.03995570208287115,
+          "count": 10
+        }
+      },
+      "COMET": {
+        "ref1": {
+          "mean": 0.7933193802833557,
+          "std": 0.019850177001783802,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.8048999309539795,
+          "std": 0.015230378412366715,
+          "count": 10
+        }
+      }
+    },
+    "openai": {
+      "BLEU-4": {
+        "ref1": {
+          "mean": 0.21568407829326325,
+          "std": 0.04380392499267861,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.20146485304188122,
+          "std": 0.03808096400678263,
+          "count": 10
+        }
+      },
+      "chrF++": {
+        "ref1": {
+          "mean": 0.529139356727151,
+          "std": 0.03217344205585878,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.5129405731452356,
+          "std": 0.034110862848010355,
+          "count": 10
+        }
+      },
+      "METEOR": {
+        "ref1": {
+          "mean": 0.45249974634955487,
+          "std": 0.052572996602231935,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.4436177771390903,
+          "std": 0.04607999243053222,
+          "count": 10
+        }
+      },
+      "ROUGE-L": {
+        "ref1": {
+          "mean": 0.5037757817167544,
+          "std": 0.0500671833414663,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.48030646103712316,
+          "std": 0.05221504479958553,
+          "count": 10
+        }
+      },
+      "BERTScore": {
+        "ref1": {
+          "mean": 0.9070360720157623,
+          "std": 0.010737564709997472,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.906931358575821,
+          "std": 0.010541424088866404,
+          "count": 10
+        }
+      },
+      "BLEURT": {
+        "ref1": {
+          "mean": 0.4874801218509674,
+          "std": 0.03372186680771573,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.4764753580093384,
+          "std": 0.029746970734239035,
+          "count": 10
+        }
+      },
+      "COMET": {
+        "ref1": {
+          "mean": 0.7829497754573822,
+          "std": 0.02136634362761216,
+          "count": 10
+        },
+        "ref2": {
+          "mean": 0.7989591062068939,
+          "std": 0.01843286445385947,
+          "count": 10
+        }
+      }
+    }
+  },
+  "overall_rankings": [
+    [
+      "gemini",
+      0.6010165517517304
+    ],
+    [
+      "claude",
+      0.5929443611742706
+    ],
+    [
+      "openai",
+      0.5755693311630724
+    ]
+  ],
+  "detailed_scores": [
+    {
+      "chunk_id": "1",
+      "model_name": "claude",
+      "scores": {
+        "BLEU-4": 0.45720892160390597,
+        "chrF++": 0.5842728410155418,
+        "METEOR": 0.5578790705961099,
+        "ROUGE-L": 0.6133828996282528,
+        "BERTScore": 0.9285278916358948,
+        "BLEURT": 0.5628882646560669,
+        "COMET": 0.8256305456161499
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 45.7208921603906,
+          "brevity_penalty": 0.9801986733067553,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 58.42728410155418,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.6043956043956044,
+          "recall": 0.6226415094339622,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9340298175811768,
+          "recall": 0.9230904579162598,
+          "f1": 0.9285278916358948,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.3020954992880151,
+          "chrF++": 0.5786133655582879,
+          "METEOR": 0.5578790705961099,
+          "ROUGE-L": 0.6133828996282528,
+          "BERTScore": 0.9237424731254578,
+          "BLEURT": 0.5628882646560669,
+          "COMET": 0.8030046820640564
+        },
+        "ref2": {
+          "BLEU-4": 0.3104587444970481,
+          "chrF++": 0.5842728410155418,
+          "METEOR": 0.5502796506142358,
+          "ROUGE-L": 0.5961199294532629,
+          "BERTScore": 0.9285278916358948,
+          "BLEURT": 0.541496992111206,
+          "COMET": 0.8256305456161499
+        }
+      }
+    },
+    {
+      "chunk_id": "1",
+      "model_name": "gemini",
+      "scores": {
+        "BLEU-4": 0.41061685836881295,
+        "chrF++": 0.5908252662994667,
+        "METEOR": 0.5345197703390749,
+        "ROUGE-L": 0.6006825938566552,
+        "BERTScore": 0.9338334202766418,
+        "BLEURT": 0.5903801918029785,
+        "COMET": 0.8314501047134399
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 41.061685836881296,
+          "brevity_penalty": 1.0,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 59.08252662994668,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.6027397260273972,
+          "recall": 0.5986394557823129,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9341039657592773,
+          "recall": 0.9335629940032959,
+          "f1": 0.9338334202766418,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.257887318024959,
+          "chrF++": 0.541019884152217,
+          "METEOR": 0.5345197703390749,
+          "ROUGE-L": 0.5888689407540396,
+          "BERTScore": 0.9158430099487305,
+          "BLEURT": 0.5411908030509949,
+          "COMET": 0.8043116927146912
+        },
+        "ref2": {
+          "BLEU-4": 0.2954463746413213,
+          "chrF++": 0.5908252662994667,
+          "METEOR": 0.530008446497598,
+          "ROUGE-L": 0.6006825938566552,
+          "BERTScore": 0.9338334202766418,
+          "BLEURT": 0.5903801918029785,
+          "COMET": 0.8314501047134399
+        }
+      }
+    },
+    {
+      "chunk_id": "1",
+      "model_name": "openai",
+      "scores": {
+        "BLEU-4": 0.39518727750220806,
+        "chrF++": 0.5741007993130725,
+        "METEOR": 0.5000027663341062,
+        "ROUGE-L": 0.5774647887323943,
+        "BERTScore": 0.9273990392684937,
+        "BLEURT": 0.5235078930854797,
+        "COMET": 0.8235013484954834
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 39.518727750220805,
+          "brevity_penalty": 0.9901478633380527,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 57.410079931307244,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5985401459854015,
+          "recall": 0.5578231292517006,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9317732453346252,
+          "recall": 0.9230656623840332,
+          "f1": 0.9273990392684937,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.27385664720418473,
+          "chrF++": 0.5383162896483119,
+          "METEOR": 0.5000027663341062,
+          "ROUGE-L": 0.5528756957328386,
+          "BERTScore": 0.9136078357696533,
+          "BLEURT": 0.4909350872039795,
+          "COMET": 0.7974326610565186
+        },
+        "ref2": {
+          "BLEU-4": 0.2596555594344989,
+          "chrF++": 0.5741007993130725,
+          "METEOR": 0.4944511097158937,
+          "ROUGE-L": 0.5774647887323943,
+          "BERTScore": 0.9273990392684937,
+          "BLEURT": 0.5235078930854797,
+          "COMET": 0.8235013484954834
+        }
+      }
+    },
+    {
+      "chunk_id": "2",
+      "model_name": "claude",
+      "scores": {
+        "BLEU-4": 0.36057390005743706,
+        "chrF++": 0.5644873411267725,
+        "METEOR": 0.5072313138152796,
+        "ROUGE-L": 0.530214424951267,
+        "BERTScore": 0.9191149473190308,
+        "BLEURT": 0.5168820023536682,
+        "COMET": 0.8297576904296875
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 36.057390005743706,
+          "brevity_penalty": 1.0,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 56.44873411267724,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5132075471698113,
+          "recall": 0.5483870967741935,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9187211990356445,
+          "recall": 0.9195089936256409,
+          "f1": 0.9191149473190308,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.2414866032461424,
+          "chrF++": 0.561022298990191,
+          "METEOR": 0.5024119326193414,
+          "ROUGE-L": 0.5218978102189781,
+          "BERTScore": 0.9174371957778931,
+          "BLEURT": 0.4611276388168335,
+          "COMET": 0.8297576904296875
+        },
+        "ref2": {
+          "BLEU-4": 0.24307568091266815,
+          "chrF++": 0.5644873411267725,
+          "METEOR": 0.5072313138152796,
+          "ROUGE-L": 0.530214424951267,
+          "BERTScore": 0.9191149473190308,
+          "BLEURT": 0.5168820023536682,
+          "COMET": 0.8147410154342651
+        }
+      }
+    },
+    {
+      "chunk_id": "2",
+      "model_name": "gemini",
+      "scores": {
+        "BLEU-4": 0.3248590833244306,
+        "chrF++": 0.5743656864196716,
+        "METEOR": 0.5006282453844211,
+        "ROUGE-L": 0.5194805194805195,
+        "BERTScore": 0.9098606705665588,
+        "BLEURT": 0.5198280215263367,
+        "COMET": 0.8323825597763062
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 32.48590833244306,
+          "brevity_penalty": 1.0,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 57.436568641967156,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.48109965635738833,
+          "recall": 0.5645161290322581,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9108569622039795,
+          "recall": 0.9088665246963501,
+          "f1": 0.9098606705665588,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.2250090619210981,
+          "chrF++": 0.5459155251486996,
+          "METEOR": 0.4875171493602527,
+          "ROUGE-L": 0.49825783972125437,
+          "BERTScore": 0.9098606705665588,
+          "BLEURT": 0.5198280215263367,
+          "COMET": 0.8323825597763062
+        },
+        "ref2": {
+          "BLEU-4": 0.22763605869237352,
+          "chrF++": 0.5743656864196716,
+          "METEOR": 0.5006282453844211,
+          "ROUGE-L": 0.5194805194805195,
+          "BERTScore": 0.9080392122268677,
+          "BLEURT": 0.5161569714546204,
+          "COMET": 0.8199384808540344
+        }
+      }
+    },
+    {
+      "chunk_id": "2",
+      "model_name": "openai",
+      "scores": {
+        "BLEU-4": 0.34441781406027644,
+        "chrF++": 0.537969432188536,
+        "METEOR": 0.48104143906157704,
+        "ROUGE-L": 0.4666666666666666,
+        "BERTScore": 0.9095056056976318,
+        "BLEURT": 0.49239999055862427,
+        "COMET": 0.8284248113632202
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 34.441781406027644,
+          "brevity_penalty": 1.0,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 53.7969432188536,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.4541984732824427,
+          "recall": 0.4798387096774194,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9133399128913879,
+          "recall": 0.9057034254074097,
+          "f1": 0.9095056056976318,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.22480522217327162,
+          "chrF++": 0.5263693148556331,
+          "METEOR": 0.4736011696992095,
+          "ROUGE-L": 0.46605504587155966,
+          "BERTScore": 0.9095056056976318,
+          "BLEURT": 0.47315794229507446,
+          "COMET": 0.8226314187049866
+        },
+        "ref2": {
+          "BLEU-4": 0.22539572078424921,
+          "chrF++": 0.537969432188536,
+          "METEOR": 0.48104143906157704,
+          "ROUGE-L": 0.4666666666666666,
+          "BERTScore": 0.909500241279602,
+          "BLEURT": 0.49239999055862427,
+          "COMET": 0.8284248113632202
+        }
+      }
+    },
+    {
+      "chunk_id": "3",
+      "model_name": "claude",
+      "scores": {
+        "BLEU-4": 0.2442006325356828,
+        "chrF++": 0.5260989759127035,
+        "METEOR": 0.4753833394988038,
+        "ROUGE-L": 0.499108734402852,
+        "BERTScore": 0.9079549908638,
+        "BLEURT": 0.4502583146095276,
+        "COMET": 0.7921339273452759
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 24.42006325356828,
+          "brevity_penalty": 0.9314733917281095,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 52.60989759127035,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.46511627906976744,
+          "recall": 0.5384615384615384,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9062463045120239,
+          "recall": 0.9096701145172119,
+          "f1": 0.9079549908638,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.17113992752884102,
+          "chrF++": 0.5260989759127035,
+          "METEOR": 0.4753833394988038,
+          "ROUGE-L": 0.499108734402852,
+          "BERTScore": 0.9079549908638,
+          "BLEURT": 0.4502583146095276,
+          "COMET": 0.7721437215805054
+        },
+        "ref2": {
+          "BLEU-4": 0.16790957820263785,
+          "chrF++": 0.5032045587853805,
+          "METEOR": 0.4405621672992879,
+          "ROUGE-L": 0.4622950819672131,
+          "BERTScore": 0.900688111782074,
+          "BLEURT": 0.41555356979370117,
+          "COMET": 0.7921339273452759
+        }
+      }
+    },
+    {
+      "chunk_id": "3",
+      "model_name": "gemini",
+      "scores": {
+        "BLEU-4": 0.30093420551963396,
+        "chrF++": 0.554967278227575,
+        "METEOR": 0.5241998278269341,
+        "ROUGE-L": 0.5051546391752577,
+        "BERTScore": 0.9030231833457947,
+        "BLEURT": 0.49791282415390015,
+        "COMET": 0.8116992115974426
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 30.093420551963394,
+          "brevity_penalty": 1.0,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 55.4967278227575,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.45652173913043476,
+          "recall": 0.5653846153846154,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9016733765602112,
+          "recall": 0.9043771028518677,
+          "f1": 0.9030231833457947,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.21627824675922727,
+          "chrF++": 0.554967278227575,
+          "METEOR": 0.5241998278269341,
+          "ROUGE-L": 0.5051546391752577,
+          "BERTScore": 0.897047758102417,
+          "BLEURT": 0.4978940486907959,
+          "COMET": 0.7821378707885742
+        },
+        "ref2": {
+          "BLEU-4": 0.1974185925138272,
+          "chrF++": 0.52540082631782,
+          "METEOR": 0.46697952176361124,
+          "ROUGE-L": 0.4595879556259905,
+          "BERTScore": 0.9030231833457947,
+          "BLEURT": 0.49791282415390015,
+          "COMET": 0.8116992115974426
+        }
+      }
+    },
+    {
+      "chunk_id": "3",
+      "model_name": "openai",
+      "scores": {
+        "BLEU-4": 0.24208756157263367,
+        "chrF++": 0.5200682207233167,
+        "METEOR": 0.47616971432130184,
+        "ROUGE-L": 0.45569620253164556,
+        "BERTScore": 0.9031088948249817,
+        "BLEURT": 0.46019017696380615,
+        "COMET": 0.8070603609085083
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 24.208756157263366,
+          "brevity_penalty": 0.937613766174232,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 52.00682207233167,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.4300341296928328,
+          "recall": 0.4846153846153846,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9062237739562988,
+          "recall": 0.9000153541564941,
+          "f1": 0.9031088948249817,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.19538587456113743,
+          "chrF++": 0.5200682207233167,
+          "METEOR": 0.47616971432130184,
+          "ROUGE-L": 0.45569620253164556,
+          "BERTScore": 0.8976486325263977,
+          "BLEURT": 0.46019017696380615,
+          "COMET": 0.7785301804542542
+        },
+        "ref2": {
+          "BLEU-4": 0.15764469115212076,
+          "chrF++": 0.47835024842594526,
+          "METEOR": 0.4169822773159965,
+          "ROUGE-L": 0.42524916943521596,
+          "BERTScore": 0.9031088948249817,
+          "BLEURT": 0.4359145164489746,
+          "COMET": 0.8070603609085083
+        }
+      }
+    },
+    {
+      "chunk_id": "4",
+      "model_name": "claude",
+      "scores": {
+        "BLEU-4": 0.3190334153343629,
+        "chrF++": 0.5079508194217557,
+        "METEOR": 0.45121314575444765,
+        "ROUGE-L": 0.5096153846153846,
+        "BERTScore": 0.9023823738098145,
+        "BLEURT": 0.5331422686576843,
+        "COMET": 0.7722128629684448
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 31.903341533436294,
+          "brevity_penalty": 1.0,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 50.79508194217557,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5559440559440559,
+          "recall": 0.47041420118343197,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9050511717796326,
+          "recall": 0.899729311466217,
+          "f1": 0.9023823738098145,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.1322130400139484,
+          "chrF++": 0.5079508194217557,
+          "METEOR": 0.42974028284190463,
+          "ROUGE-L": 0.4689922480620155,
+          "BERTScore": 0.8993198871612549,
+          "BLEURT": 0.5331422686576843,
+          "COMET": 0.751308798789978
+        },
+        "ref2": {
+          "BLEU-4": 0.20964152254186927,
+          "chrF++": 0.4949377417784988,
+          "METEOR": 0.45121314575444765,
+          "ROUGE-L": 0.5096153846153846,
+          "BERTScore": 0.9023823738098145,
+          "BLEURT": 0.46397727727890015,
+          "COMET": 0.7722128629684448
+        }
+      }
+    },
+    {
+      "chunk_id": "4",
+      "model_name": "gemini",
+      "scores": {
+        "BLEU-4": 0.3203152034335283,
+        "chrF++": 0.5415504153168635,
+        "METEOR": 0.4628965173387395,
+        "ROUGE-L": 0.5545454545454546,
+        "BERTScore": 0.9087885022163391,
+        "BLEURT": 0.5129101872444153,
+        "COMET": 0.7877301573753357
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 32.03152034335283,
+          "brevity_penalty": 0.8812298577161403,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 54.15504153168635,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5683229813664596,
+          "recall": 0.5414201183431953,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9094017744064331,
+          "recall": 0.908176064491272,
+          "f1": 0.9087885022163391,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.1615965226766628,
+          "chrF++": 0.5401450750318271,
+          "METEOR": 0.4540884346471228,
+          "ROUGE-L": 0.4927536231884058,
+          "BERTScore": 0.8976007699966431,
+          "BLEURT": 0.5129101872444153,
+          "COMET": 0.7601778507232666
+        },
+        "ref2": {
+          "BLEU-4": 0.2683500063762523,
+          "chrF++": 0.5415504153168635,
+          "METEOR": 0.4628965173387395,
+          "ROUGE-L": 0.5545454545454546,
+          "BERTScore": 0.9087885022163391,
+          "BLEURT": 0.48503774404525757,
+          "COMET": 0.7877301573753357
+        }
+      }
+    },
+    {
+      "chunk_id": "4",
+      "model_name": "openai",
+      "scores": {
+        "BLEU-4": 0.2953408239180702,
+        "chrF++": 0.5275372696558205,
+        "METEOR": 0.41704682519981123,
+        "ROUGE-L": 0.47249190938511326,
+        "BERTScore": 0.8959963321685791,
+        "BLEURT": 0.4945124387741089,
+        "COMET": 0.7881810069084167
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 29.53408239180702,
+          "brevity_penalty": 1.0,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 52.75372696558205,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5214285714285715,
+          "recall": 0.4319526627218935,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.8966099619865417,
+          "recall": 0.8953835964202881,
+          "f1": 0.8959963321685791,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.1570635754020833,
+          "chrF++": 0.5275372696558205,
+          "METEOR": 0.40212882184155413,
+          "ROUGE-L": 0.4431372549019608,
+          "BERTScore": 0.8910965919494629,
+          "BLEURT": 0.4945124387741089,
+          "COMET": 0.7611966133117676
+        },
+        "ref2": {
+          "BLEU-4": 0.18567487855842577,
+          "chrF++": 0.4911602407237904,
+          "METEOR": 0.41704682519981123,
+          "ROUGE-L": 0.47249190938511326,
+          "BERTScore": 0.8959963321685791,
+          "BLEURT": 0.4597330689430237,
+          "COMET": 0.7881810069084167
+        }
+      }
+    },
+    {
+      "chunk_id": "5",
+      "model_name": "claude",
+      "scores": {
+        "BLEU-4": 0.3218966657030664,
+        "chrF++": 0.5369642402565469,
+        "METEOR": 0.43089628275496095,
+        "ROUGE-L": 0.5331010452961672,
+        "BERTScore": 0.9105636477470398,
+        "BLEURT": 0.46321165561676025,
+        "COMET": 0.7735110521316528
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 32.18966657030664,
+          "brevity_penalty": 0.8813981309035295,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 53.696424025654686,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5645756457564576,
+          "recall": 0.504950495049505,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9174201488494873,
+          "recall": 0.9038088321685791,
+          "f1": 0.9105636477470398,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.2609154040241668,
+          "chrF++": 0.5369642402565469,
+          "METEOR": 0.43089628275496095,
+          "ROUGE-L": 0.5331010452961672,
+          "BERTScore": 0.9105636477470398,
+          "BLEURT": 0.46321165561676025,
+          "COMET": 0.7735110521316528
+        },
+        "ref2": {
+          "BLEU-4": 0.1580290025455371,
+          "chrF++": 0.5076209702720955,
+          "METEOR": 0.3750502152700852,
+          "ROUGE-L": 0.44250871080139376,
+          "BERTScore": 0.8978112936019897,
+          "BLEURT": 0.44847631454467773,
+          "COMET": 0.7668949365615845
+        }
+      }
+    },
+    {
+      "chunk_id": "5",
+      "model_name": "gemini",
+      "scores": {
+        "BLEU-4": 0.322493989522374,
+        "chrF++": 0.5501780384333264,
+        "METEOR": 0.4540048263656178,
+        "ROUGE-L": 0.540447504302926,
+        "BERTScore": 0.9112371802330017,
+        "BLEURT": 0.47502070665359497,
+        "COMET": 0.7760372161865234
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 32.2493989522374,
+          "brevity_penalty": 0.9423533203944509,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 55.017803843332636,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.564748201438849,
+          "recall": 0.5181518151815182,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9143279194831848,
+          "recall": 0.9081672430038452,
+          "f1": 0.9112371802330017,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.2530396049113099,
+          "chrF++": 0.5501780384333264,
+          "METEOR": 0.4540048263656178,
+          "ROUGE-L": 0.540447504302926,
+          "BERTScore": 0.9112371802330017,
+          "BLEURT": 0.47502070665359497,
+          "COMET": 0.775648832321167
+        },
+        "ref2": {
+          "BLEU-4": 0.16512311617414085,
+          "chrF++": 0.4989156566830203,
+          "METEOR": 0.4003548480200358,
+          "ROUGE-L": 0.423407917383821,
+          "BERTScore": 0.8966754674911499,
+          "BLEURT": 0.44678574800491333,
+          "COMET": 0.7760372161865234
+        }
+      }
+    },
+    {
+      "chunk_id": "5",
+      "model_name": "openai",
+      "scores": {
+        "BLEU-4": 0.24590966113237048,
+        "chrF++": 0.4968145842425597,
+        "METEOR": 0.36544385027931525,
+        "ROUGE-L": 0.4795737122557726,
+        "BERTScore": 0.9005216360092163,
+        "BLEURT": 0.46055930852890015,
+        "COMET": 0.7652939558029175
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 24.590966113237048,
+          "brevity_penalty": 0.8647885348921639,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 49.68145842425597,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5192307692307693,
+          "recall": 0.44554455445544555,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9044761061668396,
+          "recall": 0.8966015577316284,
+          "f1": 0.9005216360092163,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.18864057583749644,
+          "chrF++": 0.4968145842425597,
+          "METEOR": 0.3649907101083318,
+          "ROUGE-L": 0.4795737122557726,
+          "BERTScore": 0.9005216360092163,
+          "BLEURT": 0.4555776119232178,
+          "COMET": 0.7510441541671753
+        },
+        "ref2": {
+          "BLEU-4": 0.1384010977813343,
+          "chrF++": 0.4708140626076137,
+          "METEOR": 0.36544385027931525,
+          "ROUGE-L": 0.40142095914742454,
+          "BERTScore": 0.8891115188598633,
+          "BLEURT": 0.46055930852890015,
+          "COMET": 0.7652939558029175
+        }
+      }
+    },
+    {
+      "chunk_id": "6",
+      "model_name": "claude",
+      "scores": {
+        "BLEU-4": 0.42788226623380893,
+        "chrF++": 0.6243511200058942,
+        "METEOR": 0.4886012799372541,
+        "ROUGE-L": 0.6744639376218323,
+        "BERTScore": 0.9326525330543518,
+        "BLEURT": 0.5444908142089844,
+        "COMET": 0.7973541021347046
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 42.78822662338089,
+          "brevity_penalty": 0.8848809540027005,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 62.43511200058942,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.6975806451612904,
+          "recall": 0.6528301886792452,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9366557598114014,
+          "recall": 0.9286834001541138,
+          "f1": 0.9326525330543518,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.3465807463753127,
+          "chrF++": 0.6243511200058942,
+          "METEOR": 0.4886012799372541,
+          "ROUGE-L": 0.6744639376218323,
+          "BERTScore": 0.9326525330543518,
+          "BLEURT": 0.5444908142089844,
+          "COMET": 0.7973541021347046
+        },
+        "ref2": {
+          "BLEU-4": 0.22895549760471096,
+          "chrF++": 0.5210343331207432,
+          "METEOR": 0.4184188101202566,
+          "ROUGE-L": 0.5535055350553506,
+          "BERTScore": 0.9117696285247803,
+          "BLEURT": 0.4685816168785095,
+          "COMET": 0.7885290384292603
+        }
+      }
+    },
+    {
+      "chunk_id": "6",
+      "model_name": "gemini",
+      "scores": {
+        "BLEU-4": 0.4281693964039956,
+        "chrF++": 0.6318697530082567,
+        "METEOR": 0.5497407283548726,
+        "ROUGE-L": 0.6703910614525139,
+        "BERTScore": 0.9324352145195007,
+        "BLEURT": 0.5819234848022461,
+        "COMET": 0.8080106377601624
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 42.81693964039956,
+          "brevity_penalty": 1.0,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 63.186975300825665,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.6617647058823529,
+          "recall": 0.6792452830188679,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.930854856967926,
+          "recall": 0.9340209364891052,
+          "f1": 0.9324352145195007,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.3610008679479742,
+          "chrF++": 0.6318697530082567,
+          "METEOR": 0.5497407283548726,
+          "ROUGE-L": 0.6703910614525139,
+          "BERTScore": 0.9324352145195007,
+          "BLEURT": 0.5819234848022461,
+          "COMET": 0.8080106377601624
+        },
+        "ref2": {
+          "BLEU-4": 0.22055615138777973,
+          "chrF++": 0.5283794839204562,
+          "METEOR": 0.4374886678545677,
+          "ROUGE-L": 0.5477031802120141,
+          "BERTScore": 0.9150128960609436,
+          "BLEURT": 0.4838935136795044,
+          "COMET": 0.8032551407814026
+        }
+      }
+    },
+    {
+      "chunk_id": "6",
+      "model_name": "openai",
+      "scores": {
+        "BLEU-4": 0.42164808391738773,
+        "chrF++": 0.6182622761249436,
+        "METEOR": 0.5474211725145438,
+        "ROUGE-L": 0.6209523809523808,
+        "BERTScore": 0.9308294057846069,
+        "BLEURT": 0.5746767520904541,
+        "COMET": 0.8085702061653137
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 42.164808391738774,
+          "brevity_penalty": 0.950749126896934,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 61.82622761249436,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.6269230769230769,
+          "recall": 0.6150943396226415,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9310787916183472,
+          "recall": 0.9305800795555115,
+          "f1": 0.9308294057846069,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.3099845853554868,
+          "chrF++": 0.6182622761249436,
+          "METEOR": 0.5474211725145438,
+          "ROUGE-L": 0.6209523809523808,
+          "BERTScore": 0.9308294057846069,
+          "BLEURT": 0.5746767520904541,
+          "COMET": 0.8085702061653137
+        },
+        "ref2": {
+          "BLEU-4": 0.2540293291408521,
+          "chrF++": 0.5527386138323628,
+          "METEOR": 0.4789873375168955,
+          "ROUGE-L": 0.555956678700361,
+          "BERTScore": 0.9182454347610474,
+          "BLEURT": 0.4908917546272278,
+          "COMET": 0.8077566623687744
+        }
+      }
+    },
+    {
+      "chunk_id": "7",
+      "model_name": "claude",
+      "scores": {
+        "BLEU-4": 0.33626655614904055,
+        "chrF++": 0.5553999706143813,
+        "METEOR": 0.48194764917847566,
+        "ROUGE-L": 0.5739130434782608,
+        "BERTScore": 0.9206250905990601,
+        "BLEURT": 0.5293871164321899,
+        "COMET": 0.8161591291427612
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 33.62665561490405,
+          "brevity_penalty": 0.9401758829606262,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 55.53999706143813,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5935251798561151,
+          "recall": 0.5555555555555556,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9255495071411133,
+          "recall": 0.9157527089118958,
+          "f1": 0.9206250905990601,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.2373621742845108,
+          "chrF++": 0.5553999706143813,
+          "METEOR": 0.48194764917847566,
+          "ROUGE-L": 0.5739130434782608,
+          "BERTScore": 0.9206250905990601,
+          "BLEURT": 0.5293871164321899,
+          "COMET": 0.7954609394073486
+        },
+        "ref2": {
+          "BLEU-4": 0.2191439204944607,
+          "chrF++": 0.5344917786407802,
+          "METEOR": 0.4700477221983944,
+          "ROUGE-L": 0.5120274914089348,
+          "BERTScore": 0.9141871333122253,
+          "BLEURT": 0.5084059238433838,
+          "COMET": 0.8161591291427612
+        }
+      }
+    },
+    {
+      "chunk_id": "7",
+      "model_name": "gemini",
+      "scores": {
+        "BLEU-4": 0.38750402238611314,
+        "chrF++": 0.5961908899950531,
+        "METEOR": 0.5491401419478578,
+        "ROUGE-L": 0.5844155844155844,
+        "BERTScore": 0.916749894618988,
+        "BLEURT": 0.48159903287887573,
+        "COMET": 0.8138812780380249
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 38.750402238611315,
+          "brevity_penalty": 1.0,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 59.61908899950531,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5642633228840125,
+          "recall": 0.6060606060606061,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9131302237510681,
+          "recall": 0.9203983545303345,
+          "f1": 0.916749894618988,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.30999274027392937,
+          "chrF++": 0.5961908899950531,
+          "METEOR": 0.5491401419478578,
+          "ROUGE-L": 0.5844155844155844,
+          "BERTScore": 0.916749894618988,
+          "BLEURT": 0.48159903287887573,
+          "COMET": 0.8109207153320312
+        },
+        "ref2": {
+          "BLEU-4": 0.20880313761276872,
+          "chrF++": 0.5430522682386655,
+          "METEOR": 0.4732366117639019,
+          "ROUGE-L": 0.4943820224719101,
+          "BERTScore": 0.9054949283599854,
+          "BLEURT": 0.46986162662506104,
+          "COMET": 0.8138812780380249
+        }
+      }
+    },
+    {
+      "chunk_id": "7",
+      "model_name": "openai",
+      "scores": {
+        "BLEU-4": 0.323026094911044,
+        "chrF++": 0.5210608260199902,
+        "METEOR": 0.5088944837873557,
+        "ROUGE-L": 0.5189003436426116,
+        "BERTScore": 0.9100964665412903,
+        "BLEURT": 0.5150139331817627,
+        "COMET": 0.8054796457290649
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 32.3026094911044,
+          "brevity_penalty": 0.9369301182780166,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 52.10608260199901,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5298245614035088,
+          "recall": 0.5084175084175084,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9103856086730957,
+          "recall": 0.9098074436187744,
+          "f1": 0.9100964665412903,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.19752689792205091,
+          "chrF++": 0.5168573286429147,
+          "METEOR": 0.43485283449403817,
+          "ROUGE-L": 0.5189003436426116,
+          "BERTScore": 0.9100964665412903,
+          "BLEURT": 0.5150139331817627,
+          "COMET": 0.7938330173492432
+        },
+        "ref2": {
+          "BLEU-4": 0.22284802777113588,
+          "chrF++": 0.5210608260199902,
+          "METEOR": 0.5088944837873557,
+          "ROUGE-L": 0.5059422750424447,
+          "BERTScore": 0.9059368968009949,
+          "BLEURT": 0.5016777515411377,
+          "COMET": 0.8054796457290649
+        }
+      }
+    },
+    {
+      "chunk_id": "8",
+      "model_name": "claude",
+      "scores": {
+        "BLEU-4": 0.33195978735431053,
+        "chrF++": 0.5711268970003656,
+        "METEOR": 0.4741102140052019,
+        "ROUGE-L": 0.5745454545454546,
+        "BERTScore": 0.91416335105896,
+        "BLEURT": 0.4880779981613159,
+        "COMET": 0.7803630828857422
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 33.195978735431055,
+          "brevity_penalty": 0.9509102735476604,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 57.112689700036555,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5787545787545788,
+          "recall": 0.5703971119133574,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9216389656066895,
+          "recall": 0.9068080186843872,
+          "f1": 0.91416335105896,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.2775925900656331,
+          "chrF++": 0.5711268970003656,
+          "METEOR": 0.4741102140052019,
+          "ROUGE-L": 0.5745454545454546,
+          "BERTScore": 0.91416335105896,
+          "BLEURT": 0.46815794706344604,
+          "COMET": 0.7803630828857422
+        },
+        "ref2": {
+          "BLEU-4": 0.16395401080277755,
+          "chrF++": 0.4654729042869517,
+          "METEOR": 0.40712844912047025,
+          "ROUGE-L": 0.4233576642335766,
+          "BERTScore": 0.8977400064468384,
+          "BLEURT": 0.4880779981613159,
+          "COMET": 0.7777289152145386
+        }
+      }
+    },
+    {
+      "chunk_id": "8",
+      "model_name": "gemini",
+      "scores": {
+        "BLEU-4": 0.3450902300412744,
+        "chrF++": 0.5592553252379795,
+        "METEOR": 0.4470516353256441,
+        "ROUGE-L": 0.5652173913043478,
+        "BERTScore": 0.9118974208831787,
+        "BLEURT": 0.5230875611305237,
+        "COMET": 0.7945135831832886
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 34.50902300412744,
+          "brevity_penalty": 0.977383850702386,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 55.92553252379795,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5672727272727273,
+          "recall": 0.5631768953068592,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9174811840057373,
+          "recall": 0.9063813090324402,
+          "f1": 0.9118974208831787,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.275767026339984,
+          "chrF++": 0.5592553252379795,
+          "METEOR": 0.4470516353256441,
+          "ROUGE-L": 0.5652173913043478,
+          "BERTScore": 0.9118974208831787,
+          "BLEURT": 0.4890611171722412,
+          "COMET": 0.7881331443786621
+        },
+        "ref2": {
+          "BLEU-4": 0.193154072235043,
+          "chrF++": 0.48860549567094774,
+          "METEOR": 0.43598102775145386,
+          "ROUGE-L": 0.43272727272727274,
+          "BERTScore": 0.9030260443687439,
+          "BLEURT": 0.5230875611305237,
+          "COMET": 0.7945135831832886
+        }
+      }
+    },
+    {
+      "chunk_id": "8",
+      "model_name": "openai",
+      "scores": {
+        "BLEU-4": 0.2759542062071511,
+        "chrF++": 0.4975401611250774,
+        "METEOR": 0.4095701917130488,
+        "ROUGE-L": 0.5076923076923078,
+        "BERTScore": 0.8983162045478821,
+        "BLEURT": 0.49708980321884155,
+        "COMET": 0.7836991548538208
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 27.59542062071511,
+          "brevity_penalty": 0.8817036469952578,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 49.754016112507735,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5432098765432098,
+          "recall": 0.47653429602888087,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9012413024902344,
+          "recall": 0.8954100012779236,
+          "f1": 0.8983162045478821,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.1946314031318683,
+          "chrF++": 0.4975401611250774,
+          "METEOR": 0.38782710913531127,
+          "ROUGE-L": 0.5076923076923078,
+          "BERTScore": 0.8982332944869995,
+          "BLEURT": 0.46832364797592163,
+          "COMET": 0.7658755779266357
+        },
+        "ref2": {
+          "BLEU-4": 0.18270523542016398,
+          "chrF++": 0.4674515966009235,
+          "METEOR": 0.4095701917130488,
+          "ROUGE-L": 0.43629343629343625,
+          "BERTScore": 0.8983162045478821,
+          "BLEURT": 0.49708980321884155,
+          "COMET": 0.7836991548538208
+        }
+      }
+    },
+    {
+      "chunk_id": "9",
+      "model_name": "claude",
+      "scores": {
+        "BLEU-4": 0.3306939924184242,
+        "chrF++": 0.5266762072872477,
+        "METEOR": 0.4972386278051036,
+        "ROUGE-L": 0.5059422750424448,
+        "BERTScore": 0.9124798774719238,
+        "BLEURT": 0.46749377250671387,
+        "COMET": 0.8011191487312317
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 33.06939924184242,
+          "brevity_penalty": 0.9388575805810325,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 52.66762072872477,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5246478873239436,
+          "recall": 0.4885245901639344,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9169559478759766,
+          "recall": 0.9080473184585571,
+          "f1": 0.9124798774719238,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.23407603571563385,
+          "chrF++": 0.5266762072872477,
+          "METEOR": 0.4425920451651497,
+          "ROUGE-L": 0.4999999999999999,
+          "BERTScore": 0.9124798774719238,
+          "BLEURT": 0.46749377250671387,
+          "COMET": 0.7873364686965942
+        },
+        "ref2": {
+          "BLEU-4": 0.20977326748784847,
+          "chrF++": 0.515058828652037,
+          "METEOR": 0.4972386278051036,
+          "ROUGE-L": 0.5059422750424448,
+          "BERTScore": 0.9115201830863953,
+          "BLEURT": 0.4541105628013611,
+          "COMET": 0.8011191487312317
+        }
+      }
+    },
+    {
+      "chunk_id": "9",
+      "model_name": "gemini",
+      "scores": {
+        "BLEU-4": 0.29547341036031954,
+        "chrF++": 0.5497645601146739,
+        "METEOR": 0.46945404357528153,
+        "ROUGE-L": 0.5331179321486268,
+        "BERTScore": 0.9159966111183167,
+        "BLEURT": 0.47964680194854736,
+        "COMET": 0.8018559217453003
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 29.547341036031952,
+          "brevity_penalty": 1.0,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 54.97645601146739,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5238095238095238,
+          "recall": 0.5427631578947368,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9121736884117126,
+          "recall": 0.9198517203330994,
+          "f1": 0.9159966111183167,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.22410099230725627,
+          "chrF++": 0.5497645601146739,
+          "METEOR": 0.46945404357528153,
+          "ROUGE-L": 0.5331179321486268,
+          "BERTScore": 0.9159966111183167,
+          "BLEURT": 0.47964680194854736,
+          "COMET": 0.7924554347991943
+        },
+        "ref2": {
+          "BLEU-4": 0.19116311172826175,
+          "chrF++": 0.5022602084890898,
+          "METEOR": 0.46065212008284145,
+          "ROUGE-L": 0.4580645161290323,
+          "BERTScore": 0.9084672927856445,
+          "BLEURT": 0.4520875811576843,
+          "COMET": 0.8018559217453003
+        }
+      }
+    },
+    {
+      "chunk_id": "9",
+      "model_name": "openai",
+      "scores": {
+        "BLEU-4": 0.33591432233044743,
+        "chrF++": 0.5248521218062198,
+        "METEOR": 0.4771686522919042,
+        "ROUGE-L": 0.5134228187919464,
+        "BERTScore": 0.9146443009376526,
+        "BLEURT": 0.4777122735977173,
+        "COMET": 0.7972441911697388
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 33.59143223304474,
+          "brevity_penalty": 0.9910581820533697,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 52.48521218062198,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.523972602739726,
+          "recall": 0.5032894736842105,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9125279188156128,
+          "recall": 0.9167705774307251,
+          "f1": 0.9146443009376526,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.23336253905351786,
+          "chrF++": 0.5248521218062198,
+          "METEOR": 0.4771686522919042,
+          "ROUGE-L": 0.5134228187919464,
+          "BERTScore": 0.9146443009376526,
+          "BLEURT": 0.4777122735977173,
+          "COMET": 0.7816483974456787
+        },
+        "ref2": {
+          "BLEU-4": 0.2130797273756335,
+          "chrF++": 0.512630588381561,
+          "METEOR": 0.4691335414765989,
+          "ROUGE-L": 0.4824120603015075,
+          "BERTScore": 0.9109843969345093,
+          "BLEURT": 0.4224393367767334,
+          "COMET": 0.7972441911697388
+        }
+      }
+    },
+    {
+      "chunk_id": "10",
+      "model_name": "claude",
+      "scores": {
+        "BLEU-4": 0.2900415525806781,
+        "chrF++": 0.5389065672536573,
+        "METEOR": 0.4813615943105579,
+        "ROUGE-L": 0.5178875638841567,
+        "BERTScore": 0.9110112190246582,
+        "BLEURT": 0.4804849624633789,
+        "COMET": 0.7880406975746155
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 29.00415525806781,
+          "brevity_penalty": 0.852596876175514,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 53.89065672536573,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5507246376811594,
+          "recall": 0.4887459807073955,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9121273159980774,
+          "recall": 0.9098979234695435,
+          "f1": 0.9110112190246582,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.22836870183205552,
+          "chrF++": 0.5389065672536573,
+          "METEOR": 0.4813615943105579,
+          "ROUGE-L": 0.5178875638841567,
+          "BERTScore": 0.9047554731369019,
+          "BLEURT": 0.4568288326263428,
+          "COMET": 0.772409200668335
+        },
+        "ref2": {
+          "BLEU-4": 0.1508912916240582,
+          "chrF++": 0.5046339407908285,
+          "METEOR": 0.41962680718628703,
+          "ROUGE-L": 0.4766839378238342,
+          "BERTScore": 0.9110112190246582,
+          "BLEURT": 0.4804849624633789,
+          "COMET": 0.7880406975746155
+        }
+      }
+    },
+    {
+      "chunk_id": "10",
+      "model_name": "gemini",
+      "scores": {
+        "BLEU-4": 0.2852461880146896,
+        "chrF++": 0.5533996920362501,
+        "METEOR": 0.5074018501289201,
+        "ROUGE-L": 0.5234248788368338,
+        "BERTScore": 0.90981125831604,
+        "BLEURT": 0.4700329303741455,
+        "COMET": 0.8086382150650024
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 28.52461880146896,
+          "brevity_penalty": 1.0,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 55.339969203625,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.525974025974026,
+          "recall": 0.5209003215434084,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9082798957824707,
+          "recall": 0.9113476872444153,
+          "f1": 0.90981125831604,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.22606704430305163,
+          "chrF++": 0.5533996920362501,
+          "METEOR": 0.5074018501289201,
+          "ROUGE-L": 0.5234248788368338,
+          "BERTScore": 0.9056370258331299,
+          "BLEURT": 0.46101683378219604,
+          "COMET": 0.779015064239502
+        },
+        "ref2": {
+          "BLEU-4": 0.16166077616797703,
+          "chrF++": 0.5108724377907544,
+          "METEOR": 0.48700064299673496,
+          "ROUGE-L": 0.46153846153846156,
+          "BERTScore": 0.90981125831604,
+          "BLEURT": 0.4700329303741455,
+          "COMET": 0.8086382150650024
+        }
+      }
+    },
+    {
+      "chunk_id": "10",
+      "model_name": "openai",
+      "scores": {
+        "BLEU-4": 0.2637390061914597,
+        "chrF++": 0.5247760004467125,
+        "METEOR": 0.4608345127552478,
+        "ROUGE-L": 0.4794520547945206,
+        "BERTScore": 0.9107146263122559,
+        "BLEURT": 0.4805401563644409,
+        "COMET": 0.7829499244689941
+      },
+      "score_details": {
+        "BLEU-4": {
+          "raw_score": 26.373900619145967,
+          "brevity_penalty": 0.8558765426887432,
+          "num_references": 2
+        },
+        "chrF++": {
+          "raw_score": 52.47760004467125,
+          "num_references": 2,
+          "word_order": 2
+        },
+        "METEOR": {
+          "num_references": 2
+        },
+        "ROUGE-L": {
+          "precision": 0.5128205128205128,
+          "recall": 0.45016077170418006,
+          "best_reference": 1,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BERTScore": {
+          "precision": 0.9109858274459839,
+          "recall": 0.9104436635971069,
+          "f1": 0.9107146263122559,
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "BLEURT": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        },
+        "COMET": {
+          "best_reference": 2,
+          "num_references": 2,
+          "aggregation": "max"
+        }
+      },
+      "per_reference_scores": {
+        "ref1": {
+          "BLEU-4": 0.18158346229153488,
+          "chrF++": 0.5247760004467125,
+          "METEOR": 0.4608345127552478,
+          "ROUGE-L": 0.4794520547945206,
+          "BERTScore": 0.9041769504547119,
+          "BLEURT": 0.4647013545036316,
+          "COMET": 0.7687355279922485
+        },
+        "ref2": {
+          "BLEU-4": 0.17521426300039775,
+          "chrF++": 0.5231293233585603,
+          "METEOR": 0.3946267153244098,
+          "ROUGE-L": 0.47916666666666674,
+          "BERTScore": 0.9107146263122559,
+          "BLEURT": 0.4805401563644409,
+          "COMET": 0.7829499244689941
+        }
+      }
+    }
+  ]
+}
