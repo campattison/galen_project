@@ -1,0 +1,162 @@
+import pandas as pd
+import numpy as np
+
+# Load the data
+df = pd.read_csv('on_mixtures_evaluation_reference_comparison_detailed.csv')
+
+print("=" * 100)
+print("TABLE A4 VERIFICATION: Mix. Reference Comparison - Johnston (J) vs. Singer and van der Eijk (S)")
+print("=" * 100)
+print()
+
+# Model name mapping
+model_map = {'claude': 'Claude', 'gemini': 'Gemini', 'openai': 'ChatGPT'}
+
+# Metrics to check
+metrics_to_check = [
+    ('BLEU-4', 'BLEU'),
+    ('chrF++', 'chrF++'),
+    ('METEOR', 'METEOR'),
+    ('ROUGE-L', 'ROUGE-L'),
+    ('BERTScore', 'BERT'),
+    ('BLEURT', 'BLEURT'),
+    ('COMET', 'COMET')
+]
+
+# Initialize results storage
+results = []
+totals = {
+    'BLEU': {'J': 0, 'S': 0}, 
+    'chrF++': {'J': 0, 'S': 0},
+    'METEOR': {'J': 0, 'S': 0},
+    'ROUGE-L': {'J': 0, 'S': 0},
+    'BERT': {'J': 0, 'S': 0},
+    'BLEURT': {'J': 0, 'S': 0},
+    'COMET': {'J': 0, 'S': 0}
+}
+
+print(f"{'#':<4} {'Model':<10} {'Metric':<10} {'J Value':<10} {'S Value':<10} {'Closer':<8} {'Verified':<10}")
+print("-" * 100)
+
+for idx, row in df.iterrows():
+    chunk = int(row['Chunk'])
+    model = model_map[row['Model']]
+    
+    row_results = {
+        'Chunk': chunk,
+        'Model': model
+    }
+    
+    for metric_col, metric_name in metrics_to_check:
+        j_value = row[f'{metric_col}_ref1'] * 100  # Convert to percentage
+        s_value = row[f'{metric_col}_ref2'] * 100
+        
+        # Determine which is closer (higher is better)
+        closer = 'J' if j_value > s_value else 'S'
+        
+        # Update totals
+        totals[metric_name][closer] += 1
+        
+        # Store results
+        row_results[f'{metric_name}_J'] = round(j_value, 1)
+        row_results[f'{metric_name}_S'] = round(s_value, 1)
+        row_results[f'{metric_name}_Closer'] = closer
+        
+        print(f"{chunk:<4} {model:<10} {metric_name:<10} {j_value:<10.1f} {s_value:<10.1f} {closer:<8}")
+    
+    results.append(row_results)
+    print()
+
+# Create DataFrame with results
+results_df = pd.DataFrame(results)
+
+print("=" * 100)
+print("TOTALS VERIFICATION")
+print("=" * 100)
+print()
+
+# Expected totals from Table A4 (only BLEU, BERT, COMET shown in table)
+expected_totals = {
+    'BLEU': {'J': 21, 'S': 9},
+    'BERT': {'J': 17, 'S': 13},
+    'COMET': {'J': 7, 'S': 23}
+}
+
+print(f"{'Metric':<15} {'J Preference':<15} {'S Preference':<15} {'J %':<15} {'S %':<15} {'Expected J':<15} {'Match?':<10}")
+print("-" * 100)
+
+all_match = True
+for metric in ['BLEU', 'chrF++', 'METEOR', 'ROUGE-L', 'BERT', 'BLEURT', 'COMET']:
+    calc_j = totals[metric]['J']
+    calc_s = totals[metric]['S']
+    total = calc_j + calc_s
+    j_pct = (calc_j / total * 100) if total > 0 else 0
+    s_pct = (calc_s / total * 100) if total > 0 else 0
+    
+    # Only check against expected for metrics that were in the table
+    if metric in expected_totals:
+        exp_j = expected_totals[metric]['J']
+        exp_s = expected_totals[metric]['S']
+        match = "✓" if (calc_j == exp_j and calc_s == exp_s) else "✗"
+        if match == "✗":
+            all_match = False
+        print(f"{metric:<15} {calc_j:<15} {calc_s:<15} {j_pct:<15.1f} {s_pct:<15.1f} {exp_j:<15} {match:<10}")
+    else:
+        # For other metrics, just show the calculated values
+        print(f"{metric:<15} {calc_j:<15} {calc_s:<15} {j_pct:<15.1f} {s_pct:<15.1f} {'N/A':<15} {'-':<10}")
+
+print()
+print("=" * 100)
+print("SUMMARY BY METRIC")
+print("=" * 100)
+print()
+
+# Create summary table
+summary_data = []
+for metric in ['BLEU', 'chrF++', 'METEOR', 'ROUGE-L', 'BERT', 'BLEURT', 'COMET']:
+    j_count = totals[metric]['J']
+    s_count = totals[metric]['S']
+    total = j_count + s_count
+    j_pct = (j_count / total * 100) if total > 0 else 0
+    s_pct = (s_count / total * 100) if total > 0 else 0
+    
+    summary_data.append({
+        'Metric': metric,
+        'Johnston_Preference': j_count,
+        'Johnston_Percentage': f"{j_pct:.1f}%",
+        'Singer_Preference': s_count,
+        'Singer_Percentage': f"{s_pct:.1f}%",
+        'Total': total
+    })
+
+summary_df = pd.DataFrame(summary_data)
+print(summary_df.to_string(index=False))
+
+print()
+print("=" * 100)
+print("KEY FINDINGS")
+print("=" * 100)
+print()
+
+# Identify which metrics prefer which reference
+johnston_metrics = [m for m in ['BLEU', 'chrF++', 'METEOR', 'ROUGE-L', 'BERT', 'BLEURT', 'COMET'] 
+                    if totals[m]['J'] > totals[m]['S']]
+singer_metrics = [m for m in ['BLEU', 'chrF++', 'METEOR', 'ROUGE-L', 'BERT', 'BLEURT', 'COMET'] 
+                 if totals[m]['S'] > totals[m]['J']]
+
+print(f"Metrics preferring Johnston reference: {', '.join(johnston_metrics)}")
+print(f"Metrics preferring Singer & van der Eijk reference: {', '.join(singer_metrics)}")
+print()
+
+if all_match:
+    print("✓ All table totals verified (BLEU, BERT, COMET)")
+    print("✓ Additional metrics calculated (chrF++, METEOR, ROUGE-L, BLEURT)")
+else:
+    print("Some discrepancies found in table verification")
+
+# Save detailed results
+results_df.to_csv('tableA4_verification_all_metrics.csv', index=False)
+summary_df.to_csv('tableA4_summary_all_metrics.csv', index=False)
+print()
+print("Detailed results saved to: tableA4_verification_all_metrics.csv")
+print("Summary saved to: tableA4_summary_all_metrics.csv")

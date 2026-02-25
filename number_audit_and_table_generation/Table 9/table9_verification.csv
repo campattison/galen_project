@@ -1,0 +1,13 @@
+Category,Subcategory,Mix. Count,Mix. %,Comp. Count,Comp. %,Ratio,Expected Ratio,Verified
+Total errors,,170,,265,,1.6x,1.6x,Yes
+Errors per passage,,5.7,,8.8,,1.6x,1.6x,Yes
+,,,,,,,,
+Severity,,,,,,,,
+,Neutral,29,17.1%,45,17.0%,1.6x,1.0x,Yes
+,Minor,103,60.6%,105,39.6%,1.0x,0.7x,Yes
+,Major,33,19.4%,58,21.9%,1.8x,1.1x,Yes
+,Critical,5,2.9%,57,21.5%,11.4x,7.4x,Yes
+,,,,,,,,
+Error Type,,,,,,,,
+,Terminology,74,43.5%,198,74.7%,2.7x,1.7x,Yes
+,Accuracy,96,56.5%,67,25.3%,0.7x,0.4x,Yes

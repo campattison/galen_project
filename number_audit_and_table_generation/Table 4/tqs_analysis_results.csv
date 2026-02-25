@@ -1,0 +1,6 @@
+Category,Mean TQS,Std Dev,N (count)
+(1) All Mixtures passages,95.2,4.77,30
+(2) All Comp passages,79.85,26.25,30
+(3) All Comp excl. passages 8 & 10,91.36,7.48,24
+"(4) All Comp excl. passages 3, 8, & 10",93.11,4.98,21
+(5) All Comp excl. ChatGPT on pass. 3 & all models on pass. 8 & 10,92.47,5.27,23

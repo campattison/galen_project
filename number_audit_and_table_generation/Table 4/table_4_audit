@@ -1,0 +1,94 @@
+import pandas as pd
+import numpy as np
+
+# Load the data
+comp_df = pd.read_csv('MQM_SUMMARY_TABLES_Comp_Summary_Sorted.csv')
+mix_df = pd.read_csv('MQM_SUMMARY_TABLES_Mixtures_Summary_Sorted.csv')
+
+# Clean the data - remove rows where Text is NaN (empty rows)
+comp_df = comp_df[comp_df['Text'].notna()]
+mix_df = mix_df[mix_df['Text'].notna()]
+
+# Remove duplicate header rows (where Chunk == 'Chunk')
+comp_df = comp_df[comp_df['Chunk'] != 'Chunk']
+mix_df = mix_df[mix_df['Chunk'] != 'Chunk']
+
+# Remove duplicates - keep first occurrence of each (Chunk, Model) combination
+comp_df = comp_df.drop_duplicates(subset=['Chunk', 'Model'], keep='first')
+mix_df = mix_df.drop_duplicates(subset=['Chunk', 'Model'], keep='first')
+
+# Convert Chunk and TQS to numeric
+comp_df['Chunk'] = pd.to_numeric(comp_df['Chunk'], errors='coerce')
+comp_df['TQS'] = pd.to_numeric(comp_df['TQS'], errors='coerce')
+mix_df['Chunk'] = pd.to_numeric(mix_df['Chunk'], errors='coerce')
+mix_df['TQS'] = pd.to_numeric(mix_df['TQS'], errors='coerce')
+
+# Initialize results dictionary
+results = {
+    'Category': [],
+    'Mean TQS': [],
+    'Std Dev': [],
+    'N (count)': []
+}
+
+# 1. Mean TQS for ALL passages of Mixtures
+mix_all = mix_df['TQS']
+results['Category'].append('(1) All Mixtures passages')
+results['Mean TQS'].append(mix_all.mean())
+results['Std Dev'].append(mix_all.std())
+results['N (count)'].append(len(mix_all))
+
+# 2. Mean TQS for ALL passages of Comp
+comp_all = comp_df['TQS']
+results['Category'].append('(2) All Comp passages')
+results['Mean TQS'].append(comp_all.mean())
+results['Std Dev'].append(comp_all.std())
+results['N (count)'].append(len(comp_all))
+
+# 3. All of Comp excluding passages 8 and 10
+comp_excl_8_10 = comp_df[~comp_df['Chunk'].isin([8, 10])]['TQS']
+results['Category'].append('(3) All Comp excl. passages 8 & 10')
+results['Mean TQS'].append(comp_excl_8_10.mean())
+results['Std Dev'].append(comp_excl_8_10.std())
+results['N (count)'].append(len(comp_excl_8_10))
+
+# 4. All of Comp excluding passages 3, 8, and 10
+comp_excl_3_8_10 = comp_df[~comp_df['Chunk'].isin([3, 8, 10])]['TQS']
+results['Category'].append('(4) All Comp excl. passages 3, 8, & 10')
+results['Mean TQS'].append(comp_excl_3_8_10.mean())
+results['Std Dev'].append(comp_excl_3_8_10.std())
+results['N (count)'].append(len(comp_excl_3_8_10))
+
+# 5. All of Comp excluding ChatGPT (openai) on passage 3, and all models on passages 8 and 10
+# First, get all rows except passages 8 and 10
+comp_excl_8_10_all = comp_df[~comp_df['Chunk'].isin([8, 10])]
+# Then, for passage 3, exclude only openai
+comp_passage_3 = comp_df[comp_df['Chunk'] == 3]
+comp_passage_3_not_openai = comp_passage_3[comp_passage_3['Model'] != 'openai']
+# Combine: all passages except 8 & 10, plus passage 3 without openai
+comp_custom = pd.concat([
+    comp_excl_8_10_all[comp_excl_8_10_all['Chunk'] != 3],  # All other passages (not 3, 8, or 10)
+    comp_passage_3_not_openai  # Passage 3 without openai
+])
+comp_custom_tqs = comp_custom['TQS']
+results['Category'].append('(5) All Comp excl. ChatGPT on pass. 3 & all models on pass. 8 & 10')
+results['Mean TQS'].append(comp_custom_tqs.mean())
+results['Std Dev'].append(comp_custom_tqs.std())
+results['N (count)'].append(len(comp_custom_tqs))
+
+# Create results dataframe
+results_df = pd.DataFrame(results)
+
+# Round to 2 decimal places for cleaner output
+results_df['Mean TQS'] = results_df['Mean TQS'].round(2)
+results_df['Std Dev'] = results_df['Std Dev'].round(2)
+
+print("TQS Analysis Results")
+print("=" * 80)
+print(results_df.to_string(index=False))
+print("=" * 80)
+
+# Save to CSV in current directory
+output_path = 'tqs_analysis_results.csv'
+results_df.to_csv(output_path, index=False)
+print(f"\nResults saved to: {output_path}")

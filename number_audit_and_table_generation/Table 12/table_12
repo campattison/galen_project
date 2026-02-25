@@ -1,0 +1,46 @@
+import pandas as pd
+from scipy import stats
+import csv, sys
+
+df = pd.read_csv('merged_metrics_tqs.csv')
+
+metrics = ['BERTScore', 'COMET', 'METEOR', 'chrF++', 'BLEU-4', 'ROUGE-L', 'BLEURT']
+
+subsets = {
+    'Mix (n=30)':      df[df['text'] == 'Mixtures'],
+    'Comp (n=30)':     df[df['text'] == 'Comp'],
+    'Combined (n=60)': df,
+}
+
+def sig(p):
+    return '***' if p < .001 else ('**' if p < .01 else ('*' if p < .05 else ''))
+
+rows = []
+
+# Pearson block
+for metric in metrics:
+    row = {'Method': 'Pearson', 'Metric': metric}
+    for label, subset in subsets.items():
+        r, p = stats.pearsonr(subset[metric], subset['TQS'])
+        row[label] = f"{r:+.2f}{sig(p)}"
+    rows.append(row)
+
+# Spearman block
+for metric in metrics:
+    row = {'Method': 'Spearman', 'Metric': metric}
+    for label, subset in subsets.items():
+        r, p = stats.spearmanr(subset[metric], subset['TQS'])
+        row[label] = f"{r:+.2f}{sig(p)}"
+    rows.append(row)
+
+# SD rows
+for label, subset in subsets.items():
+    rows.append({
+        'Method': 'SD check',
+        'Metric': 'TQS SD',
+        label: f"{subset['TQS'].std():.1f}",
+    })
+
+out = pd.DataFrame(rows, columns=['Method', 'Metric', 'Mix (n=30)', 'Comp (n=30)', 'Combined (n=60)'])
+out.to_csv('table11_audit.csv', index=False)
+print("Written to table11_audit.csv")

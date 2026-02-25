@@ -1,0 +1,25 @@
+Level,Predictor,Outcome,Pearson_r,p_value,Sig
+Passage,Rare Term Ratio,TQS (Comp.),-0.9689,0.0,***
+Passage,Rare Term Ratio,TQS (All),-0.9315,0.0,***
+Passage,Rare Term Ratio,Crit. Rate (Comp.),0.922,0.0001,***
+Passage,Rare Term Ratio,Crit. Rate (All),0.8998,0.0,***
+Passage,Not-Found Ratio,TQS (Comp.),-0.9567,0.0,***
+Passage,Not-Found Ratio,TQS (All),-0.938,0.0,***
+Passage,Not-Found Ratio,Crit. Rate (Comp.),0.9118,0.0002,***
+Passage,Not-Found Ratio,Crit. Rate (All),0.9072,0.0,***
+Passage,Mean Zipf Freq.,TQS (Comp.),0.9587,0.0,***
+Passage,Mean Zipf Freq.,TQS (All),0.9499,0.0,***
+Passage,Mean Zipf Freq.,Crit. Rate (Comp.),-0.9096,0.0003,***
+Passage,Mean Zipf Freq.,Crit. Rate (All),-0.9147,0.0,***
+Translation,Rare Term Ratio,TQS (Comp.),-0.8911,0.0,***
+Translation,Rare Term Ratio,TQS (All),-0.8616,0.0,***
+Translation,Rare Term Ratio,Crit. Rate (Comp.),0.8266,0.0,***
+Translation,Rare Term Ratio,Crit. Rate (All),0.8156,0.0,***
+Translation,Not-Found Ratio,TQS (Comp.),-0.8799,0.0,***
+Translation,Not-Found Ratio,TQS (All),-0.8676,0.0,***
+Translation,Not-Found Ratio,Crit. Rate (Comp.),0.8175,0.0,***
+Translation,Not-Found Ratio,Crit. Rate (All),0.8223,0.0,***
+Translation,Mean Zipf Freq.,TQS (Comp.),0.8817,0.0,***
+Translation,Mean Zipf Freq.,TQS (All),0.8786,0.0,***
+Translation,Mean Zipf Freq.,Crit. Rate (Comp.),-0.8154,0.0,***
+Translation,Mean Zipf Freq.,Crit. Rate (All),-0.8291,0.0,***
