@@ -1,0 +1,158 @@
+import pandas as pd
+import numpy as np
+
+# Load the Comp data
+comp_df = pd.read_csv('MQM_SUMMARY_TABLES_Comp_Summary_Sorted.csv')
+
+# Clean the data
+comp_df = comp_df[comp_df['Text'].notna()]
+comp_df = comp_df[comp_df['Chunk'] != 'Chunk']  # Remove duplicate headers
+comp_df = comp_df.drop_duplicates(subset=['Chunk', 'Model'], keep='first')
+comp_df['Chunk'] = pd.to_numeric(comp_df['Chunk'], errors='coerce')
+
+print("=" * 80)
+print("TABLE 8 VERIFICATION: Quality Ratings Under Stratification")
+print("=" * 80)
+print()
+
+# Function to calculate pass rates
+def calculate_pass_rate(df, scheme_col):
+    """Calculate pass rate (HIGH PASS + LOW PASS) / total"""
+    total = len(df)
+    passes = len(df[df[scheme_col].isin(['HIGH PASS', 'LOW PASS'])])
+    pass_rate = (passes / total * 100) if total > 0 else 0
+    return pass_rate, passes, total
+
+# Define stratifications
+stratifications = {
+    'Comp. (all passages)': comp_df,
+    'Comp. (excl. 8, 10)': comp_df[~comp_df['Chunk'].isin([8, 10])],
+    'Comp. (excl. 3, 8, 10)': comp_df[~comp_df['Chunk'].isin([3, 8, 10])]
+}
+
+# Prepare results table
+results = []
+
+for strat_name, strat_df in stratifications.items():
+    # Scheme 1 (Quality Rating)
+    scheme1_rate, scheme1_pass, scheme1_total = calculate_pass_rate(strat_df, 'Quality Rating')
+    
+    # Scheme 2 (Final Quality Rating)
+    scheme2_rate, scheme2_pass, scheme2_total = calculate_pass_rate(strat_df, 'Final Quality Rating')
+    
+    results.append({
+        'Stratification': strat_name,
+        'Scheme 1 Pass Rate': f"{scheme1_rate:.1f}%",
+        'Scheme 2 Pass Rate': f"{scheme2_rate:.1f}%",
+        'Scheme 1 Details': f"{scheme1_pass}/{scheme1_total}",
+        'Scheme 2 Details': f"{scheme2_pass}/{scheme2_total}"
+    })
+    
+    print(f"{strat_name}:")
+    print(f"  Scheme 1 (Quality Rating):       {scheme1_rate:.1f}% ({scheme1_pass}/{scheme1_total})")
+    print(f"  Scheme 2 (Final Quality Rating): {scheme2_rate:.1f}% ({scheme2_pass}/{scheme2_total})")
+    print()
+
+# Create results dataframe
+results_df = pd.DataFrame(results)
+
+print("=" * 80)
+print("COMPARISON WITH TABLE 8 (Comp. rows only)")
+print("=" * 80)
+print()
+
+# Expected values from Table 8
+expected = {
+    'Comp. (all passages)': {'Scheme 1': 63.3, 'Scheme 2': 43.3},
+    'Comp. (excl. 8, 10)': {'Scheme 1': 79.2, 'Scheme 2': 54.2},
+    'Comp. (excl. 3, 8, 10)': {'Scheme 1': 85.7, 'Scheme 2': 61.9}
+}
+
+# Check against expected values
+print(f"{'Stratification':<25} {'Scheme':<10} {'Expected':<12} {'Calculated':<12} {'Match?':<10}")
+print("-" * 80)
+
+for strat_name in stratifications.keys():
+    strat_df = stratifications[strat_name]
+    
+    # Scheme 1
+    scheme1_rate, _, _ = calculate_pass_rate(strat_df, 'Quality Rating')
+    expected_s1 = expected[strat_name]['Scheme 1']
+    match_s1 = "✓" if abs(scheme1_rate - expected_s1) < 0.1 else "✗"
+    print(f"{strat_name:<25} {'Scheme 1':<10} {expected_s1:<12.1f} {scheme1_rate:<12.1f} {match_s1:<10}")
+    
+    # Scheme 2
+    scheme2_rate, _, _ = calculate_pass_rate(strat_df, 'Final Quality Rating')
+    expected_s2 = expected[strat_name]['Scheme 2']
+    match_s2 = "✓" if abs(scheme2_rate - expected_s2) < 0.1 else "✗"
+    print(f"{'':<25} {'Scheme 2':<10} {expected_s2:<12.1f} {scheme2_rate:<12.1f} {match_s2:<10}")
+    print()
+
+print("=" * 80)
+print("NOTES:")
+print("=" * 80)
+print("- Scheme 1 = 'Quality Rating' column")
+print("- Scheme 2 = 'Final Quality Rating' column")
+print("- Pass Rate = (HIGH PASS + LOW PASS) / Total")
+print("- Gap calculation requires Mix. data (not provided)")
+print("- The Mix. pass rates in Table 8 are: Scheme 1=96.7%, Scheme 2=86.7%")
+print()
+
+# Calculate gaps (using Mix. values from Table 8)
+print("=" * 80)
+print("GAP VERIFICATION (Mix. pass rate - Comp. pass rate)")
+print("=" * 80)
+print()
+
+mix_scheme1 = 96.7
+mix_scheme2 = 86.7
+
+print(f"{'Stratification':<25} {'Scheme':<10} {'Mix. Rate':<12} {'Comp. Rate':<12} {'Gap':<10} {'Expected':<10} {'Match?':<10}")
+print("-" * 100)
+
+for strat_name in stratifications.keys():
+    strat_df = stratifications[strat_name]
+    
+    # Scheme 1 gap
+    scheme1_rate, _, _ = calculate_pass_rate(strat_df, 'Quality Rating')
+    gap_s1 = mix_scheme1 - scheme1_rate
+    
+    # Expected gaps from table
+    expected_gaps = {
+        'Comp. (all passages)': {'Scheme 1': 33.3, 'Scheme 2': 43.3},
+        'Comp. (excl. 8, 10)': {'Scheme 1': 17.5, 'Scheme 2': 32.5},
+        'Comp. (excl. 3, 8, 10)': {'Scheme 1': 11.0, 'Scheme 2': 24.8}
+    }
+    
+    expected_gap_s1 = expected_gaps[strat_name]['Scheme 1']
+    match_gap_s1 = "✓" if abs(gap_s1 - expected_gap_s1) < 0.2 else "✗"
+    print(f"{strat_name:<25} {'Scheme 1':<10} {mix_scheme1:<12.1f} {scheme1_rate:<12.1f} {gap_s1:<10.1f} {expected_gap_s1:<10.1f} {match_gap_s1:<10}")
+    
+    # Scheme 2 gap
+    scheme2_rate, _, _ = calculate_pass_rate(strat_df, 'Final Quality Rating')
+    gap_s2 = mix_scheme2 - scheme2_rate
+    expected_gap_s2 = expected_gaps[strat_name]['Scheme 2']
+    match_gap_s2 = "✓" if abs(gap_s2 - expected_gap_s2) < 0.2 else "✗"
+    print(f"{'':<25} {'Scheme 2':<10} {mix_scheme2:<12.1f} {scheme2_rate:<12.1f} {gap_s2:<10.1f} {expected_gap_s2:<10.1f} {match_gap_s2:<10}")
+    print()
+
+print("=" * 80)
+print()
+
+# Show breakdown by rating for each stratification
+print("=" * 80)
+print("DETAILED BREAKDOWN BY RATING")
+print("=" * 80)
+print()
+
+for strat_name, strat_df in stratifications.items():
+    print(f"\n{strat_name}:")
+    print("\nScheme 1 (Quality Rating):")
+    print(strat_df['Quality Rating'].value_counts().sort_index())
+    print("\nScheme 2 (Final Quality Rating):")
+    print(strat_df['Final Quality Rating'].value_counts().sort_index())
+    print("-" * 40)
+
+# Save results
+results_df.to_csv('table8_verification.csv', index=False)
+print("\nResults saved to: table8_verification.csv")

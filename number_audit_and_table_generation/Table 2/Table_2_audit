@@ -1,0 +1,93 @@
+import pandas as pd
+import numpy as np
+
+# Load the data
+df = pd.read_csv('merged_metrics_tqs.csv')
+
+# Define the evaluation frameworks (columns)
+metrics = ['BLEU-4', 'chrF++', 'METEOR', 'ROUGE-L', 'BERTScore', 'BLEURT', 'COMET', 'TQS']
+
+# Model name mapping
+model_names = {
+    'openai': 'ChatGPT',
+    'claude': 'Claude',
+    'gemini': 'Gemini'
+}
+
+def format_mean_std(values):
+    """Format as mean (std dev) rounded to 3 decimal places"""
+    mean_val = values.mean()
+    std_val = values.std()
+    return f"{mean_val:.3f} ({std_val:.3f})"
+
+def create_panel(df_subset, panel_name):
+    """Create a panel (Mix. or Comp.) with all metrics"""
+    results = []
+    
+    # For each model
+    for model_key in ['openai', 'claude', 'gemini']:
+        model_data = df_subset[df_subset['model'] == model_key]
+        row = {'Model': model_names[model_key]}
+        
+        for metric in metrics:
+            row[metric] = format_mean_std(model_data[metric])
+        
+        results.append(row)
+    
+    # Add Aggregate row (mean across all models)
+    agg_row = {'Model': 'Aggregate'}
+    for metric in metrics:
+        agg_row[metric] = format_mean_std(df_subset[metric])
+    results.append(agg_row)
+    
+    # Create dataframe
+    panel_df = pd.DataFrame(results)
+    
+    return panel_df
+
+# Create Mixtures panel
+print("=" * 120)
+print("MIXTURES PANEL")
+print("=" * 120)
+mix_df = df[df['text'] == 'Mixtures']
+mix_panel = create_panel(mix_df, 'Mixtures')
+print(mix_panel.to_string(index=False))
+print()
+
+# Create Comp panel
+print("=" * 120)
+print("COMP PANEL")
+print("=" * 120)
+comp_df = df[df['text'] == 'Comp']
+comp_panel = create_panel(comp_df, 'Comp')
+print(comp_panel.to_string(index=False))
+print()
+
+# Save to CSV files
+mix_panel.to_csv('metrics_table_mixtures.csv', index=False)
+comp_panel.to_csv('metrics_table_comp.csv', index=False)
+
+# Also create a combined version for easier viewing
+print("=" * 120)
+print("COMBINED TABLE")
+print("=" * 120)
+
+# Add panel identifier column
+mix_panel_copy = mix_panel.copy()
+mix_panel_copy.insert(0, 'Panel', 'Mixtures')
+
+comp_panel_copy = comp_panel.copy()
+comp_panel_copy.insert(0, 'Panel', 'Comp')
+
+combined = pd.concat([mix_panel_copy, comp_panel_copy], ignore_index=True)
+print(combined.to_string(index=False))
+
+# Save combined table
+combined.to_csv('metrics_table_combined.csv', index=False)
+
+print("\n" + "=" * 120)
+print("Files saved:")
+print("  - metrics_table_mixtures.csv")
+print("  - metrics_table_comp.csv")
+print("  - metrics_table_combined.csv")
+print("=" * 120)

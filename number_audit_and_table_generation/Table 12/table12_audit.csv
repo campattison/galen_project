@@ -1,0 +1,18 @@
+Method,Metric,Mix (n=30),Comp (n=30),Combined (n=60)
+Pearson,BERTScore,-0.10,+0.85***,+0.75***
+Pearson,COMET,-0.07,+0.62***,+0.60***
+Pearson,METEOR,+0.02,+0.55**,+0.53***
+Pearson,chrF++,-0.00,+0.55**,+0.53***
+Pearson,BLEU-4,-0.08,+0.42*,+0.45***
+Pearson,ROUGE-L,+0.13,+0.24,+0.34**
+Pearson,BLEURT,+0.00,+0.18,+0.32*
+Spearman,BERTScore,-0.17,+0.71***,+0.43***
+Spearman,COMET,+0.09,+0.65***,+0.51***
+Spearman,METEOR,+0.04,+0.22,+0.26*
+Spearman,chrF++,+0.09,+0.32,+0.38**
+Spearman,BLEU-4,-0.13,+0.34,+0.42***
+Spearman,ROUGE-L,+0.08,+0.10,+0.31*
+Spearman,BLEURT,+0.06,+0.08,+0.24
+SD check,TQS SD,4.8,,
+SD check,TQS SD,,26.2,
+SD check,TQS SD,,,20.2

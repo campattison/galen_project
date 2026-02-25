@@ -1,0 +1,69 @@
+Text,Chunk,Translation,Model,Word Count,APT,TQS,Quality Rating,Critical Error?,Final Quality Rating,Neutral,Minor,Major,Critical,Term.: Accuracy,Term.: Consistency,Term.: Total,Acc.: Mistranslation,Acc.: Overtranslation,Acc.: Undertranslation,Acc.: Addition,Acc.: Omission,Acc.: Total
+Mixtures,3,T2,gemini,315,0,100.0,HIGH PASS,FALSE,HIGH PASS,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mixtures,3,T3,claude,296,0,100.0,HIGH PASS,FALSE,HIGH PASS,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mixtures,2,T3,gemini,290,1,99.7,HIGH PASS,FALSE,HIGH PASS,1,1,0,0,0,0,0,2,0,0,0,0,2
+Mixtures,1,T1,gemini,289,2,99.3,HIGH PASS,FALSE,HIGH PASS,0,2,0,0,0,0,0,0,0,2,0,0,2
+Mixtures,4,T1,gemini,318,3,99.1,HIGH PASS,FALSE,HIGH PASS,0,3,0,0,2,0,2,1,0,0,0,0,1
+Mixtures,8,T3,gemini,272,3,98.9,HIGH PASS,FALSE,HIGH PASS,1,3,0,0,2,0,2,1,1,0,0,0,2
+Mixtures,6,T3,claude,246,5,98.0,HIGH PASS,FALSE,HIGH PASS,0,5,0,0,2,2,4,0,0,1,0,0,1
+Mixtures,8,T2,openai,241,5,97.9,HIGH PASS,FALSE,HIGH PASS,2,0,1,0,1,1,2,0,1,0,0,0,1
+Mixtures,3,T1,openai,285,7,97.5,HIGH PASS,FALSE,HIGH PASS,0,2,1,0,0,0,0,2,0,0,0,1,3
+Mixtures,7,T1,gemini,317,8,97.5,HIGH PASS,FALSE,HIGH PASS,0,3,1,0,1,0,1,3,0,0,0,0,3
+Mixtures,7,T3,openai,281,7,97.5,HIGH PASS,FALSE,HIGH PASS,1,7,0,0,2,0,2,2,4,0,0,0,6
+Mixtures,5,T3,gemini,278,8,97.1,HIGH PASS,FALSE,HIGH PASS,4,3,1,0,5,1,6,2,0,0,0,0,2
+Mixtures,7,T2,claude,276,8,97.1,HIGH PASS,FALSE,HIGH PASS,1,3,1,0,1,0,1,3,1,0,0,0,4
+Mixtures,10,T2,claude,274,8,97.1,HIGH PASS,FALSE,HIGH PASS,3,3,1,0,3,0,3,0,1,0,3,0,4
+Mixtures,1,T3,openai,271,8,97.0,HIGH PASS,FALSE,HIGH PASS,0,3,1,0,0,1,1,2,0,0,0,1,3
+Mixtures,5,T1,claude,271,8,97.0,HIGH PASS,FALSE,HIGH PASS,1,8,0,0,5,2,7,0,1,0,1,0,2
+Mixtures,1,T2,claude,272,9,96.7,HIGH PASS,FALSE,HIGH PASS,0,4,1,0,0,1,1,1,0,3,0,0,4
+Mixtures,4,T3,openai,274,9,96.7,HIGH PASS,FALSE,HIGH PASS,0,4,1,0,4,0,4,1,0,0,0,0,1
+Mixtures,10,T1,gemini,307,10,96.7,HIGH PASS,FALSE,HIGH PASS,4,5,1,0,3,0,3,2,0,0,4,1,7
+Mixtures,4,T2,claude,285,11,96.1,HIGH PASS,FALSE,HIGH PASS,1,6,1,0,5,0,5,3,0,0,0,0,3
+Mixtures,8,T1,claude,270,14,94.8,LOW PASS,FALSE,LOW PASS,1,4,2,0,1,2,3,2,1,1,0,0,4
+Mixtures,9,T3,claude,283,19,93.3,LOW PASS,FALSE,LOW PASS,1,4,3,0,3,0,3,0,1,4,0,0,5
+Mixtures,9,T1,openai,290,20,93.1,LOW PASS,FALSE,LOW PASS,2,5,3,0,3,0,3,1,1,5,0,0,7
+Mixtures,9,T2,gemini,314,23,92.7,LOW PASS,FALSE,LOW PASS,0,8,3,0,5,0,5,1,0,5,0,0,6
+Mixtures,2,T1,claude,264,21,92.0,LOW PASS,FALSE,LOW PASS,1,1,4,0,1,2,3,3,0,0,0,0,3
+Mixtures,6,T2,gemini,273,27,90.1,LOW PASS,TRUE,FAIL,1,2,0,1,0,0,0,2,0,2,0,0,4
+Mixtures,5,T2,openai,259,27,89.6,LOW PASS,FALSE,LOW PASS,2,7,4,0,6,2,8,3,0,2,0,0,5
+Mixtures,10,T3,openai,268,32,88.1,LOW PASS,TRUE,FAIL,0,2,1,1,2,0,2,1,0,0,0,1,2
+Mixtures,6,T1,openai,258,32,87.6,LOW PASS,TRUE,FAIL,1,2,1,1,0,0,0,2,2,1,0,0,5
+Mixtures,2,T2,openai,261,58,77.8,FAIL,TRUE,FAIL,1,3,1,2,3,0,3,4,0,0,0,0,4
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+Text,Chunk,Translation,Model,Word Count,APT,TQS,Quality Rating,Critical Error?,Final Quality Rating,Neutral,Minor,Major,Critical,Term.: Accuracy,Term.: Consistency,Term.: Total,Acc.: Mistranslation,Acc.: Overtranslation,Acc.: Undertranslation,Acc.: Addition,Acc.: Omission,Acc.: Total
+Mixtures,3,T3,claude,296,0,100.0,HIGH PASS,FALSE,HIGH PASS,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mixtures,6,T3,claude,246,5,98.0,HIGH PASS,FALSE,HIGH PASS,0,5,0,0,2,2,4,0,0,1,0,0,1
+Mixtures,7,T2,claude,276,8,97.1,HIGH PASS,FALSE,HIGH PASS,1,3,1,0,1,0,1,3,1,0,0,0,4
+Mixtures,10,T2,claude,274,8,97.1,HIGH PASS,FALSE,HIGH PASS,3,3,1,0,3,0,3,0,1,0,3,0,4
+Mixtures,5,T1,claude,271,8,97.0,HIGH PASS,FALSE,HIGH PASS,1,8,0,0,5,2,7,0,1,0,1,0,2
+Mixtures,1,T2,claude,272,9,96.7,HIGH PASS,FALSE,HIGH PASS,0,4,1,0,0,1,1,1,0,3,0,0,4
+Mixtures,4,T2,claude,285,11,96.1,HIGH PASS,FALSE,HIGH PASS,1,6,1,0,5,0,5,3,0,0,0,0,3
+Mixtures,8,T1,claude,270,14,94.8,LOW PASS,FALSE,LOW PASS,1,4,2,0,1,2,3,2,1,1,0,0,4
+Mixtures,9,T3,claude,283,19,93.3,LOW PASS,FALSE,LOW PASS,1,4,3,0,3,0,3,0,1,4,0,0,5
+Mixtures,2,T1,claude,264,21,92.0,LOW PASS,FALSE,LOW PASS,1,1,4,0,1,2,3,3,0,0,0,0,3
+,,,,,,,,,,,,,,,,,,,,,,
+Mixtures,3,T2,gemini,315,0,100.0,HIGH PASS,FALSE,HIGH PASS,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mixtures,2,T3,gemini,290,1,99.7,HIGH PASS,FALSE,HIGH PASS,1,1,0,0,0,0,0,2,0,0,0,0,2
+Mixtures,1,T1,gemini,289,2,99.3,HIGH PASS,FALSE,HIGH PASS,0,2,0,0,0,0,0,0,0,2,0,0,2
+Mixtures,4,T1,gemini,318,3,99.1,HIGH PASS,FALSE,HIGH PASS,0,3,0,0,2,0,2,1,0,0,0,0,1
+Mixtures,8,T3,gemini,272,3,98.9,HIGH PASS,FALSE,HIGH PASS,1,3,0,0,2,0,2,1,1,0,0,0,2
+Mixtures,7,T1,gemini,317,8,97.5,HIGH PASS,FALSE,HIGH PASS,0,3,1,0,1,0,1,3,0,0,0,0,3
+Mixtures,5,T3,gemini,278,8,97.1,HIGH PASS,FALSE,HIGH PASS,4,3,1,0,5,1,6,2,0,0,0,0,2
+Mixtures,10,T1,gemini,307,10,96.7,HIGH PASS,FALSE,HIGH PASS,4,5,1,0,3,0,3,2,0,0,4,1,7
+Mixtures,9,T2,gemini,314,23,92.7,LOW PASS,FALSE,LOW PASS,0,8,3,0,5,0,5,1,0,5,0,0,6
+Mixtures,6,T2,gemini,273,27,90.1,LOW PASS,TRUE,FAIL,1,2,0,1,0,0,0,2,0,2,0,0,4
+,,,,,,,,,,,,,,,,,,,,,,
+Mixtures,8,T2,openai,241,5,97.9,HIGH PASS,FALSE,HIGH PASS,2,0,1,0,1,1,2,0,1,0,0,0,1
+Mixtures,3,T1,openai,285,7,97.5,HIGH PASS,FALSE,HIGH PASS,0,2,1,0,0,0,0,2,0,0,0,1,3
+Mixtures,7,T3,openai,281,7,97.5,HIGH PASS,FALSE,HIGH PASS,1,7,0,0,2,0,2,2,4,0,0,0,6
+Mixtures,1,T3,openai,271,8,97.0,HIGH PASS,FALSE,HIGH PASS,0,3,1,0,0,1,1,2,0,0,0,1,3
+Mixtures,4,T3,openai,274,9,96.7,HIGH PASS,FALSE,HIGH PASS,0,4,1,0,4,0,4,1,0,0,0,0,1
+Mixtures,9,T1,openai,290,20,93.1,LOW PASS,FALSE,LOW PASS,2,5,3,0,3,0,3,1,1,5,0,0,7
+Mixtures,5,T2,openai,259,27,89.6,LOW PASS,FALSE,LOW PASS,2,7,4,0,6,2,8,3,0,2,0,0,5
+Mixtures,10,T3,openai,268,32,88.1,LOW PASS,TRUE,FAIL,0,2,1,1,2,0,2,1,0,0,0,1,2
+Mixtures,6,T1,openai,258,32,87.6,LOW PASS,TRUE,FAIL,1,2,1,1,0,0,0,2,2,1,0,0,5
+Mixtures,2,T2,openai,261,58,77.8,FAIL,TRUE,FAIL,1,3,1,2,3,0,3,4,0,0,0,0,4
