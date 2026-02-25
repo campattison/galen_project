@@ -1,0 +1,97 @@
+,,,,,,,,,,,,,,,,,,,,,,,
+,Model,Mix.,,,,,,Comp.,,,,,,,,,,,,,,,
+,,TQS Mean,TQS SD,High Pass %,Low Pass %,Fail %,Critical Error Count,TQS Mean,TQS SD,High Pass %,Low Pass %,Fail %,Critical Error Count,,,,,,,,,,
+,claude,96.21,2.31,70.00,30.00,0.00,0,81.22,24.50,20.00,20.00,60.00,18,,,,,,,,,,
+,gemini,97.11,3.26,80.00,10.00,10.00,1,83.44,22.53,30.00,20.00,50.00,15,,,,,,,,,,
+,openai,92.28,6.54,50.00,20.00,30.00,4,74.90,32.69,40.00,0.00,60.00,24,,,,,,,,,,
+,aggregate,95.20,4.77,66.67,20.00,13.33,5,79.85,26.25,30.00,13.33,56.67,57,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,Model,Mix.,,,,,,Comp.,,,,,,,,,,,,,,,
+,,TQS Mean,TQS SD,High Pass %,Low Pass %,Fail %,Critical Error Count,TQS Mean,TQS SD,High Pass %,Low Pass %,Fail %,Critical Error Count,,,,,,,,,,
+,claude,96.21,2.31,70.00,30.00,0.00,0,81.22,24.50,20.00,20.00,60.00,18,,,,,,,,,,
+,gemini,97.11,3.26,80.00,10.00,10.00,1,83.44,22.53,30.00,20.00,50.00,15,,,,,,,,,,
+,openai,92.28,6.54,50.00,20.00,30.00,4,74.90,32.69,40.00,0.00,60.00,24,,,,,,,,,,
+,aggregate,95.20,4.77,66.67,20.00,13.33,5,79.85,26.25,30.00,13.33,56.67,57,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,Text,Chunk,Translation,Model,Word Count,APT,TQS,Quality Rating,Critical Error?,Final Quality Rating,Neutral,Minor,Major,Critical,,,,,,,,,
+,Comp,1,T2,claude,303,0,100,HIGH PASS,FALSE,HIGH PASS,4,0,0,0,4,0,4,0,0,0,0,0,0
+,Comp,6,T3,claude,238,5,97.9,HIGH PASS,FALSE,HIGH PASS,0,0,1,0,0,0,0,1,0,0,0,0,1
+,Comp,7,T2,claude,277,16,94.2,LOW PASS,FALSE,LOW PASS,0,1,3,0,2,0,2,1,0,0,1,0,2
+,Comp,9,T3,claude,264,19,92.8,LOW PASS,FALSE,LOW PASS,0,4,3,0,4,0,4,3,0,0,0,0,3
+,Comp,4,T2,claude,283,29,89.8,LOW PASS,TRUE,FAIL,0,4,0,1,4,0,4,0,0,1,0,0,1
+,Comp,5,T1,claude,310,32,89.7,LOW PASS,TRUE,FAIL,1,2,1,1,3,0,3,1,0,0,1,0,2
+,Comp,2,T1,claude,304,34,88.8,LOW PASS,TRUE,FAIL,2,4,1,1,4,0,4,2,1,1,0,0,4
+,Comp,3,T3,claude,312,53,83,FAIL,TRUE,FAIL,0,3,5,1,3,0,3,5,1,0,0,0,6
+,Comp,10,T2,claude,301,138,54.2,FAIL,TRUE,FAIL,2,3,2,5,12,0,12,0,0,0,0,0,0
+,Comp,8,T1,claude,298,233,21.8,FAIL,TRUE,FAIL,3,8,0,9,20,0,20,0,0,0,0,0,0
+,,,,,MEAN:,55.9,81.22,High Pass %,Low Pass %,Fail %,,,SUM:,18,,,,,,,,,
+,,,,,STDEV:,73.45210079,24.49593164,20,20,60,,,,,,,,,,,,,
+,Comp,1,T1,gemini,312,2,99.4,HIGH PASS,FALSE,HIGH PASS,5,2,0,0,7,0,7,0,0,0,0,0,0
+,Comp,6,T2,gemini,260,11,95.8,HIGH PASS,FALSE,HIGH PASS,1,1,2,0,1,0,1,1,1,0,0,1,3
+,Comp,4,T1,gemini,310,15,95.2,HIGH PASS,FALSE,HIGH PASS,2,5,2,0,2,3,5,2,0,1,0,1,4
+,Comp,9,T2,gemini,277,14,94.9,LOW PASS,FALSE,LOW PASS,0,4,2,0,4,0,4,2,0,0,0,0,2
+,Comp,7,T1,gemini,313,19,93.9,LOW PASS,FALSE,LOW PASS,0,4,3,0,4,0,4,1,0,0,2,0,3
+,Comp,5,T3,gemini,347,33,90.5,LOW PASS,TRUE,FAIL,2,3,1,1,3,0,3,0,0,2,1,1,4
+,Comp,3,T2,gemini,333,39,88.3,LOW PASS,TRUE,FAIL,0,4,2,1,2,1,3,2,2,0,0,0,4
+,Comp,2,T3,gemini,315,46,85.4,FAIL,TRUE,FAIL,1,1,4,1,4,0,4,3,0,0,0,0,3
+,Comp,8,T3,gemini,336,115,65.8,FAIL,TRUE,FAIL,3,5,2,4,14,0,14,0,0,0,0,0,0
+,Comp,10,T1,gemini,301,225,25.2,FAIL,TRUE,FAIL,2,5,4,8,19,0,19,0,0,0,0,0,0
+,,,,,MEAN:,51.9,83.44,High Pass %,Low Pass %,Fail %,,,SUM:,15,,,,,,,,,
+,,,,,STDEV:,68.75633304,22.52629081,30,20,50,,,,,,,,,,,,,
+,Comp,1,T3,openai,276,2,99.3,HIGH PASS,FALSE,HIGH PASS,6,2,0,0,6,1,7,1,0,0,0,0,1
+,Comp,7,T3,openai,267,6,97.8,HIGH PASS,FALSE,HIGH PASS,1,1,1,0,1,0,1,1,0,0,1,0,2
+,Comp,4,T3,openai,277,8,97.1,HIGH PASS,FALSE,HIGH PASS,0,3,1,0,3,0,3,0,0,1,0,0,1
+,Comp,6,T1,openai,234,10,95.7,HIGH PASS,FALSE,HIGH PASS,0,5,1,0,2,1,3,1,1,1,0,0,3
+,Comp,5,T2,openai,319,37,88.4,LOW PASS,TRUE,FAIL,3,2,2,1,4,0,4,1,0,0,3,0,4
+,Comp,2,T2,openai,285,40,86,FAIL,TRUE,FAIL,1,5,2,1,4,0,4,4,0,1,0,0,5
+,Comp,9,T1,openai,268,46,82.8,FAIL,TRUE,FAIL,1,6,3,1,7,0,7,3,0,0,0,1,4
+,Comp,3,T1,openai,311,106,65.9,FAIL,TRUE,FAIL,0,1,1,4,2,0,2,4,0,0,0,0,4
+,Comp,10,T3,openai,214,137,36,FAIL,TRUE,FAIL,2,2,7,4,14,0,14,0,0,0,0,1,1
+,Comp,8,T2,openai,270,350,0,FAIL,TRUE,FAIL,3,15,2,13,33,0,33,0,0,0,0,0,0
+,,,,,MEAN:,74.2,74.9,High Pass %,Low Pass %,Fail %,,,SUM:,24,,,,,,,,,
+,,,,,STDEV:,106.8423553,32.68934587,40,0,60,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,Aggregate,,,,MEAN:,60.66666667,79.85333333,High Pass %,Low Pass %,Fail %,,,SUM:,57,,,,,,,,,
+,,,,,STDEV:,82.35094511,26.24642811,30,13.33333333,56.66666667,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,Text,Chunk,Translation,Model,Word Count,APT,TQS,Quality Rating,Critical Error?,Final Quality Rating,Neutral,Minor,Major,Critical,,,,,,,,,
+,Mixtures,3,T3,claude,296,0,100,HIGH PASS,FALSE,HIGH PASS,0,0,0,0,0,0,0,0,0,0,0,0,0
+,Mixtures,6,T3,claude,246,5,98,HIGH PASS,FALSE,HIGH PASS,0,5,0,0,2,2,4,0,0,1,0,0,1
+,Mixtures,7,T2,claude,276,8,97.1,HIGH PASS,FALSE,HIGH PASS,1,3,1,0,1,0,1,3,1,0,0,0,4
+,Mixtures,10,T2,claude,274,8,97.1,HIGH PASS,FALSE,HIGH PASS,3,3,1,0,3,0,3,0,1,0,3,0,4
+,Mixtures,5,T1,claude,271,8,97,HIGH PASS,FALSE,HIGH PASS,1,8,0,0,5,2,7,0,1,0,1,0,2
+,Mixtures,1,T2,claude,272,9,96.7,HIGH PASS,FALSE,HIGH PASS,0,4,1,0,0,1,1,1,0,3,0,0,4
+,Mixtures,4,T2,claude,285,11,96.1,HIGH PASS,FALSE,HIGH PASS,1,6,1,0,5,0,5,3,0,0,0,0,3
+,Mixtures,8,T1,claude,270,14,94.8,LOW PASS,FALSE,LOW PASS,1,4,2,0,1,2,3,2,1,1,0,0,4
+,Mixtures,9,T3,claude,283,19,93.3,LOW PASS,FALSE,LOW PASS,1,4,3,0,3,0,3,0,1,4,0,0,5
+,Mixtures,2,T1,claude,264,21,92,LOW PASS,FALSE,LOW PASS,1,1,4,0,1,2,3,3,0,0,0,0,3
+,,,,,MEAN:,10.3,96.21,High Pass %,Low Pass %,Fail %,,,SUM:,0,,,,,,,,,
+,,,,,STDEV:,6.290204024,2.314423374,70,30,0,,,,,,,,,,,,,
+,Mixtures,3,T2,gemini,315,0,100,HIGH PASS,FALSE,HIGH PASS,0,0,0,0,0,0,0,0,0,0,0,0,0
+,Mixtures,2,T3,gemini,290,1,99.7,HIGH PASS,FALSE,HIGH PASS,1,1,0,0,0,0,0,2,0,0,0,0,2
+,Mixtures,1,T1,gemini,289,2,99.3,HIGH PASS,FALSE,HIGH PASS,0,2,0,0,0,0,0,0,0,2,0,0,2
+,Mixtures,4,T1,gemini,318,3,99.1,HIGH PASS,FALSE,HIGH PASS,0,3,0,0,2,0,2,1,0,0,0,0,1
+,Mixtures,8,T3,gemini,272,3,98.9,HIGH PASS,FALSE,HIGH PASS,1,3,0,0,2,0,2,1,1,0,0,0,2
+,Mixtures,7,T1,gemini,317,8,97.5,HIGH PASS,FALSE,HIGH PASS,0,3,1,0,1,0,1,3,0,0,0,0,3
+,Mixtures,5,T3,gemini,278,8,97.1,HIGH PASS,FALSE,HIGH PASS,4,3,1,0,5,1,6,2,0,0,0,0,2
+,Mixtures,10,T1,gemini,307,10,96.7,HIGH PASS,FALSE,HIGH PASS,4,5,1,0,3,0,3,2,0,0,4,1,7
+,Mixtures,9,T2,gemini,314,23,92.7,LOW PASS,FALSE,LOW PASS,0,8,3,0,5,0,5,1,0,5,0,0,6
+,Mixtures,6,T2,gemini,273,27,90.1,LOW PASS,TRUE,FAIL,1,2,0,1,0,0,0,2,0,2,0,0,4
+,,,,,MEAN:,8.5,97.11,High Pass %,Low Pass %,Fail %,,,SUM:,1,,,,,,,,,
+,,,,,STDEV:,9.348202442,3.264778366,80,10,10,,,,,,,,,,,,,
+,Mixtures,8,T2,openai,241,5,97.9,HIGH PASS,FALSE,HIGH PASS,2,0,1,0,1,1,2,0,1,0,0,0,1
+,Mixtures,3,T1,openai,285,7,97.5,HIGH PASS,FALSE,HIGH PASS,0,2,1,0,0,0,0,2,0,0,0,1,3
+,Mixtures,7,T3,openai,281,7,97.5,HIGH PASS,FALSE,HIGH PASS,1,7,0,0,2,0,2,2,4,0,0,0,6
+,Mixtures,1,T3,openai,271,8,97,HIGH PASS,FALSE,HIGH PASS,0,3,1,0,0,1,1,2,0,0,0,1,3
+,Mixtures,4,T3,openai,274,9,96.7,HIGH PASS,FALSE,HIGH PASS,0,4,1,0,4,0,4,1,0,0,0,0,1
+,Mixtures,9,T1,openai,290,20,93.1,LOW PASS,FALSE,LOW PASS,2,5,3,0,3,0,3,1,1,5,0,0,7
+,Mixtures,5,T2,openai,259,27,89.6,LOW PASS,FALSE,LOW PASS,2,7,4,0,6,2,8,3,0,2,0,0,5
+,Mixtures,10,T3,openai,268,32,88.1,LOW PASS,TRUE,FAIL,0,2,1,1,2,0,2,1,0,0,0,1,2
+,Mixtures,6,T1,openai,258,32,87.6,LOW PASS,TRUE,FAIL,1,2,1,1,0,0,0,2,2,1,0,0,5
+,Mixtures,2,T2,openai,261,58,77.8,FAIL,TRUE,FAIL,1,3,1,2,3,0,3,4,0,0,0,0,4
+,,,,,MEAN:,20.5,92.28,High Pass %,Low Pass %,Fail %,,,SUM:,4,,,,,,,,,
+,,,,,STDEV:,17.01796436,6.53873926,50,20,30,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,Aggregate,,,,MEAN:,13.1,95.2,High Pass %,Low Pass %,Fail %,,,SUM:,5,,,,,,,,,
+,,,,,STDEV:,12.57625019,4.773778956,66.66666667,20,13.33333333,,,,,,,,,,,,,
