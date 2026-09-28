@@ -1,0 +1,124 @@
+key,value,description
+step0_r,-0.968878,"rarity vs TQS, Comp., Pearson r (original measure)"
+step0_p,0.000004,p for that r (original measure)
+step0_R2,0.938725,R^2 (original measure)
+step0_R2_pct,93.872485,"variance explained, R^2 x 100 (original measure)"
+step0_R2_ci,0.413643-0.992922,bootstrap 95% CI for R^2 (original measure)
+step0_rho,-0.878788,Spearman rho (original measure)
+step0_prho,0.000814,p for rho (original measure)
+step0_D8,1.495021,"Cook's D, passage 8 (original measure)"
+step0_D10,2.029813,"Cook's D, passage 10 (original measure)"
+step0_rx,-0.705662,r without 8 and 10 (original measure)
+step0_px,0.050505,p without 8 and 10 (original measure)
+step0_R2x,0.497959,R^2 without 8 and 10 (original measure)
+step0_rhox,-0.785714,rho without 8 and 10 (original measure)
+step0_prhox,0.020815,p for rho without 8 and 10 (original measure)
+step0_mean_comp,0.234496,"mean rare-term ratio, Comp. (original measure)"
+step0_mean_mix,0.139786,"mean rare-term ratio, Mix. (original measure)"
+step0_ratio_8,0.396552,"rare-term ratio, 8 (original measure)"
+step0_ratio_10,0.434211,"rare-term ratio, 10 (original measure)"
+step0_mean_ratio_810,0.415382,"rare-term ratio, 8+10 mean (original measure)"
+step0_mean_ratio_other_Comp,0.189274,"rare-term ratio, other Comp. mean (original measure)"
+step0_max_ratio_other_Comp,0.232456,"rare-term ratio, other Comp. max (original measure)"
+step0_max_ratio_Mix,0.187773,"rare-term ratio, Mix. max (original measure)"
+step0_multiple,2.194603,8+10 mean as a multiple of the other Comp. mean (original measure)
+step0_comp_over_mix,1.677530,Comp. mean rare-term ratio as a multiple of the Mix. mean (original measure)
+step0_sep,7.000000,Comp. passages rarer than every Mix. passage (original measure)
+step0b_r,-0.965371,"rarity vs TQS, Comp., Pearson r (original method, Comp. 1 as translated)"
+step0b_p,0.000006,"p for that r (original method, Comp. 1 as translated)"
+step0b_R2,0.931941,"R^2 (original method, Comp. 1 as translated)"
+step0b_R2_pct,93.194097,"variance explained, R^2 x 100 (original method, Comp. 1 as translated)"
+step0b_R2_ci,0.308483-0.990092,"bootstrap 95% CI for R^2 (original method, Comp. 1 as translated)"
+step0b_rho,-0.830303,"Spearman rho (original method, Comp. 1 as translated)"
+step0b_prho,0.002940,"p for rho (original method, Comp. 1 as translated)"
+step0b_D8,1.346602,"Cook's D, passage 8 (original method, Comp. 1 as translated)"
+step0b_D10,2.124995,"Cook's D, passage 10 (original method, Comp. 1 as translated)"
+step0b_rx,-0.588905,"r without 8 and 10 (original method, Comp. 1 as translated)"
+step0b_px,0.124538,"p without 8 and 10 (original method, Comp. 1 as translated)"
+step0b_R2x,0.346809,"R^2 without 8 and 10 (original method, Comp. 1 as translated)"
+step0b_rhox,-0.690476,"rho without 8 and 10 (original method, Comp. 1 as translated)"
+step0b_prhox,0.057990,"p for rho without 8 and 10 (original method, Comp. 1 as translated)"
+step0b_mean_comp,0.237846,"mean rare-term ratio, Comp. (original method, Comp. 1 as translated)"
+step0b_mean_mix,0.139786,"mean rare-term ratio, Mix. (original method, Comp. 1 as translated)"
+step0b_ratio_8,0.396552,"rare-term ratio, 8 (original method, Comp. 1 as translated)"
+step0b_ratio_10,0.434211,"rare-term ratio, 10 (original method, Comp. 1 as translated)"
+step0b_mean_ratio_810,0.415382,"rare-term ratio, 8+10 mean (original method, Comp. 1 as translated)"
+step0b_mean_ratio_other_Comp,0.193462,"rare-term ratio, other Comp. mean (original method, Comp. 1 as translated)"
+step0b_max_ratio_other_Comp,0.232456,"rare-term ratio, other Comp. max (original method, Comp. 1 as translated)"
+step0b_max_ratio_Mix,0.187773,"rare-term ratio, Mix. max (original method, Comp. 1 as translated)"
+step0b_multiple,2.147096,"8+10 mean as a multiple of the other Comp. mean (original method, Comp. 1 as translated)"
+step0b_comp_over_mix,1.701498,"Comp. mean rare-term ratio as a multiple of the Mix. mean (original method, Comp. 1 as translated)"
+step0b_sep,7.000000,"Comp. passages rarer than every Mix. passage (original method, Comp. 1 as translated)"
+final_r,-0.942676,"rarity vs TQS, Comp., Pearson r (final measure)"
+final_p,0.000044,p for that r (final measure)
+final_R2,0.888639,R^2 (final measure)
+final_R2_pct,88.863889,"variance explained, R^2 x 100 (final measure)"
+final_R2_ci,0.163156-0.974275,bootstrap 95% CI for R^2 (final measure)
+final_rho,-0.793939,Spearman rho (final measure)
+final_prho,0.006100,p for rho (final measure)
+final_D8,1.136850,"Cook's D, passage 8 (final measure)"
+final_D10,0.530318,"Cook's D, passage 10 (final measure)"
+final_rx,-0.549690,r without 8 and 10 (final measure)
+final_px,0.158129,p without 8 and 10 (final measure)
+final_R2x,0.302159,R^2 without 8 and 10 (final measure)
+final_rhox,-0.619048,rho without 8 and 10 (final measure)
+final_prhox,0.101733,p for rho without 8 and 10 (final measure)
+final_mean_comp,0.136911,"mean rare-term ratio, Comp. (final measure)"
+final_mean_mix,0.023907,"mean rare-term ratio, Mix. (final measure)"
+final_ratio_8,0.276382,"rare-term ratio, 8 (final measure)"
+final_ratio_10,0.314607,"rare-term ratio, 10 (final measure)"
+final_mean_ratio_810,0.295494,"rare-term ratio, 8+10 mean (final measure)"
+final_mean_ratio_other_Comp,0.097265,"rare-term ratio, other Comp. mean (final measure)"
+final_max_ratio_other_Comp,0.142857,"rare-term ratio, other Comp. max (final measure)"
+final_max_ratio_Mix,0.052174,"rare-term ratio, Mix. max (final measure)"
+final_multiple,3.038035,8+10 mean as a multiple of the other Comp. mean (final measure)
+final_comp_over_mix,5.726716,Comp. mean rare-term ratio as a multiple of the Mix. mean (final measure)
+final_sep,9.000000,Comp. passages rarer than every Mix. passage (final measure)
+cook_threshold,0.400000,Cook's distance threshold 4/n (n = 10)
+tqs_mean_cat,33.833333,"mean TQS, Comp. 8 and 10"
+tqs_mean_other,91.358333,"mean TQS, other Comp. passages"
+rarity_corr_step0_rare_tqs_comp,-0.968878,"Rare-term ratio vs TQS (Comp.), Pearson r (original measure)"
+rarity_corr_step0_rare_tqs_all,-0.931409,"Rare-term ratio vs TQS (All), Pearson r (original measure)"
+rarity_corr_step0_rare_crit_comp,0.922009,"Rare-term ratio vs Critical (Comp.), Pearson r (original measure)"
+rarity_corr_step0_rare_crit_all,0.899784,"Rare-term ratio vs Critical (All), Pearson r (original measure)"
+rarity_corr_step0_nf_tqs_comp,-0.956701,"Not-found ratio vs TQS (Comp.), Pearson r (original measure)"
+rarity_corr_step0_nf_tqs_all,-0.937847,"Not-found ratio vs TQS (All), Pearson r (original measure)"
+rarity_corr_step0_nf_crit_comp,0.911824,"Not-found ratio vs Critical (Comp.), Pearson r (original measure)"
+rarity_corr_step0_nf_crit_all,0.907248,"Not-found ratio vs Critical (All), Pearson r (original measure)"
+rarity_corr_step0_zipf_tqs_comp,0.958578,"Mean Zipf frequency vs TQS (Comp.), Pearson r (original measure)"
+rarity_corr_step0_zipf_tqs_all,0.951237,"Mean Zipf frequency vs TQS (All), Pearson r (original measure)"
+rarity_corr_step0_zipf_crit_comp,-0.908607,"Mean Zipf frequency vs Critical (Comp.), Pearson r (original measure)"
+rarity_corr_step0_zipf_crit_all,-0.915176,"Mean Zipf frequency vs Critical (All), Pearson r (original measure)"
+rarity_corr_final_rare_tqs_comp,-0.942676,"Rare-term ratio vs TQS (Comp.), Pearson r (final measure)"
+rarity_corr_final_rare_tqs_all,-0.897161,"Rare-term ratio vs TQS (All), Pearson r (final measure)"
+rarity_corr_final_rare_crit_comp,0.889407,"Rare-term ratio vs Critical (Comp.), Pearson r (final measure)"
+rarity_corr_final_rare_crit_all,0.858043,"Rare-term ratio vs Critical (All), Pearson r (final measure)"
+rarity_corr_final_nf_tqs_comp,-0.905355,"Not-found ratio vs TQS (Comp.), Pearson r (final measure)"
+rarity_corr_final_nf_tqs_all,-0.876896,"Not-found ratio vs TQS (All), Pearson r (final measure)"
+rarity_corr_final_nf_crit_comp,0.884111,"Not-found ratio vs Critical (Comp.), Pearson r (final measure)"
+rarity_corr_final_nf_crit_all,0.858631,"Not-found ratio vs Critical (All), Pearson r (final measure)"
+rarity_corr_final_zipf_tqs_comp,0.947029,"Mean Zipf frequency vs TQS (Comp.), Pearson r (final measure)"
+rarity_corr_final_zipf_tqs_all,0.939686,"Mean Zipf frequency vs TQS (All), Pearson r (final measure)"
+rarity_corr_final_zipf_crit_comp,-0.893468,"Mean Zipf frequency vs Critical (Comp.), Pearson r (final measure)"
+rarity_corr_final_zipf_crit_all,-0.898794,"Mean Zipf frequency vs Critical (All), Pearson r (final measure)"
+low_rarity_passages,"1, 4, 6","Comp. passages, taken from the lowest rarity up, with no Scheme 1 FAIL and at most one Scheme 2 FAIL in total (in passage order)"
+low_rarity_max,0.070175,highest rare-term ratio among them
+low_rarity_next,0.101852,"rare-term ratio of the next passage (Comp. 5), where that no longer holds"
+low_rarity_s2_fails,4: Claude (89.8),the Scheme 2 FAIL among those passages (passage: model (TQS))
+rarity_gap_low,0.142857,highest rare-term ratio of any Comp. passage other than 8 and 10
+rarity_gap_high,0.276382,lower rare-term ratio of Comp. 8 and 10
+err_term_r,0.847610,"Comp. passages: rarity vs Terminology errors, Pearson r"
+err_term_rho,0.425534,"Comp. passages: rarity vs Terminology errors, Spearman rho"
+err_term_p,0.001955,"p for the Pearson r, rarity vs Terminology errors"
+err_term_prho,0.220179,"p for the Spearman rho, rarity vs Terminology errors"
+err_acc_r,-0.460889,"Comp. passages: rarity vs Accuracy errors, Pearson r"
+err_acc_rho,-0.103660,"Comp. passages: rarity vs Accuracy errors, Spearman rho"
+err_acc_p,0.180051,"p for the Pearson r, rarity vs Accuracy errors"
+err_acc_prho,0.775664,"p for the Spearman rho, rarity vs Accuracy errors"
+notation_step_rise,0.001428,"largest rise in any rare-term ratio from step 0b to step 1 (numerals and symbols dropped, abbreviations expanded, words split at ῤῥ re-joined)"
+notation_step_worst,-0.054843,"largest fall in any rare-term ratio from step 0b to step 1 (numerals and symbols dropped, abbreviations expanded, words split at ῤῥ re-joined) (Comp. 8)"
+notation_step_mix_max,0.001428,"largest change in the rare-term ratio of a Mix. passage from step 0b to step 1 (numerals and symbols dropped, abbreviations expanded, words split at ῤῥ re-joined)"
+notation_TQS_r,-0.899898,Comp. passages: notation density vs TQS
+notation_critical_r,0.824242,Comp. passages: notation density vs critical errors
+notation_rarity_r,0.956259,Comp. passages: notation density vs the rare-term ratio
+notation_TQS_rx,-0.430421,Comp. passages other than 8 and 10: notation density vs TQS

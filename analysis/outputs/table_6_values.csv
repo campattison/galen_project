@@ -1,0 +1,49 @@
+row,column,statistic,value
+Mix. Claude,S1 High Pass,%,70.000000
+Mix. Claude,S1 Low Pass,%,30.000000
+Mix. Claude,S1 Fail,%,0.000000
+Mix. Claude,S2 High Pass,%,70.000000
+Mix. Claude,S2 Low Pass,%,30.000000
+Mix. Claude,S2 Fail,%,0.000000
+Mix. Gemini,S1 High Pass,%,80.000000
+Mix. Gemini,S1 Low Pass,%,20.000000
+Mix. Gemini,S1 Fail,%,0.000000
+Mix. Gemini,S2 High Pass,%,80.000000
+Mix. Gemini,S2 Low Pass,%,10.000000
+Mix. Gemini,S2 Fail,%,10.000000
+Mix. ChatGPT,S1 High Pass,%,50.000000
+Mix. ChatGPT,S1 Low Pass,%,40.000000
+Mix. ChatGPT,S1 Fail,%,10.000000
+Mix. ChatGPT,S2 High Pass,%,50.000000
+Mix. ChatGPT,S2 Low Pass,%,20.000000
+Mix. ChatGPT,S2 Fail,%,30.000000
+Mix. Aggregate,S1 High Pass,%,66.666667
+Mix. Aggregate,S1 Low Pass,%,30.000000
+Mix. Aggregate,S1 Fail,%,3.333333
+Mix. Aggregate,S2 High Pass,%,66.666667
+Mix. Aggregate,S2 Low Pass,%,20.000000
+Mix. Aggregate,S2 Fail,%,13.333333
+Comp. Claude,S1 High Pass,%,20.000000
+Comp. Claude,S1 Low Pass,%,50.000000
+Comp. Claude,S1 Fail,%,30.000000
+Comp. Claude,S2 High Pass,%,20.000000
+Comp. Claude,S2 Low Pass,%,20.000000
+Comp. Claude,S2 Fail,%,60.000000
+Comp. Gemini,S1 High Pass,%,30.000000
+Comp. Gemini,S1 Low Pass,%,40.000000
+Comp. Gemini,S1 Fail,%,30.000000
+Comp. Gemini,S2 High Pass,%,30.000000
+Comp. Gemini,S2 Low Pass,%,20.000000
+Comp. Gemini,S2 Fail,%,50.000000
+Comp. ChatGPT,S1 High Pass,%,40.000000
+Comp. ChatGPT,S1 Low Pass,%,10.000000
+Comp. ChatGPT,S1 Fail,%,50.000000
+Comp. ChatGPT,S2 High Pass,%,40.000000
+Comp. ChatGPT,S2 Low Pass,%,0.000000
+Comp. ChatGPT,S2 Fail,%,60.000000
+Comp. Aggregate,S1 High Pass,%,30.000000
+Comp. Aggregate,S1 Low Pass,%,33.333333
+Comp. Aggregate,S1 Fail,%,36.666667
+Comp. Aggregate,S2 High Pass,%,30.000000
+Comp. Aggregate,S2 Low Pass,%,13.333333
+Comp. Aggregate,S2 Fail,%,56.666667

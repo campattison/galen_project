@@ -1,0 +1,23 @@
+key,value,description
+tokens_original,4428,tokens counted in the original measure
+comp1_tokens_preface,214,"Comp. 1 tokens in the original measure (the preface, I.1)"
+comp1_tokens_translated,224,Comp. 1 tokens by the original method on the translated passage (I.2)
+decisions_unused,ἀποθήκῃ; ῥοὰς,recorded hand decisions for words that occur only in the preface
+notation_tokens,177,"numerals, symbols and abbreviations counted as words in the original measure"
+numerals,85,numerals removed
+symbols,29,symbols removed
+notation_dropped,114,numerals and symbols dropped (the abbreviations are kept)
+abbreviations,63,weight abbreviations expanded to their lemma and counted as words
+abbreviation_pairs,"δραχ. = δραχμή, ξε. = ξέστης","the weight abbreviations as printed, and the words they abbreviate"
+abbreviation_forms,δραχ = δραχμή; ξε = ξέστης,the weight abbreviations and the lemmas they are counted as
+split_words,3,words Stanza split at ῤῥ (re-joined)
+unmatched_tokens,574,word tokens whose Stanza lemma matches nothing in Diorisis
+unmatched_share,13.480507,share of word tokens with an unmatched Stanza lemma (%)
+repaired_tokens,452,unmatched lemmas repaired (normalised or Diorisis form lemma)
+disagreement_tokens,69,tokens decided by hand
+disagreement_words,24,words decided by hand
+absent_Comp,108,Comp: final tokens absent from Diorisis (counted as rare)
+tokens_Comp,2142,Comp: tokens in the final measure
+absent_Mix,14,Mix: final tokens absent from Diorisis (counted as rare)
+tokens_Mix,2179,Mix: tokens in the final measure
+absent_total,122,"final tokens absent from Diorisis, both texts"

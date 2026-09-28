@@ -1,0 +1,20 @@
+,Mix.,Comp.,Comp./Mix. Ratio
+Total errors,170,265,1.6×
+Errors per translation,5.7,8.8,1.6×
+Severity,,,
+Neutral,29 (17.1%),45 (17.0%),1.0×
+Minor,103 (60.6%),105 (39.6%),0.7×
+Major,33 (19.4%),58 (21.9%),1.1×
+Critical,5 (2.9%),57 (21.5%),7.3×
+Error Type,,,
+Terminology,74 (43.5%),198 (74.7%),1.7×
+Accuracy,96 (56.5%),67 (25.3%),0.4×
+Terminology Subtypes,,,
+Term. Accuracy,60 (35.3%),192 (72.5%),2.1×
+Term. Consistency,14 (8.2%),6 (2.3%),0.3×
+Accuracy Subtypes,,,
+Mistranslation,44 (25.9%),39 (14.7%),0.6×
+Overtranslation,14 (8.2%),6 (2.3%),0.3×
+Undertranslation,26 (15.3%),8 (3.0%),0.2×
+Addition,8 (4.7%),9 (3.4%),0.7×
+Omission,4 (2.4%),5 (1.9%),0.8×

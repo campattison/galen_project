@@ -1,0 +1,29 @@
+row,column,statistic,value
+BLEU,Johnston: Preference,count,24.000000
+BLEU,Johnston: %,%,80.000000
+BLEU,Singer & v.d.E.: Preference,count,6.000000
+BLEU,Singer & v.d.E.: %,%,20.000000
+chrF++,Johnston: Preference,count,25.000000
+chrF++,Johnston: %,%,83.333333
+chrF++,Singer & v.d.E.: Preference,count,5.000000
+chrF++,Singer & v.d.E.: %,%,16.666667
+METEOR,Johnston: Preference,count,26.000000
+METEOR,Johnston: %,%,86.666667
+METEOR,Singer & v.d.E.: Preference,count,4.000000
+METEOR,Singer & v.d.E.: %,%,13.333333
+ROUGE-L,Johnston: Preference,count,24.000000
+ROUGE-L,Johnston: %,%,80.000000
+ROUGE-L,Singer & v.d.E.: Preference,count,6.000000
+ROUGE-L,Singer & v.d.E.: %,%,20.000000
+BERTScore,Johnston: Preference,count,15.000000
+BERTScore,Johnston: %,%,50.000000
+BERTScore,Singer & v.d.E.: Preference,count,15.000000
+BERTScore,Singer & v.d.E.: %,%,50.000000
+BLEURT,Johnston: Preference,count,16.000000
+BLEURT,Johnston: %,%,53.333333
+BLEURT,Singer & v.d.E.: Preference,count,14.000000
+BLEURT,Singer & v.d.E.: %,%,46.666667
+COMET,Johnston: Preference,count,6.000000
+COMET,Johnston: %,%,20.000000
+COMET,Singer & v.d.E.: Preference,count,24.000000
+COMET,Singer & v.d.E.: %,%,80.000000

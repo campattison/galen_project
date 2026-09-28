@@ -1,0 +1,51 @@
+key,value,description
+wc_min,214,shortest English translation in words (the denominator of TQS)
+wc_max,347,longest English translation in words (the denominator of TQS)
+tqs_one_crit_min,88.317757,TQS with a single critical error and nothing else: lowest
+tqs_one_crit_max,92.795389,TQS with a single critical error and nothing else: highest
+tqs_two_crit_max,85.590778,TQS with two critical errors: highest possible
+budget_high_minor,10,most minor errors the shortest translation can carry and stay HIGH PASS
+budget_high_minor_longest,17,"the same, longest translation"
+budget_high_major,2,most major errors the shortest translation can carry and stay HIGH PASS
+budget_high_major_longest,3,"the same, longest translation"
+budget_high_critical,0,most critical errors the shortest translation can carry and stay HIGH PASS
+budget_high_critical_longest,0,"the same, longest translation"
+budget_low_minor,27,most minor errors the shortest translation can carry and stay LOW PASS or better
+budget_low_minor_longest,45,"the same, longest translation"
+budget_low_major,5,most major errors the shortest translation can carry and stay LOW PASS or better
+budget_low_major_longest,9,"the same, longest translation"
+budget_low_critical,1,most critical errors the shortest translation can carry and stay LOW PASS or better
+budget_low_critical_longest,1,"the same, longest translation"
+fail_at_minor,28,minor errors at which the shortest translation first FAILs
+fail_at_minor_longest,46,"the same, longest translation"
+fail_at_major,6,major errors at which the shortest translation first FAILs
+fail_at_major_longest,10,"the same, longest translation"
+fail_at_critical,2,critical errors at which the shortest translation first FAILs
+fail_at_critical_longest,2,"the same, longest translation"
+below_hp,31,translations below HIGH PASS
+below_hp_no_crit,10,translations below HIGH PASS with no critical error (demoted by major and minor errors alone)
+below_hp_no_crit_majors,2-4,fewest-most major errors among those translations
+fail_n,12,translations that FAIL under Scheme 1
+fail_no_crit,0,translations that FAIL under Scheme 1 with no critical error
+scheme_disagreements,9,"translations the two schemes rate differently (all LOW PASS under 1, FAIL under 2)"
+weights_rho_min,0.965999,lowest Spearman correlation between TQS as scored and TQS under another severity weighting
+weights_bands_max,17,most translations that change band under another severity weighting
+weights_gap_min,26.250912,smallest gap between Comp. 8 and 10 and the other Comp. passages under any weighting tried
+pass_f85_Mix_1,96.666667,Mix Scheme 1 pass rate with FAIL < 85
+pass_f85_Mix_2,86.666667,Mix Scheme 2 pass rate with FAIL < 85
+pass_f85_Comp_1,70.000000,Comp Scheme 1 pass rate with FAIL < 85
+pass_f85_Comp_2,43.333333,Comp Scheme 2 pass rate with FAIL < 85
+pass_f87_Mix_1,96.666667,Mix Scheme 1 pass rate with FAIL < 87
+pass_f87_Mix_2,86.666667,Mix Scheme 2 pass rate with FAIL < 87
+pass_f87_Comp_1,63.333333,Comp Scheme 1 pass rate with FAIL < 87
+pass_f87_Comp_2,43.333333,Comp Scheme 2 pass rate with FAIL < 87
+pass_f90_Mix_1,86.666667,Mix Scheme 1 pass rate with FAIL < 90
+pass_f90_Mix_2,83.333333,Mix Scheme 2 pass rate with FAIL < 90
+pass_f90_Comp_1,46.666667,Comp Scheme 1 pass rate with FAIL < 90
+pass_f90_Comp_2,43.333333,Comp Scheme 2 pass rate with FAIL < 90
+pass_hp93_Mix,76.666667,Mix HIGH PASS rate with HIGH PASS >= 93
+pass_hp93_Comp,40.000000,Comp HIGH PASS rate with HIGH PASS >= 93
+pass_hp95_Mix,66.666667,Mix HIGH PASS rate with HIGH PASS >= 95
+pass_hp95_Comp,30.000000,Comp HIGH PASS rate with HIGH PASS >= 95
+pass_hp97_Mix,53.333333,Mix HIGH PASS rate with HIGH PASS >= 97
+pass_hp97_Comp,20.000000,Comp HIGH PASS rate with HIGH PASS >= 97

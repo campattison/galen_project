@@ -1,0 +1,6 @@
+key,value,description
+gen_n,60,translations stored
+gen_dates,2025-10-29,generation date(s)
+gen_first_attempt,60,translations produced on the first attempt (one generation per passage per model)
+gen_success,60,records with status success
+api_tools_any,0,API calls that pass a tool or search parameter

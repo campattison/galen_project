@@ -1,0 +1,8 @@
+Metric,Johnston: Preference,Johnston: %,Singer & v.d.E.: Preference,Singer & v.d.E.: %,Total
+BLEU,24,80.0%,6,20.0%,30
+chrF++,25,83.3%,5,16.7%,30
+METEOR,26,86.7%,4,13.3%,30
+ROUGE-L,24,80.0%,6,20.0%,30
+BERTScore,15,50.0%,15,50.0%,30
+BLEURT,16,53.3%,14,46.7%,30
+COMET,6,20.0%,24,80.0%,30

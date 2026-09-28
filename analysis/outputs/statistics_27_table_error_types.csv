@@ -1,0 +1,3 @@
+key,value,description
+errors_total,435,errors in both texts together
+errors_comp_over_mix_pct,55.882353,how many more errors Comp. has than Mix. (%)

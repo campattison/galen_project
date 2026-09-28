@@ -45,3 +45,7 @@ corpus_metrics/Diorisis/
 
 # Excluded pipeline components (not part of this release)
 mt_eval copy/
+
+# Scratch output of analysis/optional/ scripts
+analysis/outputs/optional/
+analysis/outputs_comet_kiwi/

@@ -1,0 +1,6 @@
+Metric,Input limit,How the input is encoded,Mix. pairs truncated,Comp. pairs truncated,What the metric reads
+"BLEU-4, chrF++, METEOR, ROUGE-L",none,no length limit,0 of 60,0 of 30,all of every passage
+BERTScore,510 per side,candidate and reference embedded separately,0 of 60,6 of 30,"Comp. 8 and 10 only: reference 85% (8), 77% (10); longest hypothesis 81%"
+COMET (wmt22-comet-da),508 per segment,"source, candidate and reference embedded separately",60 of 60 (Greek source),30 of 30 (Greek source); 6 of 30 (English),"Greek: 71% mean, 66% min (Mix.); 65% mean, 59% min (Comp.); Comp. 8 and 10: reference (79%) and 5 of 6 candidates (80–94%) also cut"
+BLEURT-20,512 joint,reference and candidate concatenated; the longer side truncated until the pair fits,60 of 60,30 of 30,"both sides: 71–73% (Mix.), 61% (Comp.), 41% at worst (Comp. 10, Gemini)"
+COMET-Kiwi (wmt22-cometkiwi-da),512 joint,"candidate and source concatenated, candidate first; the Greek tail discarded",30 of 30,30 of 30,"Greek: 19% (Mix.), 9% (Comp.); one token in 5 Comp. pairs"

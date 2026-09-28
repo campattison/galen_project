@@ -1,0 +1,9 @@
+key,value,description
+corr_Mix_sig_pearson,0,"Mix. (n=30): metrics with p < .05, Pearson (none)"
+corr_Mix_sig_spearman,0,"Mix. (n=30): metrics with p < .05, Spearman (none)"
+corr_Mix_max_abs_r,0.167246,Mix. (n=30): largest |Pearson r|
+corr_Mix_min_p,0.377039,"Mix. (n=30): smallest p, Pearson"
+corr_Comp_sig_pearson,5,"Comp. (n=30): metrics with p < .05, Pearson (BLEU-4, chrF++, METEOR, BERTScore, COMET)"
+corr_Comp_sig_spearman,2,"Comp. (n=30): metrics with p < .05, Spearman (BERTScore, COMET)"
+corr_Comp_max_abs_r,0.850473,Comp. (n=30): largest |Pearson r|
+corr_Comp_min_p,0.000000,"Comp. (n=30): smallest p, Pearson"

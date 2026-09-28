@@ -1,0 +1,23 @@
+key,value,description
+tqs_mix,95.200000,"mean TQS, Mix."
+tqs_mix_sd,4.773779,"SD of TQS, Mix."
+tqs_comp,79.853333,"mean TQS, Comp."
+tqs_comp_sd,26.246428,"SD of TQS, Comp."
+tqs_gap_cat,57.525000,mean TQS of the other eight Comp. passages minus that of Comp. 8 and 10
+tqs_mix_minus_ordinary,3.841667,mean TQS of Mix. minus that of the other eight Comp. passages (all models)
+tqs_mix_minus_ordinary_models,"ChatGPT 3.2, Claude 4.2, Gemini 4.2","the same difference, by model"
+tqs_mix_minus_x3810,2.085714,"mean TQS of Mix. minus that of Comp. excluding 3, 8, 10"
+tqs_mix_minus_x810c3,2.734783,"mean TQS of Mix. minus that of Comp. excluding 8, 10 and ChatGPT on passage 3"
+tqs_x810c3_sd,5.273744,SD of TQS for that subset
+tqs_other8,91.358333,"mean TQS, Comp. other eight"
+s1_pass_other8,79.166667,"Scheme 1 pass rate, Comp. other eight"
+tqs_x3810,93.114286,"mean TQS, Comp. excluding 3, 8, 10"
+s1_pass_x3810,85.714286,"Scheme 1 pass rate, Comp. excluding 3, 8, 10"
+tqs_x810c3,92.465217,"mean TQS, Comp. excluding 8, 10 and ChatGPT on 3"
+s1_pass_x810c3,82.608696,"Scheme 1 pass rate, Comp. excluding 8, 10 and ChatGPT on 3"
+crit_share_3810,85.964912,"share of the critical errors in Comp. that fall in passages 3, 8 and 10 (%)"
+comp8_tqs_range,0.0-65.8,Comp. 8: lowest and highest TQS of the three models
+comet_other,77.255837,"mean COMET x100, the other eight Comp. passages"
+comet_cat,72.463717,"mean COMET x100, Comp. 8 and 10"
+comet_dip_points,4.792121,"the difference, in points"
+comet_dip_pct,6.202924,the same difference relative to the other passages (%)

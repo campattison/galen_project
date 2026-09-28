@@ -1,0 +1,6 @@
+key,value,description
+corr_order,"BERTScore, COMET, chrF++, METEOR, BLEU-4, ROUGE-L, BLEURT","metrics by Pearson r with TQS, highest first"
+corr_rho_below_r,7,metrics (of 7) whose Spearman rho is below their Pearson r
+corr_largest_r_minus_rho,BERTScore,metric with the largest difference between Pearson r and Spearman rho
+corr_best_rho,COMET,metric with the highest Spearman rho
+corr_mid_range,0.446741/0.602629,"lowest / highest Pearson r of the metrics ranked second to fifth (COMET, chrF++, METEOR, BLEU-4)"

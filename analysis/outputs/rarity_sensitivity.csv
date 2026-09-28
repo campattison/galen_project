@@ -1,0 +1,7 @@
+scenario,errors,r Comp,"r without 8,10",gap (lower of 8/10 minus highest other)
+final measure,0,-0.942676,-0.549691,0.133525
+"random: 32 of 452 repaired tokens flipped, 2.5th percentile",32,-0.957786,-0.650380,0.114675
+"random: 32 of 452 repaired tokens flipped, 97.5th percentile",32,-0.931618,-0.471876,0.148600
+"random: smallest gap in 2,000 runs",32,,,0.094991
+worst case: 32 errors placed to narrow the gap,32,-0.834255,-0.408328,0.019174
+half of the words absent from Diorisis counted common,108,-0.930977,-0.553180,0.098360

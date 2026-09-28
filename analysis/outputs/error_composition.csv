@@ -1,0 +1,5 @@
+group,errors,terminology,accuracy,terminology share %,critical,Term.: Accuracy,Term.: Consistency,Acc.: Mistranslation,Acc.: Overtranslation,Acc.: Undertranslation,Acc.: Addition,Acc.: Omission
+Mix. (all 10 passages),170,74,96,43.529412,5,60,14,44,14,26,8,4
+Comp. (all 10 passages),265,198,67,74.716981,57,192,6,39,6,8,9,5
+Comp. 8 and 10,113,112,1,99.115044,43,112,0,0,0,0,0,1
+Comp. other eight,152,86,66,56.578947,14,80,6,39,6,8,9,4

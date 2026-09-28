@@ -1,0 +1,23 @@
+key,value,description
+err_cat_total,113,errors in Comp. 8 and 10
+err_cat_term,112,Terminology errors in Comp. 8 and 10
+crit_cat,43,critical errors in Comp. 8 and 10
+crit_cat_term_min,42,critical errors in Comp. 8 and 10 that must be Terminology (critical minus all Accuracy errors)
+err_cat_acc_excl_omission,0,"errors of mistranslation, over-/undertranslation or addition in Comp. 8 and 10"
+err_cat_breakdown,112/113,Comp. 8 and 10: Terminology-Accuracy errors / all errors (the rest are omissions)
+acc_share_mix,56.470588,"Accuracy share of errors (%), Mix. (all 10 passages)"
+mis_share_mix,25.882353,"mistranslation share of errors (%), Mix. (all 10 passages)"
+acc_share_other,43.421053,"Accuracy share of errors (%), Comp. other eight"
+mis_share_other,25.657895,"mistranslation share of errors (%), Comp. other eight"
+acc_share_cat,0.884956,"Accuracy share of errors (%), Comp. 8 and 10"
+mis_share_cat,0.000000,"mistranslation share of errors (%), Comp. 8 and 10"
+acc_share_comp,25.283019,"Accuracy share of errors (%), Comp. (all 10 passages)"
+mis_share_comp,14.716981,"mistranslation share of errors (%), Comp. (all 10 passages)"
+err_other_mis,39,mistranslation errors in the other eight Comp. passages
+term_share_cat,99.115044,"Terminology share of errors (%), Comp. 8 and 10"
+term_share_other,56.578947,"Terminology share of errors (%), Comp. other eight"
+term_share_mix,43.529412,"Terminology share of errors (%), Mix. (all 10 passages)"
+term_share_comp,74.716981,"Terminology share of errors (%), Comp. (all 10 passages)"
+crit_comp,57,"critical errors, Comp."
+crit_mix,5,"critical errors, Mix."
+crit_other_comp,14,critical errors in the eight other Comp. passages

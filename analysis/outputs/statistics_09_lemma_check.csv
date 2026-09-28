@@ -1,0 +1,10 @@
+key,value,description
+check_lemma_k,47,hand check: corrected lemma is the right dictionary word
+check_lemma_pct,94.000000,share (%): corrected lemma is the right dictionary word
+check_lemma_ci,83.782657-97.938540,Wilson 95% CI of that share (%)
+check_status_k,50,hand check: word correctly classed as rare or common
+check_status_pct,100.000000,share (%): word correctly classed as rare or common
+check_status_ci,92.864997-100.000000,Wilson 95% CI of that share (%)
+check_frame,449,repaired tokens the sample was drawn from
+check_preface_words,3,"checked words drawn from the preface, which the final measure does not include"
+check_status_k_final,47,checked words in the final measure correctly classed as rare or common

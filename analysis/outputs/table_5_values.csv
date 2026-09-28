@@ -1,0 +1,57 @@
+row,column,statistic,value
+BERTScore,Pearson r [95% CI],r,0.778456
+BERTScore,Pearson r [95% CI],CI low,0.653759
+BERTScore,Pearson r [95% CI],CI high,0.861991
+BERTScore,p (Pearson),p,0.000000
+BERTScore,Spearman rho [95% CI],rho,0.406560
+BERTScore,Spearman rho [95% CI],CI low,0.170206
+BERTScore,Spearman rho [95% CI],CI high,0.598679
+BERTScore,p (Spearman),p,0.001267
+COMET,Pearson r [95% CI],r,0.602629
+COMET,Pearson r [95% CI],CI low,0.411704
+COMET,Pearson r [95% CI],CI high,0.742877
+COMET,p (Pearson),p,0.000000
+COMET,Spearman rho [95% CI],rho,0.478570
+COMET,Spearman rho [95% CI],CI low,0.255720
+COMET,Spearman rho [95% CI],CI high,0.653126
+COMET,p (Spearman),p,0.000110
+chrF++,Pearson r [95% CI],r,0.549124
+chrF++,Pearson r [95% CI],CI low,0.343030
+chrF++,Pearson r [95% CI],CI high,0.704777
+chrF++,p (Pearson),p,0.000006
+chrF++,Spearman rho [95% CI],rho,0.310833
+chrF++,Spearman rho [95% CI],CI low,0.061785
+chrF++,Spearman rho [95% CI],CI high,0.523443
+chrF++,p (Spearman),p,0.015638
+METEOR,Pearson r [95% CI],r,0.532157
+METEOR,Pearson r [95% CI],CI low,0.321703
+METEOR,Pearson r [95% CI],CI high,0.692505
+METEOR,p (Pearson),p,0.000012
+METEOR,Spearman rho [95% CI],rho,0.247488
+METEOR,Spearman rho [95% CI],CI low,-0.006868
+METEOR,Spearman rho [95% CI],CI high,0.471765
+METEOR,p (Spearman),p,0.056588
+BLEU-4,Pearson r [95% CI],r,0.446741
+BLEU-4,Pearson r [95% CI],CI low,0.217488
+BLEU-4,Pearson r [95% CI],CI high,0.629281
+BLEU-4,p (Pearson),p,0.000346
+BLEU-4,Spearman rho [95% CI],rho,0.362977
+BLEU-4,Spearman rho [95% CI],CI low,0.120124
+BLEU-4,Spearman rho [95% CI],CI high,0.564841
+BLEU-4,p (Spearman),p,0.004367
+ROUGE-L,Pearson r [95% CI],r,0.314813
+ROUGE-L,Pearson r [95% CI],CI low,0.066178
+ROUGE-L,Pearson r [95% CI],CI high,0.526639
+ROUGE-L,p (Pearson),p,0.014290
+ROUGE-L,Spearman rho [95% CI],rho,0.266250
+ROUGE-L,Spearman rho [95% CI],CI low,0.013219
+ROUGE-L,Spearman rho [95% CI],CI high,0.487234
+ROUGE-L,p (Spearman),p,0.039758
+BLEURT,Pearson r [95% CI],r,0.309501
+BLEURT,Pearson r [95% CI],CI low,0.060316
+BLEURT,Pearson r [95% CI],CI high,0.522372
+BLEURT,p (Pearson),p,0.016112
+BLEURT,Spearman rho [95% CI],rho,0.224390
+BLEURT,Spearman rho [95% CI],CI low,-0.031319
+BLEURT,Spearman rho [95% CI],CI high,0.452531
+BLEURT,p (Spearman),p,0.084778

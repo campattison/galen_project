@@ -1,0 +1,33 @@
+key,value,description
+cap_bertscore,510,BERTScore: tokens of content kept on each side (512 with its two special tokens)
+cap_comet,508,COMET: tokens of content kept in each segment (510 with its two special tokens)
+cap_joint,512,"BLEURT-20 and COMET-Kiwi: the joint window, special tokens included"
+comet_greek_mean_Mix,0.713375,"Mix.: share of the Greek source COMET reads, mean over passages"
+comet_greek_min_Mix,0.656331,"Mix.: the same, lowest passage"
+bleurt_share_Mix,0.708654/0.727052,Mix.: share of each side BLEURT reads (lower / higher of the reference mean and the candidate mean)
+comet_greek_mean_Comp,0.649324,"Comp.: share of the Greek source COMET reads, mean over passages"
+comet_greek_min_Comp,0.592765,"Comp.: the same, lowest passage"
+bleurt_share_Comp,0.610529/0.610644,Comp.: share of each side BLEURT reads (lower / higher of the reference mean and the candidate mean)
+comet_greek_mean_Comp_x3810,0.669297,"Comp. without passages 3, 8 and 10: share of the Greek source COMET reads, mean"
+bleurt_worst,0.411669,"smallest share of a side BLEURT reads (Comp. 10, Gemini)"
+bleurt_pairs_cut,90,pairs BLEURT truncates (of 90)
+bert_ref_kept_8,0.847176,Comp. 8: share of the reference BERTScore reads
+comet_ref_kept_8,0.792512,"Comp. 8: share of the reference COMET reads (641 XLM-R tokens, 508 kept)"
+bert_ref_kept_10,0.770393,Comp. 10: share of the reference BERTScore reads
+comet_ref_kept_10,0.791277,"Comp. 10: share of the reference COMET reads (642 XLM-R tokens, 508 kept)"
+bert_hyp_kept_min,0.809524,"smallest share of a candidate BERTScore reads (the longest candidate: Comp. 10, Gemini)"
+comet_hyp_cut,5,Comp. 8 and 10 candidates COMET truncates (of 6)
+comet_hyp_kept_range,0.797488/0.935543,lowest / highest share of those candidates COMET reads
+gap_cells_untruncated,14,cells of the gap table (of 21) computed on input no metric truncated
+gap_cells_untruncated_significant,14,"of those, the gaps significant at .05 (Welch)"
+kiwi_joint_range,1003/1497,"lowest / highest joint candidate + source length in XLM-R tokens, against a 512-token window"
+kiwi_pairs_cut,60,translation-source pairs over the window (of 60)
+kiwi_keep_mix,0.191257,"share of the Greek source COMET-Kiwi reads, Mix. mean"
+kiwi_keep_comp,0.092557,"share of the Greek source COMET-Kiwi reads, Comp. mean"
+kiwi_one_token,5,"pairs in which a single Greek token survives (Comp. 8 ChatGPT, Comp. 8 Claude, Comp. 8 Gemini, Comp. 10 Claude, Comp. 10 Gemini)"
+kiwi_gap,-22.548056,"gap on COMET-Kiwi, (mean Comp. - mean Mix.) / mean Mix. x 100, all passages"
+kiwi_comet_gap,-3.984767,"the same gap on reference-based COMET, the same translations"
+kiwi_r_share,0.823106,"COMET-Kiwi vs the share of the Greek it read, Pearson r (60 translations)"
+kiwi_r_tqs,0.454869,"COMET-Kiwi vs TQS, Pearson r (60 translations)"
+kiwi_partial_r,-0.141106,"COMET-Kiwi vs TQS with the share read held constant, partial r (60 translations)"
+kiwi_partial_p,0.286417,p for that partial r (df = 57)

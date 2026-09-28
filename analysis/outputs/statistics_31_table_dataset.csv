@@ -1,0 +1,3 @@
+key,value,description
+work_words_Mix,27730,"Mix.: words in the whole work (every token with a letter, numerals included)"
+work_words_Comp,104103,"Comp.: words in the whole work (every token with a letter, numerals included)"

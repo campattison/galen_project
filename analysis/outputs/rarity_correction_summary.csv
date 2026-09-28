@@ -1,0 +1,19 @@
+correction,tokens
+tokens counted in the original measure,4428
+Comp. 1: the preface replaced by the translated passage (tokens before -> after),214 -> 224
+tokens counted by the original method on the translated passages,4438
+"numerals removed (e.g. ι΄, ιβ΄)",85
+"symbols removed (no Greek letter: Latin numerals, stray ano teleia)",29
+weight abbreviations expanded to their lemma,63
+"words split by Stanza at ῤῥ, re-joined (tokens before -> after)",6 -> 3
+word tokens in the corrected measure,4258
+words whose Stanza lemma matches nothing in Diorisis,574
+  repaired by normalising accents/case of the Stanza lemma,16
+  repaired with the lemma Diorisis assigns to the form,436
+"  word absent from Diorisis (kept, counted as rare)",122
+tokens where Stanza and Diorisis disagree about rare/common (hand decisions),69
+  distinct words decided by hand,24
+  decisions recorded for words only in the preface (not used),2
+tokens in the final measure,4321
+  counted rare,336
+  of which absent from Diorisis,122

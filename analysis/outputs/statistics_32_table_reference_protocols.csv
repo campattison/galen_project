@@ -1,0 +1,7 @@
+key,value,description
+protocol_mix_significant,0,"correlations with TQS within Mix. significant at .05, any metric, any protocol"
+protocol_mix_max_abs_r,0.232694,"largest |Pearson r| with TQS within Mix., any metric, any protocol"
+protocol_mix_min_p,0.215926,smallest p for those correlations
+protocol_bert_highest,True,BERTScore has the highest Pearson r with TQS (all 60) under every protocol
+protocol_bert_r_range,0.755831/0.778456,lowest / highest Pearson r of BERTScore with TQS (all 60) across the four protocols
+protocol_shift_other,2.625035,"largest difference from the mean protocol in the Mix. mean x100 of any metric other than BLEU-4 (ROUGE-L, multi)"

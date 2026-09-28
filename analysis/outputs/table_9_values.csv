@@ -1,0 +1,17 @@
+row,column,statistic,value
+Rare term ratio,TQS (Comp.),r,-0.942676
+Rare term ratio,TQS (Comp.),p,0.000044
+Rare term ratio,TQS (All),r,-0.897161
+Rare term ratio,TQS (All),p,0.000000
+Rare term ratio,Critical (Comp.),r,0.889407
+Rare term ratio,Critical (Comp.),p,0.000572
+Rare term ratio,Critical (All),r,0.858043
+Rare term ratio,Critical (All),p,0.000001
+Average Zipf frequency,TQS (Comp.),r,0.947029
+Average Zipf frequency,TQS (Comp.),p,0.000032
+Average Zipf frequency,TQS (All),r,0.939686
+Average Zipf frequency,TQS (All),p,0.000000
+Average Zipf frequency,Critical (Comp.),r,-0.893468
+Average Zipf frequency,Critical (Comp.),p,0.000495
+Average Zipf frequency,Critical (All),r,-0.898794
+Average Zipf frequency,Critical (All),p,0.000000

@@ -1,0 +1,27 @@
+n,word,occurrences,passages,stanza_lemma,stanza_count,diorisis_lemma,diorisis_count,recorded_choice,recorded_other,recorded_note,final_lemma,final_count,final_status,resolution_note
+1,ἢ,28,"Comp 1, Comp 2, Comp 4, Comp 5, Comp 6, Comp 7, Comp 8, Comp 9, Mix 1, Mix 10, Mix 2, Mix 3, Mix 4, Mix 5, Mix 7, Mix 8",ἤ,43,ἠέ,50237,Diorisis,,,ἠέ,50237,common,
+2,εἴρηται,4,"Comp 5, Mix 1, Mix 10, Mix 2",εἴρω,26,ἔρομαι,2369,Diorisis,,,ἔρομαι,2369,common,
+3,ἀρσενικοῦ,4,Comp 8,ἀρσενικός,55,ἀρσενικόν,38,Diorisis,,,ἀρσενικόν,38,rare,
+4,ἑλκῶν,3,"Comp 3, Comp 5, Comp 6",ἑλκέω,23,ἕλκος,513,Diorisis,,,ἕλκος,513,common,
+5,δεῖ,3,"Comp 2, Mix 4, Mix 7",δεῖ,7,δέομαι,13383,Other,δεῖν,Very common word (impersonal),δέω,8487,common,"the very common impersonal δεῖ; counted under δέω, the lemma Diorisis gives the infinitive δεῖν"
+6,δ’,3,"Comp 7, Mix 7, Mix 8",δίω,14,δέ,330497,Diorisis,,,δέ,330497,common,
+7,ἀσφάλτου,2,"Comp 7, Mix 9",ἄσφαλτος,9,ἄσφαλτον,74,Diorisis,,,ἄσφαλτον,74,common,
+8,ὕλης,2,Comp 4,ὗλις,1,ὕλη,2061,Diorisis,,,ὕλη,2061,common,
+9,μνημονεῦσαι,2,Comp 9,μνημονεύω,1282,μνημονέω,49,Stanza,,,μνημονεύω,1282,common,
+10,οἷόνπερ,2,Mix 8,οἶος,439,οἷονπερ,37,Stanza,,,οἶος,439,common,
+11,μόριον,2,"Comp 9, Mix 4",μόριος,11,μόριον,877,Diorisis,,,μόριον,877,common,
+12,ῥώσει,1,Mix 9,ῥώομαι,14,ῥώννυμι,247,Diorisis,,,ῥώννυμι,247,common,
+13,συμφύτῳ,1,Mix 6,σύμφυτος,76,σύμφυτον,43,Stanza,,,σύμφυτος,76,common,
+14,ἀποθήκῃ,1,Comp 1,ἀποτίθημι,446,ἀποθήκη,32,Diorisis,,,ἀποθήκη,32,rare,
+15,ῥοὰς,1,Comp 1,ῥοή,81,ῥοάς,35,Stanza,,,ῥοή,81,common,
+16,μελανίαν,1,Comp 2,μέλας,1172,μελανία,22,Diorisis,,,μελανία,22,rare,
+17,πως,1,Mix 4,οὔπως,4,πως,1742,Diorisis,,,πως,1742,common,
+18,προτραπήσεσθαι,1,Comp 4,προτρέπω,395,προσράπτω,13,Stanza,,,προτρέπω,395,common,
+19,ἤ,1,Comp 4,ἤ,43,ἠέ,50237,Diorisis,,,ἠέ,50237,common,
+20,ἐτῶν,1,Comp 6,ἐτός,15,ἔται,868,Stanza,,,ἔτος,2232,common,the word means 'years' here (Comp. 6); Stanza's ἐτός ('idly') and Diorisis's ἔται ('clansmen') are both wrong for this passage
+21,ἐστίν·,1,Comp 7,στίζω,37,εἰμί,169876,Diorisis,,,εἰμί,169876,common,
+22,ἐπικρατεῖ,1,Mix 2,ἐπικρατέω,423,ἐπικρατής,48,Stanza,,,ἐπικρατέω,423,common,
+23,δεῖν,1,Mix 10,δεῖ,7,δέω,8487,Other,δεῖν,,δέω,8487,common,"the very common impersonal δεῖ; counted under δέω, the lemma Diorisis gives the infinitive δεῖν"
+24,μορίῳ,1,Comp 1,μόριος,11,μόριον,877,Diorisis,,,μόριον,877,common,"the dative of μόριον ""part"", as decided for μόριον (row 11)"
+25,προσοίσομεν,1,Comp 1,πρόσοιδα,5,προσφέρω,1544,Diorisis,,,προσφέρω,1544,common,"future of προσφέρω ""apply"" (""we shall apply""); Stanza's πρόσοιδα is wrong"
+26,εἰκότως,1,Comp 1,εἰκότως,5,ἐοικότως,1113,Diorisis,,,ἐοικότως,1113,common,"the common adverb ""reasonably"", which Diorisis files under ἐοικότως"

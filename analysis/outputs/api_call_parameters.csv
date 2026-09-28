@@ -1,0 +1,4 @@
+API,translator.py line,parameters passed,tool/search parameter
+OpenAI (GPT-5),200,"input, max_output_tokens, model, reasoning, text",no
+Anthropic (Claude Sonnet 4.5),329,"max_tokens, messages, model, temperature",no
+Google (Gemini 2.5 Pro),404,"config, contents, max_output_tokens, model, temperature",no

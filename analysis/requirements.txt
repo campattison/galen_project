@@ -1,0 +1,12 @@
+# Exact versions used to produce outputs/ (Python 3.10 or later).
+# pip install -r analysis/requirements.txt
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+sacrebleu==2.5.1
+
+# Only for the scripts in optional/ (not needed for run_all.sh):
+#   optional/regenerate_stanza_lemmas.py  -> stanza==1.11.0
+#   optional/comet_kiwi.py                -> unbabel-comet==2.2.7 (and a Hugging Face login)
+#   optional/render_figure1.py            -> matplotlib
+#   optional/build_diorisis_form_index.py -> the Diorisis corpus (corpus_metrics/download_diorisis.sh)

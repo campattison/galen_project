@@ -1,0 +1,15 @@
+row,column,statistic,value
+Mix. (all passages),Scheme 1 Pass Rate,%,96.666667
+Mix. (all passages),Scheme 2 Pass Rate,%,86.666667
+Comp. (all passages),Scheme 1 Pass Rate,%,63.333333
+Comp. (all passages),Scheme 1 Gap,points,33.333333
+Comp. (all passages),Scheme 2 Pass Rate,%,43.333333
+Comp. (all passages),Scheme 2 Gap,points,43.333333
+"Comp. (excl. 8, 10)",Scheme 1 Pass Rate,%,79.166667
+"Comp. (excl. 8, 10)",Scheme 1 Gap,points,17.500000
+"Comp. (excl. 8, 10)",Scheme 2 Pass Rate,%,54.166667
+"Comp. (excl. 8, 10)",Scheme 2 Gap,points,32.500000
+"Comp. (excl. 3, 8, 10)",Scheme 1 Pass Rate,%,85.714286
+"Comp. (excl. 3, 8, 10)",Scheme 1 Gap,points,10.952381
+"Comp. (excl. 3, 8, 10)",Scheme 2 Pass Rate,%,61.904762
+"Comp. (excl. 3, 8, 10)",Scheme 2 Gap,points,24.761905

@@ -1,0 +1,72 @@
+row,column,statistic,value
+Total errors,Mix.,count,170.000000
+Errors per translation,Mix.,mean,5.666667
+Total errors,Comp.,count,265.000000
+Errors per translation,Comp.,mean,8.833333
+Total errors,Comp./Mix. Ratio,ratio,1.558824
+Errors per translation,Comp./Mix. Ratio,ratio,1.558824
+Neutral,Mix.,count,29.000000
+Neutral,Mix.,share %,17.058824
+Neutral,Comp.,count,45.000000
+Neutral,Comp.,share %,16.981132
+Neutral,Comp./Mix. Ratio,ratio,0.995446
+Minor,Mix.,count,103.000000
+Minor,Mix.,share %,60.588235
+Minor,Comp.,count,105.000000
+Minor,Comp.,share %,39.622642
+Minor,Comp./Mix. Ratio,ratio,0.653966
+Major,Mix.,count,33.000000
+Major,Mix.,share %,19.411765
+Major,Comp.,count,58.000000
+Major,Comp.,share %,21.886792
+Major,Comp./Mix. Ratio,ratio,1.127501
+Critical,Mix.,count,5.000000
+Critical,Mix.,share %,2.941176
+Critical,Comp.,count,57.000000
+Critical,Comp.,share %,21.509434
+Critical,Comp./Mix. Ratio,ratio,7.313208
+Terminology,Mix.,count,74.000000
+Terminology,Mix.,share %,43.529412
+Terminology,Comp.,count,198.000000
+Terminology,Comp.,share %,74.716981
+Terminology,Comp./Mix. Ratio,ratio,1.716471
+Accuracy,Mix.,count,96.000000
+Accuracy,Mix.,share %,56.470588
+Accuracy,Comp.,count,67.000000
+Accuracy,Comp.,share %,25.283019
+Accuracy,Comp./Mix. Ratio,ratio,0.447720
+Term. Accuracy,Mix.,count,60.000000
+Term. Accuracy,Mix.,share %,35.294118
+Term. Accuracy,Comp.,count,192.000000
+Term. Accuracy,Comp.,share %,72.452830
+Term. Accuracy,Comp./Mix. Ratio,ratio,2.052830
+Term. Consistency,Mix.,count,14.000000
+Term. Consistency,Mix.,share %,8.235294
+Term. Consistency,Comp.,count,6.000000
+Term. Consistency,Comp.,share %,2.264151
+Term. Consistency,Comp./Mix. Ratio,ratio,0.274933
+Mistranslation,Mix.,count,44.000000
+Mistranslation,Mix.,share %,25.882353
+Mistranslation,Comp.,count,39.000000
+Mistranslation,Comp.,share %,14.716981
+Mistranslation,Comp./Mix. Ratio,ratio,0.568611
+Overtranslation,Mix.,count,14.000000
+Overtranslation,Mix.,share %,8.235294
+Overtranslation,Comp.,count,6.000000
+Overtranslation,Comp.,share %,2.264151
+Overtranslation,Comp./Mix. Ratio,ratio,0.274933
+Undertranslation,Mix.,count,26.000000
+Undertranslation,Mix.,share %,15.294118
+Undertranslation,Comp.,count,8.000000
+Undertranslation,Comp.,share %,3.018868
+Undertranslation,Comp./Mix. Ratio,ratio,0.197388
+Addition,Mix.,count,8.000000
+Addition,Mix.,share %,4.705882
+Addition,Comp.,count,9.000000
+Addition,Comp.,share %,3.396226
+Addition,Comp./Mix. Ratio,ratio,0.721698
+Omission,Mix.,count,4.000000
+Omission,Mix.,share %,2.352941
+Omission,Comp.,count,5.000000
+Omission,Comp.,share %,1.886792
+Omission,Comp./Mix. Ratio,ratio,0.801887

@@ -1,0 +1,9 @@
+key,value,description
+gap_d_all_min,0.930318,"smallest |Cohen's d|, all passages"
+gap_d_all_max,1.277709,"largest |Cohen's d|, all passages"
+gap_d_all_min_metric,METEOR,"metric with the smallest |Cohen's d|, all passages"
+gap_d_any_min,0.611133,smallest |Cohen's d| in any column
+gap_p_all_max,0.000682,"largest Welch p, All passages"
+gap_p_x810_max,0.010656,"largest Welch p, Excl. 8, 10"
+gap_p_x3810_max,0.036015,"largest Welch p, Excl. 3, 8, 10"
+gap_ns_cells,0,gaps not significant at .05 (none)
