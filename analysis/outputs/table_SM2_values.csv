@@ -1,0 +1,113 @@
+row,column,statistic,value
+Johnston only ChatGPT,BLEU-4,mean x100,22.018960
+Johnston only ChatGPT,chrF++,mean x100,53.210880
+Johnston only ChatGPT,METEOR,mean x100,45.804720
+Johnston only ChatGPT,ROUGE-L,mean x100,51.049710
+Johnston only ChatGPT,BERTScore,mean x100,90.759070
+Johnston only ChatGPT,COMET,mean x100,78.425190
+Johnston only ChatGPT,BLEURT,mean x100,48.748010
+Johnston only Claude,BLEU-4,mean x100,24.922310
+Johnston only Claude,chrF++,mean x100,55.653460
+Johnston only Claude,METEOR,mean x100,48.796920
+Johnston only Claude,ROUGE-L,mean x100,55.406630
+Johnston only Claude,BERTScore,mean x100,91.515300
+Johnston only Claude,COMET,mean x100,78.753300
+Johnston only Claude,BLEURT,mean x100,49.369870
+Johnston only Gemini,BLEU-4,mean x100,25.391580
+Johnston only Gemini,chrF++,mean x100,56.493560
+Johnston only Gemini,METEOR,mean x100,51.163010
+Johnston only Gemini,ROUGE-L,mean x100,55.633640
+Johnston only Gemini,BERTScore,mean x100,91.214360
+Johnston only Gemini,COMET,mean x100,79.421600
+Johnston only Gemini,BLEURT,mean x100,50.400910
+Johnston only Aggregate,BLEU-4,mean x100,24.110950
+Johnston only Aggregate,chrF++,mean x100,55.119300
+Johnston only Aggregate,METEOR,mean x100,48.588217
+Johnston only Aggregate,ROUGE-L,mean x100,54.029993
+Johnston only Aggregate,BERTScore,mean x100,91.162910
+Johnston only Aggregate,COMET,mean x100,78.866697
+Johnston only Aggregate,BLEURT,mean x100,49.506263
+Singer and van der Eijk only ChatGPT,BLEU-4,mean x100,20.150690
+Singer and van der Eijk only ChatGPT,chrF++,mean x100,51.329100
+Singer and van der Eijk only ChatGPT,METEOR,mean x100,44.432810
+Singer and van der Eijk only ChatGPT,ROUGE-L,mean x100,48.323670
+Singer and van der Eijk only ChatGPT,BERTScore,mean x100,90.919510
+Singer and van der Eijk only ChatGPT,COMET,mean x100,79.976040
+Singer and van der Eijk only ChatGPT,BLEURT,mean x100,48.181960
+Singer and van der Eijk only Claude,BLEU-4,mean x100,20.582060
+Singer and van der Eijk only Claude,chrF++,mean x100,51.954110
+Singer and van der Eijk only Claude,METEOR,mean x100,45.501260
+Singer and van der Eijk only Claude,ROUGE-L,mean x100,50.409530
+Singer and van der Eijk only Claude,BERTScore,mean x100,91.113750
+Singer and van der Eijk only Claude,COMET,mean x100,79.565200
+Singer and van der Eijk only Claude,BLEURT,mean x100,47.801390
+Singer and van der Eijk only Gemini,BLEU-4,mean x100,21.369070
+Singer and van der Eijk only Gemini,chrF++,mean x100,53.077830
+Singer and van der Eijk only Gemini,METEOR,mean x100,46.668810
+Singer and van der Eijk only Gemini,ROUGE-L,mean x100,49.814730
+Singer and van der Eijk only Gemini,BERTScore,mean x100,91.116240
+Singer and van der Eijk only Gemini,COMET,mean x100,80.641850
+Singer and van der Eijk only Gemini,BLEURT,mean x100,50.053100
+Singer and van der Eijk only Aggregate,BLEU-4,mean x100,20.700607
+Singer and van der Eijk only Aggregate,chrF++,mean x100,52.120347
+Singer and van der Eijk only Aggregate,METEOR,mean x100,45.534293
+Singer and van der Eijk only Aggregate,ROUGE-L,mean x100,49.515977
+Singer and van der Eijk only Aggregate,BERTScore,mean x100,91.049833
+Singer and van der Eijk only Aggregate,COMET,mean x100,80.061030
+Singer and van der Eijk only Aggregate,BLEURT,mean x100,48.678817
+Mean of the two (as in Table 1) ChatGPT,BLEU-4,mean x100,21.084825
+Mean of the two (as in Table 1) ChatGPT,chrF++,mean x100,52.269990
+Mean of the two (as in Table 1) ChatGPT,METEOR,mean x100,45.118765
+Mean of the two (as in Table 1) ChatGPT,ROUGE-L,mean x100,49.686690
+Mean of the two (as in Table 1) ChatGPT,BERTScore,mean x100,90.839290
+Mean of the two (as in Table 1) ChatGPT,COMET,mean x100,79.200615
+Mean of the two (as in Table 1) ChatGPT,BLEURT,mean x100,48.464985
+Mean of the two (as in Table 1) Claude,BLEU-4,mean x100,22.752185
+Mean of the two (as in Table 1) Claude,chrF++,mean x100,53.803785
+Mean of the two (as in Table 1) Claude,METEOR,mean x100,47.149090
+Mean of the two (as in Table 1) Claude,ROUGE-L,mean x100,52.908080
+Mean of the two (as in Table 1) Claude,BERTScore,mean x100,91.314525
+Mean of the two (as in Table 1) Claude,COMET,mean x100,79.159250
+Mean of the two (as in Table 1) Claude,BLEURT,mean x100,48.585630
+Mean of the two (as in Table 1) Gemini,BLEU-4,mean x100,23.380325
+Mean of the two (as in Table 1) Gemini,chrF++,mean x100,54.785695
+Mean of the two (as in Table 1) Gemini,METEOR,mean x100,48.915910
+Mean of the two (as in Table 1) Gemini,ROUGE-L,mean x100,52.724185
+Mean of the two (as in Table 1) Gemini,BERTScore,mean x100,91.165300
+Mean of the two (as in Table 1) Gemini,COMET,mean x100,80.031725
+Mean of the two (as in Table 1) Gemini,BLEURT,mean x100,50.227005
+Mean of the two (as in Table 1) Aggregate,BLEU-4,mean x100,22.405778
+Mean of the two (as in Table 1) Aggregate,chrF++,mean x100,53.619823
+Mean of the two (as in Table 1) Aggregate,METEOR,mean x100,47.061255
+Mean of the two (as in Table 1) Aggregate,ROUGE-L,mean x100,51.772985
+Mean of the two (as in Table 1) Aggregate,BERTScore,mean x100,91.106372
+Mean of the two (as in Table 1) Aggregate,COMET,mean x100,79.463863
+Mean of the two (as in Table 1) Aggregate,BLEURT,mean x100,49.092540
+Library multi-reference ChatGPT,BLEU-4,mean x100,31.453600
+Library multi-reference ChatGPT,chrF++,mean x100,53.610770
+Library multi-reference ChatGPT,METEOR,mean x100,46.767090
+Library multi-reference ChatGPT,ROUGE-L,mean x100,51.295600
+Library multi-reference ChatGPT,BERTScore,mean x100,91.237630
+Library multi-reference ChatGPT,COMET,mean x100,79.984170
+Library multi-reference ChatGPT,BLEURT,mean x100,49.948650
+Library multi-reference Claude,BLEU-4,mean x100,34.212570
+Library multi-reference Claude,chrF++,mean x100,55.710060
+Library multi-reference Claude,METEOR,mean x100,49.343390
+Library multi-reference Claude,ROUGE-L,mean x100,55.636140
+Library multi-reference Claude,BERTScore,mean x100,91.760990
+Library multi-reference Claude,COMET,mean x100,79.790470
+Library multi-reference Claude,BLEURT,mean x100,49.805630
+Library multi-reference Gemini,BLEU-4,mean x100,34.496520
+Library multi-reference Gemini,chrF++,mean x100,57.065030
+Library multi-reference Gemini,METEOR,mean x100,51.163010
+Library multi-reference Gemini,ROUGE-L,mean x100,56.262320
+Library multi-reference Gemini,BERTScore,mean x100,91.712630
+Library multi-reference Gemini,COMET,mean x100,80.689410
+Library multi-reference Gemini,BLEURT,mean x100,51.708700
+Library multi-reference Aggregate,BLEU-4,mean x100,33.387563
+Library multi-reference Aggregate,chrF++,mean x100,55.461953
+Library multi-reference Aggregate,METEOR,mean x100,49.091163
+Library multi-reference Aggregate,ROUGE-L,mean x100,54.398020
+Library multi-reference Aggregate,BERTScore,mean x100,91.570417
+Library multi-reference Aggregate,COMET,mean x100,80.154683
+Library multi-reference Aggregate,BLEURT,mean x100,50.487660

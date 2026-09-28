@@ -1,0 +1,29 @@
+key,value,description
+surface_hh_s_vs_j,20.566457,"mean sentence BLEU, Singer vs Johnston (ref)"
+surface_hh_j_vs_s,20.480490,"mean sentence BLEU, Johnston vs Singer (ref)"
+surface_llm_vs_j,24.110942,"mean sentence BLEU, LLMs vs Johnston (mean of 3)"
+surface_llm_vs_s,20.700608,"mean sentence BLEU, LLMs vs Singer (mean of 3)"
+surface_llm_vs_marai,17.117330,"mean sentence BLEU, LLMs vs Marai, Comp. (mean of 3)"
+surface_ChatGPT_j_s,22.018943/20.150685,mean sentence BLEU of ChatGPT against Johnston / Singer & van der Eijk (Mix.)
+surface_Claude_j_s,24.922311/20.582071,mean sentence BLEU of Claude against Johnston / Singer & van der Eijk (Mix.)
+surface_Gemini_j_s,25.391573/21.369069,mean sentence BLEU of Gemini against Johnston / Singer & van der Eijk (Mix.)
+surface_models_above_hh_j,3,models whose mean BLEU against Johnston exceeds that of the Singer & van der Eijk translation against Johnston
+surface_all_models_closer_j,3,models whose Mix. output is closer (BLEU) to Johnston than to Singer & van der Eijk
+surface_diff_j,3.544485,LLMs vs Johnston (mean of 3) minus the other human translation against the same reference (BLEU points)
+surface_p_j,0.019531,Wilcoxon signed-rank p over the 10 passages
+surface_diff_s,0.220119,LLMs vs Singer (mean of 3) minus the other human translation against the same reference (BLEU points)
+surface_p_s,0.769531,Wilcoxon signed-rank p over the 10 passages
+verbatim_hh_mean,8.000000,"longest shared word run, human-human (Mix.): mean"
+verbatim_hh_max,11,"longest shared word run, human-human (Mix.): maximum"
+verbatim_llm_pub_mean,8.983333,"longest shared word run, LLM vs published (Mix.): mean"
+verbatim_llm_pub_max,25,"longest shared word run, LLM vs published (Mix.): maximum"
+verbatim_llm_comp_mean,7.566667,"longest shared word run, LLM vs unpublished reference (Comp.): mean"
+verbatim_llm_comp_max,16,"longest shared word run, LLM vs unpublished reference (Comp.): maximum"
+verbatim_j_mean,8.933333,"longest shared word run, LLM vs Johnston: mean"
+verbatim_j_max,13,"longest shared word run, LLM vs Johnston: maximum"
+verbatim_s_mean,9.033333,"longest shared word run, LLM vs Singer & van der Eijk: mean"
+verbatim_s_max,25,"longest shared word run, LLM vs Singer & van der Eijk: maximum"
+verbatim_pub_over_hh_max,6,LLM-published runs longer than the longest run between the two human translations (11 words)
+verbatim_pub_over_comp_max,2,LLM-published runs longer than the longest LLM run with the unpublished Comp. reference (16 words)
+verbatim_comp_max_where,"Comp. 2, Gemini",where the longest LLM run with the unpublished Comp. reference occurs
+verbatim_max_where,"Mix. 1, Claude vs Singer & van der Eijk",where the longest LLM-published run occurs

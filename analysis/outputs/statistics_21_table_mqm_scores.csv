@@ -1,0 +1,5 @@
+key,value,description
+tqs_gemini_minus_claude_Mix,0.900000,Mix.: mean TQS of Gemini minus mean TQS of Claude
+tqs_gemini_minus_chatgpt_Mix,4.830000,Mix.: mean TQS of Gemini minus mean TQS of ChatGPT
+tqs_gemini_minus_claude_Comp,2.220000,Comp.: mean TQS of Gemini minus mean TQS of Claude
+tqs_gemini_minus_chatgpt_Comp,8.540000,Comp.: mean TQS of Gemini minus mean TQS of ChatGPT

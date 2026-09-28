@@ -1,0 +1,101 @@
+step,text,chunk,tokens,rare,rare_ratio,absent,mean_zipf
+0 original measure,Comp,1,214,32,0.149533,26,5.603319
+0 original measure,Comp,2,228,53,0.232456,36,5.161627
+0 original measure,Comp,3,235,47,0.200000,31,5.372116
+0 original measure,Comp,4,228,39,0.171053,28,5.615167
+0 original measure,Comp,5,218,42,0.192661,31,5.383937
+0 original measure,Comp,6,200,34,0.170000,23,5.661229
+0 original measure,Comp,7,233,45,0.193133,24,5.612559
+0 original measure,Comp,8,232,92,0.396552,69,3.840288
+0 original measure,Comp,9,224,46,0.205357,36,5.106212
+0 original measure,Comp,10,228,99,0.434211,76,3.453873
+0 original measure,Mix,1,216,33,0.152778,27,5.550910
+0 original measure,Mix,2,211,29,0.137441,25,5.582609
+0 original measure,Mix,3,204,24,0.117647,21,5.663181
+0 original measure,Mix,4,222,23,0.103604,17,5.851595
+0 original measure,Mix,5,210,33,0.157143,25,5.628548
+0 original measure,Mix,6,224,34,0.151786,30,5.545478
+0 original measure,Mix,7,232,36,0.155172,26,5.580715
+0 original measure,Mix,8,207,29,0.140097,24,5.603232
+0 original measure,Mix,9,233,22,0.094421,19,5.816943
+0 original measure,Mix,10,229,43,0.187773,34,5.362661
+"0b original method, Comp. 1 as translated",Comp,1,224,41,0.183036,28,5.423880
+"0b original method, Comp. 1 as translated",Comp,2,228,53,0.232456,36,5.161627
+"0b original method, Comp. 1 as translated",Comp,3,235,47,0.200000,31,5.372116
+"0b original method, Comp. 1 as translated",Comp,4,228,39,0.171053,28,5.615167
+"0b original method, Comp. 1 as translated",Comp,5,218,42,0.192661,31,5.383937
+"0b original method, Comp. 1 as translated",Comp,6,200,34,0.170000,23,5.661229
+"0b original method, Comp. 1 as translated",Comp,7,233,45,0.193133,24,5.612559
+"0b original method, Comp. 1 as translated",Comp,8,232,92,0.396552,69,3.840288
+"0b original method, Comp. 1 as translated",Comp,9,224,46,0.205357,36,5.106212
+"0b original method, Comp. 1 as translated",Comp,10,228,99,0.434211,76,3.453873
+"0b original method, Comp. 1 as translated",Mix,1,216,33,0.152778,27,5.550910
+"0b original method, Comp. 1 as translated",Mix,2,211,29,0.137441,25,5.582609
+"0b original method, Comp. 1 as translated",Mix,3,204,24,0.117647,21,5.663181
+"0b original method, Comp. 1 as translated",Mix,4,222,23,0.103604,17,5.851595
+"0b original method, Comp. 1 as translated",Mix,5,210,33,0.157143,25,5.628548
+"0b original method, Comp. 1 as translated",Mix,6,224,34,0.151786,30,5.545478
+"0b original method, Comp. 1 as translated",Mix,7,232,36,0.155172,26,5.580715
+"0b original method, Comp. 1 as translated",Mix,8,207,29,0.140097,24,5.603232
+"0b original method, Comp. 1 as translated",Mix,9,233,22,0.094421,19,5.816943
+"0b original method, Comp. 1 as translated",Mix,10,229,43,0.187773,34,5.362661
+1 notation removed,Comp,1,224,41,0.183036,28,5.423880
+1 notation removed,Comp,2,217,47,0.216590,30,5.303413
+1 notation removed,Comp,3,233,45,0.193133,29,5.418229
+1 notation removed,Comp,4,228,39,0.171053,28,5.615167
+1 notation removed,Comp,5,216,40,0.185185,29,5.433789
+1 notation removed,Comp,6,200,34,0.170000,23,5.661229
+1 notation removed,Comp,7,232,45,0.193966,24,5.615879
+1 notation removed,Comp,8,199,68,0.341709,50,4.138235
+1 notation removed,Comp,9,215,38,0.176744,29,5.275216
+1 notation removed,Comp,10,178,71,0.398876,56,3.549843
+1 notation removed,Mix,1,214,33,0.154206,27,5.551213
+1 notation removed,Mix,2,211,29,0.137441,25,5.582609
+1 notation removed,Mix,3,203,24,0.118227,21,5.651137
+1 notation removed,Mix,4,222,23,0.103604,17,5.851595
+1 notation removed,Mix,5,210,33,0.157143,25,5.628548
+1 notation removed,Mix,6,223,34,0.152466,30,5.548631
+1 notation removed,Mix,7,230,36,0.156522,26,5.587137
+1 notation removed,Mix,8,206,29,0.140777,24,5.606926
+1 notation removed,Mix,9,231,22,0.095238,19,5.805389
+1 notation removed,Mix,10,229,43,0.187773,34,5.362661
+2 unmatched lemmas repaired,Comp,1,224,19,0.084821,4,5.910927
+2 unmatched lemmas repaired,Comp,2,217,32,0.147465,12,5.708702
+2 unmatched lemmas repaired,Comp,3,233,25,0.107296,8,5.855877
+2 unmatched lemmas repaired,Comp,4,228,20,0.087719,3,6.122886
+2 unmatched lemmas repaired,Comp,5,216,25,0.115741,8,5.869193
+2 unmatched lemmas repaired,Comp,6,200,17,0.085000,5,6.095978
+2 unmatched lemmas repaired,Comp,7,232,34,0.146552,10,5.901275
+2 unmatched lemmas repaired,Comp,8,199,52,0.261307,25,4.615375
+2 unmatched lemmas repaired,Comp,9,215,27,0.125581,15,5.567787
+2 unmatched lemmas repaired,Comp,10,178,56,0.314607,18,4.269513
+2 unmatched lemmas repaired,Mix,1,214,7,0.032710,1,6.216136
+2 unmatched lemmas repaired,Mix,2,211,4,0.018957,0,6.206057
+2 unmatched lemmas repaired,Mix,3,203,4,0.019704,1,6.148777
+2 unmatched lemmas repaired,Mix,4,222,7,0.031532,1,6.206911
+2 unmatched lemmas repaired,Mix,5,210,9,0.042857,1,6.221638
+2 unmatched lemmas repaired,Mix,6,223,7,0.031390,2,6.186681
+2 unmatched lemmas repaired,Mix,7,230,15,0.065217,3,6.065066
+2 unmatched lemmas repaired,Mix,8,206,8,0.038835,1,6.193021
+2 unmatched lemmas repaired,Mix,9,231,7,0.030303,3,6.179209
+2 unmatched lemmas repaired,Mix,10,229,13,0.056769,1,6.126131
+3 final,Comp,1,224,10,0.044643,4,6.018303
+3 final,Comp,2,217,31,0.142857,12,5.729092
+3 final,Comp,3,233,24,0.103004,8,5.861664
+3 final,Comp,4,228,16,0.070175,3,6.178865
+3 final,Comp,5,216,22,0.101852,8,5.898709
+3 final,Comp,6,200,14,0.070000,5,6.128921
+3 final,Comp,7,232,30,0.129310,10,5.953075
+3 final,Comp,8,199,55,0.276382,25,4.627562
+3 final,Comp,9,215,25,0.116279,15,5.590900
+3 final,Comp,10,178,56,0.314607,18,4.269513
+3 final,Mix,1,214,1,0.004673,1,6.296965
+3 final,Mix,2,211,2,0.009479,0,6.229883
+3 final,Mix,3,203,1,0.004926,1,6.194110
+3 final,Mix,4,222,3,0.013514,1,6.255072
+3 final,Mix,5,210,7,0.033333,1,6.250852
+3 final,Mix,6,223,7,0.031390,2,6.186681
+3 final,Mix,7,230,12,0.052174,3,6.110824
+3 final,Mix,8,206,5,0.024272,1,6.244032
+3 final,Mix,9,231,5,0.021645,3,6.188566
+3 final,Mix,10,229,10,0.043668,1,6.161549

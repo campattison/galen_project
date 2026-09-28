@@ -1,0 +1,8 @@
+metric,items,multi-reference > best single reference,multi-reference = best single reference,mean excess (points)
+BLEU-4,30,30,0,8.641330
+chrF++,30,0,30,0.000000
+METEOR,30,0,30,0.000000
+ROUGE-L,30,0,30,0.000000
+BERTScore,30,0,30,0.000000
+COMET,30,0,30,0.000000
+BLEURT,30,0,30,0.000000

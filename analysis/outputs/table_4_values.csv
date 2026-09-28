@@ -1,0 +1,127 @@
+row,column,statistic,value
+BLEU-4,All passages,gap %,-23.603026
+BLEU-4,All passages,Welch p,0.000016
+BLEU-4,All passages,Cohen's d,-1.220882
+BLEU-4,All passages,Mix. mean x100,22.405778
+BLEU-4,All passages,Comp. mean x100,17.117337
+BLEU-4,All passages,Comp. n,30.000000
+BLEU-4,"Excl. 8, 10",gap %,-19.815048
+BLEU-4,"Excl. 8, 10",Welch p,0.000212
+BLEU-4,"Excl. 8, 10",Cohen's d,-1.109743
+BLEU-4,"Excl. 8, 10",Mix. mean x100,22.405778
+BLEU-4,"Excl. 8, 10",Comp. mean x100,17.966063
+BLEU-4,"Excl. 8, 10",Comp. n,24.000000
+BLEU-4,"Excl. 3, 8, 10",gap %,-17.296313
+BLEU-4,"Excl. 3, 8, 10",Welch p,0.001451
+BLEU-4,"Excl. 3, 8, 10",Cohen's d,-0.981868
+BLEU-4,"Excl. 3, 8, 10",Mix. mean x100,22.405778
+BLEU-4,"Excl. 3, 8, 10",Comp. mean x100,18.530405
+BLEU-4,"Excl. 3, 8, 10",Comp. n,21.000000
+chrF++,All passages,gap %,-8.004279
+chrF++,All passages,Welch p,0.000011
+chrF++,All passages,Cohen's d,-1.254251
+chrF++,All passages,Mix. mean x100,53.619823
+chrF++,All passages,Comp. mean x100,49.327943
+chrF++,All passages,Comp. n,30.000000
+chrF++,"Excl. 8, 10",gap %,-6.199943
+chrF++,"Excl. 8, 10",Welch p,0.000040
+chrF++,"Excl. 8, 10",Cohen's d,-1.227143
+chrF++,"Excl. 8, 10",Mix. mean x100,53.619823
+chrF++,"Excl. 8, 10",Comp. mean x100,50.295425
+chrF++,"Excl. 8, 10",Comp. n,24.000000
+chrF++,"Excl. 3, 8, 10",gap %,-5.536633
+chrF++,"Excl. 3, 8, 10",Welch p,0.000313
+chrF++,"Excl. 3, 8, 10",Cohen's d,-1.100152
+chrF++,"Excl. 3, 8, 10",Mix. mean x100,53.619823
+chrF++,"Excl. 3, 8, 10",Comp. mean x100,50.651090
+chrF++,"Excl. 3, 8, 10",Comp. n,21.000000
+METEOR,All passages,gap %,-9.737972
+METEOR,All passages,Welch p,0.000682
+METEOR,All passages,Cohen's d,-0.930318
+METEOR,All passages,Mix. mean x100,47.061255
+METEOR,All passages,Comp. mean x100,42.478443
+METEOR,All passages,Comp. n,30.000000
+METEOR,"Excl. 8, 10",gap %,-6.358010
+METEOR,"Excl. 8, 10",Welch p,0.010656
+METEOR,"Excl. 8, 10",Cohen's d,-0.722007
+METEOR,"Excl. 8, 10",Mix. mean x100,47.061255
+METEOR,"Excl. 8, 10",Comp. mean x100,44.069096
+METEOR,"Excl. 8, 10",Comp. n,24.000000
+METEOR,"Excl. 3, 8, 10",gap %,-5.423616
+METEOR,"Excl. 3, 8, 10",Welch p,0.036015
+METEOR,"Excl. 3, 8, 10",Cohen's d,-0.611133
+METEOR,"Excl. 3, 8, 10",Mix. mean x100,47.061255
+METEOR,"Excl. 3, 8, 10",Comp. mean x100,44.508833
+METEOR,"Excl. 3, 8, 10",Comp. n,21.000000
+ROUGE-L,All passages,gap %,-8.980176
+ROUGE-L,All passages,Welch p,0.000262
+ROUGE-L,All passages,Cohen's d,-1.004264
+ROUGE-L,All passages,Mix. mean x100,51.772985
+ROUGE-L,All passages,Comp. mean x100,47.123680
+ROUGE-L,All passages,Comp. n,30.000000
+ROUGE-L,"Excl. 8, 10",gap %,-8.487329
+ROUGE-L,"Excl. 8, 10",Welch p,0.000308
+ROUGE-L,"Excl. 8, 10",Cohen's d,-1.024534
+ROUGE-L,"Excl. 8, 10",Mix. mean x100,51.772985
+ROUGE-L,"Excl. 8, 10",Comp. mean x100,47.378842
+ROUGE-L,"Excl. 8, 10",Comp. n,24.000000
+ROUGE-L,"Excl. 3, 8, 10",gap %,-8.063351
+ROUGE-L,"Excl. 3, 8, 10",Welch p,0.001023
+ROUGE-L,"Excl. 3, 8, 10",Cohen's d,-0.950587
+ROUGE-L,"Excl. 3, 8, 10",Mix. mean x100,51.772985
+ROUGE-L,"Excl. 3, 8, 10",Comp. mean x100,47.598348
+ROUGE-L,"Excl. 3, 8, 10",Comp. n,21.000000
+BERTScore,All passages,gap %,-1.722487
+BERTScore,All passages,Welch p,0.000044
+BERTScore,All passages,Cohen's d,-1.174221
+BERTScore,All passages,Mix. mean x100,91.106372
+BERTScore,All passages,Comp. mean x100,89.537077
+BERTScore,All passages,Comp. n,30.000000
+BERTScore,"Excl. 8, 10",gap %,-0.924186
+BERTScore,"Excl. 8, 10",Welch p,0.000152
+BERTScore,"Excl. 8, 10",Cohen's d,-1.089431
+BERTScore,"Excl. 8, 10",Mix. mean x100,91.106372
+BERTScore,"Excl. 8, 10",Comp. mean x100,90.264379
+BERTScore,"Excl. 8, 10",Comp. n,24.000000
+BERTScore,"Excl. 3, 8, 10",gap %,-0.788357
+BERTScore,"Excl. 3, 8, 10",Welch p,0.000925
+BERTScore,"Excl. 3, 8, 10",Cohen's d,-0.946248
+BERTScore,"Excl. 3, 8, 10",Mix. mean x100,91.106372
+BERTScore,"Excl. 3, 8, 10",Comp. mean x100,90.388129
+BERTScore,"Excl. 3, 8, 10",Comp. n,21.000000
+COMET,All passages,gap %,-3.984767
+COMET,All passages,Welch p,0.000010
+COMET,All passages,Cohen's d,-1.277709
+COMET,All passages,Mix. mean x100,79.463863
+COMET,All passages,Comp. mean x100,76.297413
+COMET,All passages,Comp. n,30.000000
+COMET,"Excl. 8, 10",gap %,-2.778654
+COMET,"Excl. 8, 10",Welch p,0.000038
+COMET,"Excl. 8, 10",Cohen's d,-1.237328
+COMET,"Excl. 8, 10",Mix. mean x100,79.463863
+COMET,"Excl. 8, 10",Comp. mean x100,77.255837
+COMET,"Excl. 8, 10",Comp. n,24.000000
+COMET,"Excl. 3, 8, 10",gap %,-2.306962
+COMET,"Excl. 3, 8, 10",Welch p,0.000233
+COMET,"Excl. 3, 8, 10",Cohen's d,-1.095159
+COMET,"Excl. 3, 8, 10",Mix. mean x100,79.463863
+COMET,"Excl. 3, 8, 10",Comp. mean x100,77.630662
+COMET,"Excl. 3, 8, 10",Comp. n,21.000000
+BLEURT,All passages,gap %,-8.628786
+BLEURT,All passages,Welch p,0.000202
+BLEURT,All passages,Cohen's d,-1.031074
+BLEURT,All passages,Mix. mean x100,49.092540
+BLEURT,All passages,Comp. mean x100,44.856450
+BLEURT,All passages,Comp. n,30.000000
+BLEURT,"Excl. 8, 10",gap %,-7.877814
+BLEURT,"Excl. 8, 10",Welch p,0.001743
+BLEURT,"Excl. 8, 10",Cohen's d,-0.952325
+BLEURT,"Excl. 8, 10",Mix. mean x100,49.092540
+BLEURT,"Excl. 8, 10",Comp. mean x100,45.225121
+BLEURT,"Excl. 8, 10",Comp. n,24.000000
+BLEURT,"Excl. 3, 8, 10",gap %,-7.304062
+BLEURT,"Excl. 3, 8, 10",Welch p,0.006883
+BLEURT,"Excl. 3, 8, 10",Cohen's d,-0.874096
+BLEURT,"Excl. 3, 8, 10",Mix. mean x100,49.092540
+BLEURT,"Excl. 3, 8, 10",Comp. mean x100,45.506790
+BLEURT,"Excl. 3, 8, 10",Comp. n,21.000000

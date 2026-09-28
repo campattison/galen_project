@@ -1,0 +1,7 @@
+band,error type,"most it can carry, shortest output","most it can carry, longest output"
+HIGH PASS (TQS >= 95),minor,10,17
+HIGH PASS (TQS >= 95),major,2,3
+HIGH PASS (TQS >= 95),critical,0,0
+LOW PASS or better (TQS >= 87),minor,27,45
+LOW PASS or better (TQS >= 87),major,5,9
+LOW PASS or better (TQS >= 87),critical,1,1

@@ -1,0 +1,101 @@
+comparison,chunk,model,reference,longest run (words),shared words
+human-human (Mix.),1,,Singer vs Johnston,7,hot cold dry and wet and that
+LLM vs published (Mix.),1,ChatGPT,Johnston,9,in which we examined the elements according to hippocrates
+LLM vs published (Mix.),1,ChatGPT,Singer & van der Eijk,10,over the cold and that cold in which the cold
+LLM vs unpublished reference (Comp.),1,ChatGPT,Marai,6,when we can recall the difference
+LLM vs published (Mix.),1,Claude,Johnston,12,in another work in which we examined the elements according to hippocrates
+LLM vs published (Mix.),1,Claude,Singer & van der Eijk,25,that hot in which the hot predominates over the cold and that cold in which the cold predominates over the hot this then is the
+LLM vs unpublished reference (Comp.),1,Claude,Marai,8,for if you compare the juice of panax
+LLM vs published (Mix.),1,Gemini,Johnston,9,in which we examined the elements according to hippocrates
+LLM vs published (Mix.),1,Gemini,Singer & van der Eijk,9,from that which predominates in the mixture we call
+LLM vs unpublished reference (Comp.),1,Gemini,Marai,6,of each not only according to
+human-human (Mix.),2,,Singer vs Johnston,11,and evenness throughout for autumn is much hotter at midday than
+LLM vs published (Mix.),2,ChatGPT,Johnston,8,to be dry and cold it would not
+LLM vs published (Mix.),2,ChatGPT,Singer & van der Eijk,10,called cold and dry for it is not cold when
+LLM vs unpublished reference (Comp.),2,ChatGPT,Marai,10,wrote the proportion of the plaster in these words white
+LLM vs published (Mix.),2,Claude,Johnston,7,cold and dry for it is not
+LLM vs published (Mix.),2,Claude,Singer & van der Eijk,9,cold and dry for it is not cold when
+LLM vs unpublished reference (Comp.),2,Claude,Marai,11,that these things have been written for those who know the
+LLM vs published (Mix.),2,Gemini,Johnston,7,cold and dry for it is not
+LLM vs published (Mix.),2,Gemini,Singer & van der Eijk,9,cold and dry for it is not cold when
+LLM vs unpublished reference (Comp.),2,Gemini,Marai,16,say in his defense perhaps that these things have been written for those who know the
+human-human (Mix.),3,,Singer vs Johnston,7,the nature of the plant or animal
+LLM vs published (Mix.),3,ChatGPT,Johnston,8,reference to the nature of the plant or
+LLM vs published (Mix.),3,ChatGPT,Singer & van der Eijk,6,is called drier hotter colder or
+LLM vs unpublished reference (Comp.),3,ChatGPT,Marai,8,that is mixing it with less oil whereas
+LLM vs published (Mix.),3,Claude,Johnston,8,reference to the nature of the plant or
+LLM vs published (Mix.),3,Claude,Singer & van der Eijk,6,the nature of the plant or
+LLM vs unpublished reference (Comp.),3,Claude,Marai,7,that is mixing it with less oil
+LLM vs published (Mix.),3,Gemini,Johnston,9,the reference to the nature of the plant or
+LLM vs published (Mix.),3,Gemini,Singer & van der Eijk,7,drier hotter colder or wetter than it
+LLM vs unpublished reference (Comp.),3,Gemini,Marai,5,so that some of the
+human-human (Mix.),4,,Singer vs Johnston,9,horns hair nails ligaments hooves and spurs have more
+LLM vs published (Mix.),4,ChatGPT,Johnston,6,are judged by the perfection of
+LLM vs published (Mix.),4,ChatGPT,Singer & van der Eijk,8,the perfection of the activity appropriate to each
+LLM vs unpublished reference (Comp.),4,ChatGPT,Marai,8,fruits among which are bitter almonds and pistachios
+LLM vs published (Mix.),4,Claude,Johnston,8,of animals are judged by the perfection of
+LLM vs published (Mix.),4,Claude,Singer & van der Eijk,8,the perfection of the activity appropriate to each
+LLM vs unpublished reference (Comp.),4,Claude,Marai,5,not once or twice but
+LLM vs published (Mix.),4,Gemini,Johnston,8,the driest part of all in a human
+LLM vs published (Mix.),4,Gemini,Singer & van der Eijk,19,not only of animals but also of all other bodies and at the same time that of the parts
+LLM vs unpublished reference (Comp.),4,Gemini,Marai,12,them in dry rooms so that they are neither roasted by the
+human-human (Mix.),5,,Singer vs Johnston,6,the heat is strong in children
+LLM vs published (Mix.),5,ChatGPT,Johnston,9,carry nor in general perform any of the practical
+LLM vs published (Mix.),5,ChatGPT,Singer & van der Eijk,5,that their growth is due
+LLM vs unpublished reference (Comp.),5,ChatGPT,Marai,7,the quantity of two year old euphorbium
+LLM vs published (Mix.),5,Claude,Johnston,10,peak of excellence in those in their prime in general
+LLM vs published (Mix.),5,Claude,Singer & van der Eijk,6,for nutrition but also for growth
+LLM vs unpublished reference (Comp.),5,Claude,Marai,7,it would not be useless to know
+LLM vs published (Mix.),5,Gemini,Johnston,9,nor in general perform any of the practical functions
+LLM vs published (Mix.),5,Gemini,Singer & van der Eijk,6,for nutrition but also for growth
+LLM vs unpublished reference (Comp.),5,Gemini,Marai,6,it would not be useless to
+human-human (Mix.),6,,Singer vs Johnston,7,black bile is a kind of sediment
+LLM vs published (Mix.),6,ChatGPT,Johnston,9,each of the nonrational animals of the humors the
+LLM vs published (Mix.),6,ChatGPT,Singer & van der Eijk,8,the brain and the spinal cord for these
+LLM vs unpublished reference (Comp.),6,ChatGPT,Marai,4,the bottom of the
+LLM vs published (Mix.),6,Claude,Johnston,10,on the nature of man but that it is cold
+LLM vs published (Mix.),6,Claude,Singer & van der Eijk,14,it is both colder and thicker than blood yellow bile is much hotter while
+LLM vs unpublished reference (Comp.),6,Claude,Marai,5,the thickness of the adulterated
+LLM vs published (Mix.),6,Gemini,Johnston,10,on the nature of man but that it is cold
+LLM vs published (Mix.),6,Gemini,Singer & van der Eijk,8,it is both colder and thicker than blood
+LLM vs unpublished reference (Comp.),6,Gemini,Marai,14,old oil and fat which my father had been keeping for a long time
+human-human (Mix.),7,,Singer vs Johnston,7,for it was shown previously that all
+LLM vs published (Mix.),7,ChatGPT,Johnston,13,the former is the driest of all the parts of the head for
+LLM vs published (Mix.),7,ChatGPT,Singer & van der Eijk,6,of the feet are hairless and
+LLM vs unpublished reference (Comp.),7,ChatGPT,Marai,7,for this reason it is suitable for
+LLM vs published (Mix.),7,Claude,Johnston,5,of the hands just as
+LLM vs published (Mix.),7,Claude,Singer & van der Eijk,7,still remains but the residue is small
+LLM vs unpublished reference (Comp.),7,Claude,Marai,7,for this reason it is suitable for
+LLM vs published (Mix.),7,Gemini,Johnston,13,the former is the driest of all the parts of the head for
+LLM vs published (Mix.),7,Gemini,Singer & van der Eijk,8,weakly by the heat it undergoes something similar
+LLM vs unpublished reference (Comp.),7,Gemini,Marai,7,for this reason it is suitable for
+human-human (Mix.),8,,Singer vs Johnston,9,smooth lobsters crayfish and crabs have dry skin but
+LLM vs published (Mix.),8,ChatGPT,Johnston,7,the temples and all the other parts
+LLM vs published (Mix.),8,ChatGPT,Singer & van der Eijk,11,the eyes the temples and all the other parts but in
+LLM vs unpublished reference (Comp.),8,ChatGPT,Marai,6,dry and with rose oil another
+LLM vs published (Mix.),8,Claude,Johnston,10,the eyes and the temples and all the other parts
+LLM vs published (Mix.),8,Claude,Singer & van der Eijk,9,the temples and all the other parts but in
+LLM vs unpublished reference (Comp.),8,Claude,Marai,7,remedy for spreading ulcers which i use
+LLM vs published (Mix.),8,Gemini,Johnston,9,it is possible for the skin alone to be
+LLM vs published (Mix.),8,Gemini,Singer & van der Eijk,10,the eyes the temples and all the other parts but
+LLM vs unpublished reference (Comp.),8,Gemini,Marai,6,dry and with rose oil another
+human-human (Mix.),9,,Singer vs Johnston,11,as to why wine heats the body significantly when drunk but
+LLM vs published (Mix.),9,ChatGPT,Johnston,9,it has been shown a little earlier that it
+LLM vs published (Mix.),9,ChatGPT,Singer & van der Eijk,9,the animal not simply as a hot drug but
+LLM vs unpublished reference (Comp.),9,ChatGPT,Marai,7,whether he intends the kotyle to be
+LLM vs published (Mix.),9,Claude,Johnston,9,it has been shown a little earlier that it
+LLM vs published (Mix.),9,Claude,Singer & van der Eijk,7,not simply as a hot drug but
+LLM vs unpublished reference (Comp.),9,Claude,Marai,8,better if he had also mentioned the oil
+LLM vs published (Mix.),9,Gemini,Johnston,9,it has been shown a little earlier that it
+LLM vs published (Mix.),9,Gemini,Singer & van der Eijk,7,not simply as a hot drug but
+LLM vs unpublished reference (Comp.),9,Gemini,Marai,10,unciae of weight because the roman libra weighs 12 unciae
+human-human (Mix.),10,,Singer vs Johnston,6,the innate heat as was also
+LLM vs published (Mix.),10,ChatGPT,Johnston,8,other reason than that it is cold and
+LLM vs published (Mix.),10,ChatGPT,Singer & van der Eijk,8,sleep for no other reason than that it
+LLM vs unpublished reference (Comp.),10,ChatGPT,Marai,6,dissolved in wine then the melted
+LLM vs published (Mix.),10,Claude,Johnston,10,as to produce no perceptible and clear harm to any
+LLM vs published (Mix.),10,Claude,Singer & van der Eijk,8,sleep for no other reason than that it
+LLM vs unpublished reference (Comp.),10,Claude,Marai,5,myrrh aristolochia pepper gentian styrax
+LLM vs published (Mix.),10,Gemini,Johnston,10,as to produce no perceptible and clear harm to any
+LLM vs published (Mix.),10,Gemini,Singer & van der Eijk,8,sleep for no other reason than that it
+LLM vs unpublished reference (Comp.),10,Gemini,Marai,6,joints and abscesses it also softens

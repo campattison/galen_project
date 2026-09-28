@@ -1,0 +1,13 @@
+key,value,description
+tqs_mix_min,77.800000,lowest TQS of any Mix. translation
+tqs_catastrophic_max,65.800000,highest TQS of any translation of Comp. 8 or 10
+tqs_passage_Comp1,99.566667,Comp. 1: mean TQS of the three translations
+tqs_passage_Comp2,86.733333,Comp. 2: mean TQS of the three translations
+tqs_passage_Comp3,79.066667,Comp. 3: mean TQS of the three translations
+tqs_passage_Comp4,94.033333,Comp. 4: mean TQS of the three translations
+tqs_passage_Comp5,89.533333,Comp. 5: mean TQS of the three translations
+tqs_passage_Comp6,96.466667,Comp. 6: mean TQS of the three translations
+tqs_passage_Comp7,95.300000,Comp. 7: mean TQS of the three translations
+tqs_passage_Comp8,29.200000,Comp. 8: mean TQS of the three translations
+tqs_passage_Comp9,90.166667,Comp. 9: mean TQS of the three translations
+tqs_passage_Comp10,38.466667,Comp. 10: mean TQS of the three translations

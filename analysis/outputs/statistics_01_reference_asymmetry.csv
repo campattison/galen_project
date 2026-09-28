@@ -1,0 +1,46 @@
+key,value,description
+bleu_boost_items,30,Mix. translations whose multi-reference BLEU-4 exceeds the better single-reference BLEU-4 (of 30)
+bleu_boost_points,8.641330,"mean excess of multi-reference BLEU-4 x 100 over the better single-reference BLEU-4 x 100, Mix."
+bleu_mix_pooled,33.387563,"Mix. mean BLEU-4 x 100, both references (multi-reference)"
+bleu_gap_pooled_all,-48.731399,"gap in BLEU-4, (mean Comp. - mean Mix.) / mean Mix. x 100, Mix. both references (multi-reference), Comp. all"
+bleu_p_pooled_all,0.000000,Welch p for that gap
+bleu_gap_pooled_x810,-46.189357,"gap in BLEU-4, (mean Comp. - mean Mix.) / mean Mix. x 100, Mix. both references (multi-reference), Comp. excl 8,10"
+bleu_p_pooled_x810,0.000000,Welch p for that gap
+bleu_gap_pooled_x3810,-44.499080,"gap in BLEU-4, (mean Comp. - mean Mix.) / mean Mix. x 100, Mix. both references (multi-reference), Comp. excl 3,8,10"
+bleu_p_pooled_x3810,0.000000,Welch p for that gap
+bleu_mix_johnston,24.110950,"Mix. mean BLEU-4 x 100, Johnston only"
+bleu_gap_johnston_all,-29.005963,"gap in BLEU-4, (mean Comp. - mean Mix.) / mean Mix. x 100, Mix. Johnston only, Comp. all"
+bleu_p_johnston_all,0.000001,Welch p for that gap
+bleu_gap_johnston_x810,-25.485879,"gap in BLEU-4, (mean Comp. - mean Mix.) / mean Mix. x 100, Mix. Johnston only, Comp. excl 8,10"
+bleu_p_johnston_x810,0.000009,Welch p for that gap
+bleu_gap_johnston_x3810,-23.145273,"gap in BLEU-4, (mean Comp. - mean Mix.) / mean Mix. x 100, Mix. Johnston only, Comp. excl 3,8,10"
+bleu_p_johnston_x3810,0.000062,Welch p for that gap
+bleu_mix_singer,20.700607,"Mix. mean BLEU-4 x 100, Singer & van der Eijk only"
+bleu_gap_singer_all,-17.309976,"gap in BLEU-4, (mean Comp. - mean Mix.) / mean Mix. x 100, Mix. Singer & van der Eijk only, Comp. all"
+bleu_p_singer_all,0.003365,Welch p for that gap
+bleu_gap_singer_x810,-13.209971,"gap in BLEU-4, (mean Comp. - mean Mix.) / mean Mix. x 100, Mix. Singer & van der Eijk only, Comp. excl 8,10"
+bleu_p_singer_x810,0.022324,Welch p for that gap
+bleu_gap_singer_x3810,-10.483760,"gap in BLEU-4, (mean Comp. - mean Mix.) / mean Mix. x 100, Mix. Singer & van der Eijk only, Comp. excl 3,8,10"
+bleu_p_singer_x3810,0.074373,Welch p for that gap
+bleu_mix_mean,22.405778,"Mix. mean BLEU-4 x 100, mean of the two single-reference scores"
+bleu_gap_mean_all,-23.603026,"gap in BLEU-4, (mean Comp. - mean Mix.) / mean Mix. x 100, Mix. mean of the two single-reference scores, Comp. all"
+bleu_p_mean_all,0.000016,Welch p for that gap
+bleu_gap_mean_x810,-19.815048,"gap in BLEU-4, (mean Comp. - mean Mix.) / mean Mix. x 100, Mix. mean of the two single-reference scores, Comp. excl 8,10"
+bleu_p_mean_x810,0.000212,Welch p for that gap
+bleu_gap_mean_x3810,-17.296313,"gap in BLEU-4, (mean Comp. - mean Mix.) / mean Mix. x 100, Mix. mean of the two single-reference scores, Comp. excl 3,8,10"
+bleu_p_mean_x3810,0.001451,Welch p for that gap
+bleu_comp,17.117337,Comp. mean BLEU-4 x 100 (one reference)
+gap_all_chrF++_multiref,-11.059852,"chrF++: gap (%), Mix. scored multi-reference, all passages"
+gap_all_chrF++_mean,-8.004279,"chrF++: gap (%), Mix. scored as the mean of its two single-reference scores, all passages"
+gap_all_METEOR_multiref,-13.470286,"METEOR: gap (%), Mix. scored multi-reference, all passages"
+gap_all_METEOR_mean,-9.737972,"METEOR: gap (%), Mix. scored as the mean of its two single-reference scores, all passages"
+gap_all_ROUGE-L_multiref,-13.372435,"ROUGE-L: gap (%), Mix. scored multi-reference, all passages"
+gap_all_ROUGE-L_mean,-8.980176,"ROUGE-L: gap (%), Mix. scored as the mean of its two single-reference scores, all passages"
+gap_all_BERTScore_multiref,-2.220521,"BERTScore: gap (%), Mix. scored multi-reference, all passages"
+gap_all_BERTScore_mean,-1.722487,"BERTScore: gap (%), Mix. scored as the mean of its two single-reference scores, all passages"
+gap_all_COMET_multiref,-4.812283,"COMET: gap (%), Mix. scored multi-reference, all passages"
+gap_all_COMET_mean,-3.984767,"COMET: gap (%), Mix. scored as the mean of its two single-reference scores, all passages"
+gap_all_BLEURT_multiref,-11.153636,"BLEURT: gap (%), Mix. scored multi-reference, all passages"
+gap_all_BLEURT_mean,-8.628786,"BLEURT: gap (%), Mix. scored as the mean of its two single-reference scores, all passages"
+bleu_single_ref_range,13.840100/36.100100,lowest / highest BLEU-4 x 100 of a Mix. translation against a single reference
+fix_scores_changed,119,"Mix. scores (all metrics, each reference and multi-reference) changed by the reference fix"

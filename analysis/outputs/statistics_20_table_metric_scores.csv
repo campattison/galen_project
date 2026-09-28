@@ -1,0 +1,5 @@
+key,value,description
+metric_gemini_highest_Mix,5,"Mix.: metrics (of 7) on which Gemini has the highest mean (BLEU-4, chrF++, METEOR, COMET, BLEURT)"
+metric_order_gcc_Mix,4,"Mix.: metrics (of 7) whose means order Gemini > Claude > ChatGPT (BLEU-4, chrF++, METEOR, BLEURT)"
+metric_gemini_highest_Comp,6,"Comp.: metrics (of 7) on which Gemini has the highest mean (BLEU-4, chrF++, METEOR, ROUGE-L, BERTScore, COMET)"
+metric_order_gcc_Comp,6,"Comp.: metrics (of 7) whose means order Gemini > Claude > ChatGPT (BLEU-4, chrF++, METEOR, ROUGE-L, BERTScore, COMET)"

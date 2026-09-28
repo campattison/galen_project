@@ -1,0 +1,4 @@
+scope,passages,Friedman p,"Friedman p, unrounded TQS",Brown-Forsythe p,Wilcoxon p Claude vs ChatGPT,mean TQS Claude - ChatGPT,Wilcoxon p Gemini vs ChatGPT,mean TQS Gemini - ChatGPT,Wilcoxon p Gemini vs Claude,mean TQS Gemini - Claude
+Mix,10,0.091197,0.153847,0.059024,0.232422,3.930000,0.007812,4.830000,0.425781,0.900000
+Comp,10,0.272532,0.272532,0.696256,0.105469,6.320000,0.492188,8.540000,0.646484,2.220000
+All,20,0.053083,0.078528,0.620929,0.017181,5.125000,0.026860,6.685000,0.344208,1.560000

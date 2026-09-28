@@ -1,0 +1,21 @@
+text,chunk,tokens,rare,absent,rare ratio,not-found ratio,avg Zipf,avg Zipf (found only)
+Comp,1,True,True,True,True,True,True,True
+Comp,2,True,True,True,True,True,True,True
+Comp,3,True,True,True,True,True,True,True
+Comp,4,True,True,True,True,True,True,True
+Comp,5,True,True,True,True,True,True,True
+Comp,6,True,True,True,True,True,True,True
+Comp,7,True,True,True,True,True,True,True
+Comp,8,True,True,True,True,True,True,True
+Comp,9,True,True,True,True,True,True,True
+Comp,10,True,True,True,True,True,True,True
+Mix,1,True,True,True,True,True,True,True
+Mix,2,True,True,True,True,True,True,True
+Mix,3,True,True,True,True,True,True,True
+Mix,4,True,True,True,True,True,True,True
+Mix,5,True,True,True,True,True,True,True
+Mix,6,True,True,True,True,True,True,True
+Mix,7,True,True,True,True,True,True,True
+Mix,8,True,True,True,True,True,True,True
+Mix,9,True,True,True,True,True,True,True
+Mix,10,True,True,True,True,True,True,True

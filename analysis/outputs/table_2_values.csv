@@ -1,0 +1,25 @@
+row,column,statistic,value
+Mix. ChatGPT,TQS Mean,mean,92.280000
+Mix. ChatGPT,TQS SD,SD,6.538739
+Mix. ChatGPT,Critical Errors,count,4.000000
+Mix. Claude,TQS Mean,mean,96.210000
+Mix. Claude,TQS SD,SD,2.314423
+Mix. Claude,Critical Errors,count,0.000000
+Mix. Gemini,TQS Mean,mean,97.110000
+Mix. Gemini,TQS SD,SD,3.264778
+Mix. Gemini,Critical Errors,count,1.000000
+Mix. Aggregate,TQS Mean,mean,95.200000
+Mix. Aggregate,TQS SD,SD,4.773779
+Mix. Aggregate,Critical Errors,count,5.000000
+Comp. ChatGPT,TQS Mean,mean,74.900000
+Comp. ChatGPT,TQS SD,SD,32.689346
+Comp. ChatGPT,Critical Errors,count,24.000000
+Comp. Claude,TQS Mean,mean,81.220000
+Comp. Claude,TQS SD,SD,24.495932
+Comp. Claude,Critical Errors,count,18.000000
+Comp. Gemini,TQS Mean,mean,83.440000
+Comp. Gemini,TQS SD,SD,22.526291
+Comp. Gemini,Critical Errors,count,15.000000
+Comp. Aggregate,TQS Mean,mean,79.853333
+Comp. Aggregate,TQS SD,SD,26.246428
+Comp. Aggregate,Critical Errors,count,57.000000

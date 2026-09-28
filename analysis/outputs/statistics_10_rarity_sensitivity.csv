@@ -1,0 +1,14 @@
+key,value,description
+sens_error_rate,7.135003,upper 95% bound on wrong rare/common calls among repaired lemmas (%)
+sens_k,32,errors simulated
+sens_r_lo,-0.957786,random errors: r (2.5th percentile)
+sens_r_hi,-0.931618,random errors: r (97.5th percentile)
+sens_gap_min,0.094991,"random errors: smallest gap between 8/10 and the rest in 2,000 runs"
+sens_top2_share,100.000000,random runs in which 8 and 10 remain the two rarest (%)
+sens_worst_r,-0.834255,worst case: r
+sens_worst_gap,0.019174,worst case: gap
+sens_worst_top2,"8, 10",worst case: two rarest passages
+sens_absent_tokens,108,Comp. tokens counted rare only because the word is absent from Diorisis
+sens_half_8,0.213568,half-absent scenario: Comp. 8
+sens_half_10,0.264045,half-absent scenario: Comp. 10
+sens_half_other_max,0.115207,half-absent scenario: highest other Comp.

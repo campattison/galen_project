@@ -1,0 +1,13 @@
+key,value,description
+pass_s1_Mix_Claude,100.000000,Mix. Claude: Scheme 1 pass rate (%)
+pass_s2_Mix_Claude,100.000000,Mix. Claude: Scheme 2 pass rate (%)
+pass_s1_Mix_Gemini,100.000000,Mix. Gemini: Scheme 1 pass rate (%)
+pass_s2_Mix_Gemini,90.000000,Mix. Gemini: Scheme 2 pass rate (%)
+pass_s1_Mix_ChatGPT,90.000000,Mix. ChatGPT: Scheme 1 pass rate (%)
+pass_s2_Mix_ChatGPT,70.000000,Mix. ChatGPT: Scheme 2 pass rate (%)
+pass_s1_Comp_Claude,70.000000,Comp. Claude: Scheme 1 pass rate (%)
+pass_s2_Comp_Claude,40.000000,Comp. Claude: Scheme 2 pass rate (%)
+pass_s1_Comp_Gemini,70.000000,Comp. Gemini: Scheme 1 pass rate (%)
+pass_s2_Comp_Gemini,50.000000,Comp. Gemini: Scheme 2 pass rate (%)
+pass_s1_Comp_ChatGPT,50.000000,Comp. ChatGPT: Scheme 1 pass rate (%)
+pass_s2_Comp_ChatGPT,40.000000,Comp. ChatGPT: Scheme 2 pass rate (%)

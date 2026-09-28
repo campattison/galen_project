@@ -1,0 +1,2 @@
+key,value,description
+refpref_lexical_range,24/26,"lowest / highest number of Mix. translations (of 30) scoring higher against Johnston on the four lexical metrics (BLEU-4, chrF++, METEOR, ROUGE-L)"

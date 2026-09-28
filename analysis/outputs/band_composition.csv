@@ -1,0 +1,3 @@
+text,HIGH PASS,LOW PASS,FAIL
+Comp,9,10,11
+Mix,20,9,1
