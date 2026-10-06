@@ -22,8 +22,8 @@ requests>=2.28.0           # HTTP requests
 # ============================================
 # Evaluation Metrics - Lexical
 # ============================================
-nltk>=3.8                  # BLEU-4, METEOR (downloads: punkt, wordnet, omw-1.4)
-sacrebleu>=2.3.0           # chrF++ (character + word n-grams)
+nltk>=3.8                  # METEOR (downloads: punkt, wordnet, omw-1.4)
+sacrebleu>=2.3.0           # BLEU-4 and chrF++ (character + word n-grams)
 rouge-score>=0.1.2         # ROUGE-L
 
 # ============================================

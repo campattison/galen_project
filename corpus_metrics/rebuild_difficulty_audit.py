@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Galenic Passage Difficulty Analysis
-====================================
+Galenic Passage Difficulty Analysis: the original rarity measure
+================================================================
+Kept for the record. analysis/07_rarity_measure.py reproduces its values (step 0) and corrects
+the measure; the tables use the corrected measure.
+
 Computes corpus-based rarity metrics for chunks of Galen's De compositione
-medicamentorum (Comp.) and De temperamentis / De mixtionibus (Mix.) against the
+medicamentorum per genera (Comp.) and De temperamentis (Mix.) against the
 Diorisis Ancient Greek Corpus.
 
 Workflow
@@ -11,12 +14,12 @@ Workflow
 1.  Build a lemma-frequency dictionary from the Diorisis XML files.
 2.  Parse Greek text chunks from mix.txt and comp.txt.
 3.  Lemmatize each chunk with Stanza.
-4.  Print the lemmatised form of every chunk.
+4.  Print the lemmatized form of every chunk.
 5.  Compute per-chunk difficulty metrics (Zipf, rare-term ratio, not-found ratio).
 
 Usage
 -----
-    python galenic_difficulty.py
+    python rebuild_difficulty_audit.py
 
 Adjust the three path constants at the top of main() to match your local layout.
 """
@@ -291,10 +294,8 @@ def main():
     }).round(4)
     print(summary)
 
-    print("\nInterpretation:")
-    print("  • Lower avg_zipf          → harder (rarer vocabulary pulling down the mean)")
-    print("  • Higher rare_term_ratio   → harder (more lemmas with freq < 50 in Diorisis)")
-    print("  • Higher not_found_ratio   → harder (more lemmas absent from Diorisis entirely)")
+    print("\nColumns: avg_zipf = mean Zipf frequency; rare_term_ratio = share of lemmas with fewer than 50")
+    print("occurrences in Diorisis; not_found_ratio = share of lemmas absent from Diorisis.")
 
 
     # 6. Save

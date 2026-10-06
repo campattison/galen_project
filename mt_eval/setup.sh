@@ -60,7 +60,9 @@ echo ""
 
 # Check for .env file
 echo "Checking for API keys configuration..."
-if [ -f "../.env" ]; then
+if [ -f ".env" ]; then
+    echo "✓ Found .env in mt_eval/"
+elif [ -f "../.env" ]; then
     echo "✓ Found .env in project root"
 elif [ -f "config/.env" ]; then
     echo "✓ Found .env in config/"
@@ -68,8 +70,8 @@ else
     echo "⚠️  No .env file found"
     echo ""
     echo "To configure API keys, either:"
-    echo "  1. Copy ../env.example to ../.env (recommended)"
-    echo "  2. Copy config/env.example to config/.env"
+    echo "  1. Copy config/env.example to .env (in mt_eval/)"
+    echo "  2. Or copy it to config/.env"
     echo ""
     echo "Then edit the .env file with your actual API keys:"
     echo "  - OPENAI_API_KEY"
@@ -88,7 +90,7 @@ echo "  1. Activate the virtual environment:"
 echo "     source venv/bin/activate"
 echo ""
 echo "  2. Run the pipeline:"
-echo "     python3 pipeline.py input/10_chunks.txt"
+echo "     python3 pipeline.py input/on_mixtures.txt"
 echo ""
 echo "  3. When done, deactivate the virtual environment:"
 echo "     deactivate"

@@ -9,7 +9,7 @@ Complete workflow:
 4. Generate comprehensive report
 
 Usage:
-    python3 pipeline.py input/10_chunks_clean.txt
+    python3 pipeline.py input/on_mixtures.txt
 """
 
 import os
@@ -24,7 +24,7 @@ try:
     from dotenv import load_dotenv
     env_loaded = False
     
-    # Try current directory (galen_eval/.env)
+    # Try mt_eval/.env
     current_env = os.path.join(os.path.dirname(__file__), '.env')
     if os.path.exists(current_env):
         load_dotenv(current_env)
@@ -246,19 +246,19 @@ def main():
         epilog="""
 Examples:
   # Run full pipeline with all defaults
-  python pipeline.py input/10_chunks.txt
+  python pipeline.py input/on_mixtures.txt
   
   # Use only specific models
-  python pipeline.py input/10_chunks.txt --models openai claude
+  python pipeline.py input/on_mixtures.txt --models openai claude
   
   # Use only fast metrics (no neural metrics)
-  python pipeline.py input/10_chunks.txt --metrics bleu rouge chrf
+  python pipeline.py input/on_mixtures.txt --metrics bleu rouge chrf
   
   # Use GPU for faster neural metrics
-  python pipeline.py input/10_chunks.txt --gpu
+  python pipeline.py input/on_mixtures.txt --gpu
   
   # Parallel translation (faster but more API load)
-  python pipeline.py input/10_chunks.txt --parallel
+  python pipeline.py input/on_mixtures.txt --parallel
         """
     )
     
