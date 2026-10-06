@@ -4,10 +4,11 @@ For each step of the rarity measure (07), correlates passage rarity with passage
 TQS over the three models; total critical errors). For every step it computes Pearson and
 Spearman correlations, R^2 with a bootstrap CI (seed 0, 10,000 resamples), Cook's distance, the
 correlation without Comp. 8 and 10, and group means. For the final measure it also finds the
-rarity below which (almost) no model fails, correlates rarity with each type of error, and checks
-whether the density of notation (numerals, symbols) predicts quality on its own. Steps 0 and 0b
-are the original measure and the original method with Comp. 1 the translated passage (see 07);
-the notation check compares step 1 with step 0b.
+rarity below which (almost) no model fails, correlates rarity with each type of error (over all
+ten Comp. passages and without 8 and 10), and checks whether the density of notation (numerals,
+symbols) predicts quality on its own. Steps 0 and 0b are the original measure and the original
+method with Comp. 1 the translated passage (see 07); the notation check compares step 1 with
+step 0b.
 
 Inputs : outputs/rarity_by_passage_steps.csv and outputs/rarity_tokens.csv (from 07), mqm/ summary sheets
 Outputs: rarity_stats_by_step.csv, rarity_correlations_by_step.csv, rarity_quality_by_passage.csv,
@@ -140,16 +141,19 @@ STATS.add('rarity_gap_low', gap_lo, 'highest rare-term ratio of any Comp. passag
 STATS.add('rarity_gap_high', gap_hi, 'lower rare-term ratio of Comp. 8 and 10')
 
 # ---------------------------------------------------------------- rarity vs error type
+# over all ten Comp. passages, and over the eight without Comp. 8 and 10
 e = fin[fin.text == 'Comp'].merge(err, on=['text', 'chunk'])
 rows = []
-for col, lab in [('term', 'Terminology errors'), ('acc', 'Accuracy errors')]:
-    rr, pp = pearson(e.rare_ratio, e[col])
-    rh, ph = spearman(e.rare_ratio, e[col])
-    rows.append({'errors': lab, 'r': rr, 'p': pp, 'rho': rh, 'p rho': ph})
-    STATS.add(f'err_{col}_r', rr, f'Comp. passages: rarity vs {lab}, Pearson r')
-    STATS.add(f'err_{col}_rho', rh, f'Comp. passages: rarity vs {lab}, Spearman rho')
-    STATS.add(f'err_{col}_p', pp, f'p for the Pearson r, rarity vs {lab}')
-    STATS.add(f'err_{col}_prho', ph, f'p for the Spearman rho, rarity vs {lab}')
+for scope, sub, sfx, slab in [('Comp. (all)', e, '', 'Comp. passages'),
+                              ('Comp. (excl. 8, 10)', e[~e.chunk.isin(CATASTROPHIC)], '_x810', 'Comp. passages other than 8 and 10')]:
+    for col, lab in [('term', 'Terminology errors'), ('acc', 'Accuracy errors')]:
+        rr, pp = pearson(sub.rare_ratio, sub[col])
+        rh, ph = spearman(sub.rare_ratio, sub[col])
+        rows.append({'passages': scope, 'n': len(sub), 'errors': lab, 'r': rr, 'p': pp, 'rho': rh, 'p rho': ph})
+        STATS.add(f'err_{col}_r{sfx}', rr, f'{slab}: rarity vs {lab}, Pearson r')
+        STATS.add(f'err_{col}_rho{sfx}', rh, f'{slab}: rarity vs {lab}, Spearman rho')
+        STATS.add(f'err_{col}_p{sfx}', pp, f'p for the Pearson r, rarity vs {lab} ({slab})' if sfx else f'p for the Pearson r, rarity vs {lab}')
+        STATS.add(f'err_{col}_prho{sfx}', ph, f'p for the Spearman rho, rarity vs {lab} ({slab})' if sfx else f'p for the Spearman rho, rarity vs {lab}')
 write_csv(pd.DataFrame(rows), 'rarity_vs_error_type.csv')
 
 # ---------------------------------------------------------------- the notation check

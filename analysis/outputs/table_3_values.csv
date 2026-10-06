@@ -1,15 +1,15 @@
 row,column,statistic,value
-Mix. (all passages),Mean TQS,mean,95.200000
-Mix. (all passages),SD,SD,4.773779
-Comp. (all passages),Mean TQS,mean,79.853333
-Comp. (all passages),SD,SD,26.246428
-Comp. (all passages),Gap vs Mix.,points,15.346667
-"Comp. (excl. 8, 10)",Mean TQS,mean,91.358333
-"Comp. (excl. 8, 10)",SD,SD,7.483833
-"Comp. (excl. 8, 10)",Gap vs Mix.,points,3.841667
-"Comp. (excl. 3, 8, 10)",Mean TQS,mean,93.114286
-"Comp. (excl. 3, 8, 10)",SD,SD,4.980390
-"Comp. (excl. 3, 8, 10)",Gap vs Mix.,points,2.085714
-"Comp. (excl. 8, 10, and ChatGPT on 3)",Mean TQS,mean,92.465217
-"Comp. (excl. 8, 10, and ChatGPT on 3)",SD,SD,5.273744
-"Comp. (excl. 8, 10, and ChatGPT on 3)",Gap vs Mix.,points,2.734783
+Mix. (all passages),TQS Mean,mean,95.200000
+Mix. (all passages),TQS SD,SD,4.773779
+Comp. (all passages),TQS Mean,mean,79.853333
+Comp. (all passages),TQS SD,SD,26.246428
+Comp. (all passages),Gap vs. Mix.,points,15.346667
+"Comp. (excl. 8, 10)",TQS Mean,mean,91.358333
+"Comp. (excl. 8, 10)",TQS SD,SD,7.483833
+"Comp. (excl. 8, 10)",Gap vs. Mix.,points,3.841667
+"Comp. (excl. 3, 8, 10)",TQS Mean,mean,93.114286
+"Comp. (excl. 3, 8, 10)",TQS SD,SD,4.980390
+"Comp. (excl. 3, 8, 10)",Gap vs. Mix.,points,2.085714
+"Comp. (excl. 8, 10, and ChatGPT on 3)",TQS Mean,mean,92.465217
+"Comp. (excl. 8, 10, and ChatGPT on 3)",TQS SD,SD,5.273744
+"Comp. (excl. 8, 10, and ChatGPT on 3)",Gap vs. Mix.,points,2.734783

@@ -17,18 +17,18 @@ from tables import write_table
 V = CellValues()
 rar = pd.read_csv(OUT / 'rarity_by_passage_final.csv')
 assert len(rar) == 20
-COLS = ['Text', 'Ch.', 'Words', 'Avg. Zipf', 'Rare Ratio', 'Rare']
+COLS = ['Text', 'Passage', 'Words', 'Avg. Zipf', 'Rare Ratio', 'Rare']
 rows, means = [], []                                  # the two means together at the foot
 for text in ['Mix.', 'Comp.']:
     g = rar[rar.Text == text]
-    rows.append({'Text': text, 'Ch.': '', 'Words': '', 'Avg. Zipf': '', 'Rare Ratio': '', 'Rare': ''})
+    rows.append({'Text': text, 'Passage': '', 'Words': '', 'Avg. Zipf': '', 'Rare Ratio': '', 'Rare': ''})
     for _, r in g.iterrows():
-        rows.append({'Text': '', 'Ch.': str(int(r.Passage)), 'Words': str(int(r.Words)),
+        rows.append({'Text': '', 'Passage': str(int(r.Passage)), 'Words': str(int(r.Words)),
                      'Avg. Zipf': f"{r['Mean Zipf']:.2f}", 'Rare Ratio': f_pct(r['Rare-term ratio'] * 100, 1),
                      'Rare': str(int(r['Rare words']))})
         V(f'{text} {int(r.Passage)}', 'Avg. Zipf', 'mean', r['Mean Zipf'])
         V(f'{text} {int(r.Passage)}', 'Rare Ratio', '%', r['Rare-term ratio'] * 100)
-    means.append({'Text': text, 'Ch.': 'Mean', 'Words': '—', 'Avg. Zipf': f"{g['Mean Zipf'].mean():.2f}",
+    means.append({'Text': text, 'Passage': 'Mean', 'Words': '—', 'Avg. Zipf': f"{g['Mean Zipf'].mean():.2f}",
                   'Rare Ratio': f_pct(g['Rare-term ratio'].mean() * 100, 1), 'Rare': '—'})
     V(f'{text} Mean', 'Avg. Zipf', 'mean', g['Mean Zipf'].mean())
     V(f'{text} Mean', 'Rare Ratio', '%', g['Rare-term ratio'].mean() * 100)

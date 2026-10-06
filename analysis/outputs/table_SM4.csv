@@ -1,4 +1,4 @@
-Text,Chunk,Model,TQS,BLEU-4,BERTScore,COMET,Rating (Scheme 1)
+Text,Passage,Model,TQS,BLEU-4,BERTScore,COMET,Rating (Scheme 1)
 Mix.,,,,,,,
 ,1,Claude,96.7,30.6%,92.6%,81.4%,HP
 ,1,Gemini,99.3,27.7%,92.5%,81.8%,HP

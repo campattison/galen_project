@@ -19,9 +19,11 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt  # noqa: E402
 
+plt.rcParams['font.sans-serif'] = ['Arial', 'Helvetica', 'Liberation Sans', 'DejaVu Sans']   # first one installed
+
 OUT = Path(os.environ.get('ANALYSIS_OUT', str(Path(__file__).resolve().parent.parent / 'outputs')))
 MODELS = ['Claude', 'Gemini', 'ChatGPT']
-YLABEL = 'Chunk'            # the axis label of the figure (a chunk is a passage)
+YLABEL = 'Passage'          # the axis label of the figure
 
 rows = list(csv.DictReader(open(OUT / 'figure_1.csv', encoding='utf-8')))
 dest = Path(sys.argv[1]) if len(sys.argv) > 1 else OUT / 'optional' / 'figure_1.png'
@@ -44,5 +46,5 @@ for ax, text in zip(axes, ['Comp.', 'Mix.']):
     ax.set_title(text, fontsize=14)
 axes[0].set_ylabel(YLABEL, fontsize=12)
 fig.colorbar(im, ax=axes, shrink=.7, ticks=[0, 50, 100], label='TQS')
-fig.savefig(dest, dpi=225, bbox_inches='tight', metadata={'Software': None})
+fig.savefig(dest, dpi=300, bbox_inches='tight', metadata={'Software': None})
 print(f'wrote {dest}')

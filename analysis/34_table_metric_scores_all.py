@@ -24,12 +24,12 @@ SHOWN = ['BLEU-4', 'BERTScore', 'COMET']
 d = sc.merge(mq[KEYS + ['TQS']], on=KEYS, validate='1:1').set_index(KEYS)
 rows = []
 for text in ['Mix', 'Comp']:
-    rows.append({'Text': LABEL[text], 'Chunk': '', 'Model': '', 'TQS': '', 'BLEU-4': '', 'BERTScore': '',
+    rows.append({'Text': LABEL[text], 'Passage': '', 'Model': '', 'TQS': '', 'BLEU-4': '', 'BERTScore': '',
                  'COMET': '', 'Rating (Scheme 1)': ''})
     for chunk in range(1, 11):
         for model in ROW_MODELS:
             r = d.loc[(text, chunk, model)]
-            rows.append({'Text': '', 'Chunk': str(chunk), 'Model': model, 'TQS': f'{np.round(r.TQS, 1):.1f}',
+            rows.append({'Text': '', 'Passage': str(chunk), 'Model': model, 'TQS': f'{np.round(r.TQS, 1):.1f}',
                          **{m: f'{np.round(r[m] * 100, 1):.1f}%' for m in SHOWN},
                          'Rating (Scheme 1)': RATING_ABBR[rating_s1(r.TQS)]})
             V(f'{LABEL[text]} {chunk} {model}', 'TQS', 'value', r.TQS)

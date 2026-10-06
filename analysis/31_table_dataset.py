@@ -39,11 +39,11 @@ for text in ('Mix', 'Comp'):
         counts.append(w)
         where = loc[(loc.text == text) & (loc.passage == str(n))].location
         assert len(where) == 1, (text, n)
-        rows.append({'Work': LABEL[text] if n == 1 else '', '#': str(n), 'Location': where.iloc[0], 'Words': str(w)})
+        rows.append({'Work': LABEL[text] if n == 1 else '', 'Passage': str(n), 'Location': where.iloc[0], 'Words': str(w)})
         V(f'{LABEL[text]} {n}', 'Words', 'count', w)
 # an average of whole numbers can end exactly in 5 (4,407 / 20 = 220.35): round half up, on the exact value
 avg = Decimal(sum(counts)) / Decimal(len(counts))
-rows.append({'Work': '', '#': '', 'Location': 'Average Word Count', 'Words': str(avg.quantize(Decimal('0.1'), rounding=ROUND_HALF_UP))})
+rows.append({'Work': '', 'Passage': '', 'Location': 'Average Word Count', 'Words': str(avg.quantize(Decimal('0.1'), rounding=ROUND_HALF_UP))})
 V('Average Word Count', 'Words', 'mean', float(avg))
 table = pd.DataFrame(rows)
 write_table('dataset', table, V)

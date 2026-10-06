@@ -17,21 +17,21 @@ mq = load_mqm()
 MIX, COMP = mq[mq.text == 'Mix'], mq[mq.text == 'Comp']
 
 mix_mean = MIX.TQS.mean()
-rows = [{'Stratification': 'Mix. (all passages)', 'Mean TQS': f_num(mix_mean, 1), 'SD': f_num(MIX.TQS.std(ddof=1), 1),
-         'Gap vs Mix.': '—'}]
-V('Mix. (all passages)', 'Mean TQS', 'mean', mix_mean)
-V('Mix. (all passages)', 'SD', 'SD', MIX.TQS.std(ddof=1))
+rows = [{'Stratification': 'Mix. (all passages)', 'TQS Mean': f_num(mix_mean, 1), 'TQS SD': f_num(MIX.TQS.std(ddof=1), 1),
+         'Gap vs. Mix.': '—'}]
+V('Mix. (all passages)', 'TQS Mean', 'mean', mix_mean)
+V('Mix. (all passages)', 'TQS SD', 'SD', MIX.TQS.std(ddof=1))
 subsets = [('Comp. (all passages)', COMP),
            ('Comp. (excl. 8, 10)', COMP[~COMP.chunk.isin(CATASTROPHIC)]),
            ('Comp. (excl. 3, 8, 10)', COMP[~COMP.chunk.isin([3] + CATASTROPHIC)]),
            ('Comp. (excl. 8, 10, and ChatGPT on 3)',
             COMP[~COMP.chunk.isin(CATASTROPHIC) & ~((COMP.chunk == 3) & (COMP.model == 'ChatGPT'))])]
 for lab, g in subsets:
-    rows.append({'Stratification': lab, 'Mean TQS': f_num(g.TQS.mean(), 1), 'SD': f_num(g.TQS.std(ddof=1), 1),
-                 'Gap vs Mix.': f_num(mix_mean - g.TQS.mean(), 1)})
-    V(lab, 'Mean TQS', 'mean', g.TQS.mean())
-    V(lab, 'SD', 'SD', g.TQS.std(ddof=1))
-    V(lab, 'Gap vs Mix.', 'points', mix_mean - g.TQS.mean())
+    rows.append({'Stratification': lab, 'TQS Mean': f_num(g.TQS.mean(), 1), 'TQS SD': f_num(g.TQS.std(ddof=1), 1),
+                 'Gap vs. Mix.': f_num(mix_mean - g.TQS.mean(), 1)})
+    V(lab, 'TQS Mean', 'mean', g.TQS.mean())
+    V(lab, 'TQS SD', 'SD', g.TQS.std(ddof=1))
+    V(lab, 'Gap vs. Mix.', 'points', mix_mean - g.TQS.mean())
 table = pd.DataFrame(rows)
 write_table('mqm_stratified', table, V)
 print(table.to_string(index=False))
