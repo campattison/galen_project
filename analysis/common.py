@@ -32,7 +32,7 @@ LABEL = {'Mix': 'Mix.', 'Comp': 'Comp.'}
 RARE_BELOW = 50            # rare = fewer than 50 occurrences in Diorisis
 FAIL_BELOW = 87            # Scheme 1: FAIL if TQS < 87
 HIGH_PASS_FROM = 95        # HIGH PASS if TQS >= 95
-CATASTROPHIC = [8, 10]     # the two Comp. passages on which every model failed
+CATASTROPHIC = [8, 10]     # Comp. 8 and 10, excluded in the stratified comparisons
 # passage subsets for the Mix.-Comp. comparisons; exclusions apply to Comp. only
 STRATA = [('All passages', []), ('Excl. 8, 10', [8, 10]), ('Excl. 3, 8, 10', [3, 8, 10])]
 RATING_ABBR = {'HIGH PASS': 'HP', 'LOW PASS': 'LP', 'FAIL': 'F'}

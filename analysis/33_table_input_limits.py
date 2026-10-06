@@ -1,10 +1,9 @@
 """33 Table SM3: the input length limit of each automated metric and how much of each passage it reads.
 
-Three of the seven automated metrics cap their input, and at the passage lengths used here the cap
-binds. The table states each metric's cap, how it encodes its input, how many scored pairs it
-truncates and how much of the texts it actually reads. COMET-Kiwi, a reference-free metric, joins
-candidate and source with the candidate first, so the Greek is what is discarded, and more of it
-for Comp. than for Mix.
+Three of the seven automated metrics cap their input. The table states each metric's cap, how it
+encodes its input, how many scored pairs it truncates and how much of the texts it actually reads.
+COMET-Kiwi, a reference-free metric, joins candidate and source with the candidate first, so
+truncation removes the end of the source.
 
 Inputs: the token counts of every text under each metric's own tokenizer and, for each scored pair,
 what each metric keeps (data/token_counts_passages.csv, data/token_counts_pairs.csv; see

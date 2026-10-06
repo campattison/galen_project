@@ -6,7 +6,7 @@ Parses input documents containing:
 - Greek text chunks
 - Reference translations (usually 2 per chunk)
 
-Handles the format from 10_chunks.txt and similar documents.
+Handles the format of input/on_mixtures.txt and input/on_comp.txt.
 """
 
 import re

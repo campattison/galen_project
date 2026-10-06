@@ -3,17 +3,19 @@
 Translation Evaluation Module
 
 Evaluates machine translations against reference translations using:
-- BLEU-4 - multi-reference (checks n-grams against ANY reference)
-- chrF++ - multi-reference (native support, includes word n-grams)
-- METEOR - multi-reference (natively supports multiple references)
+- BLEU-4 - multi-reference (sacreBLEU pools n-gram matches over the references)
+- chrF++ - multi-reference (sacreBLEU; amounts to the higher single-reference score)
+- METEOR - multi-reference (NLTK; amounts to the higher single-reference score)
 - ROUGE-L - max across references
 - BERTScore - max across references
 - COMET (contextualized multilingual evaluation) - max across references
 - BLEURT - max across references
 
-Multi-reference methodology:
-- Lexical metrics (BLEU, chrF++, METEOR): Pass all references; credit for matching ANY reference
-- Neural/semantic metrics (ROUGE, BERTScore, COMET, BLEURT): Compute per-reference, take MAX
+Multi-reference scores:
+- BLEU-4, chrF++, METEOR: all references passed to the library (BLEU-4 pools n-grams; chrF++ and
+  METEOR amount to the higher single-reference score)
+- ROUGE-L, BERTScore, COMET, BLEURT: scored against each reference; the maximum is kept
+Every score against each single reference is stored as well.
 """
 
 import logging
@@ -405,8 +407,7 @@ class Evaluator:
         """
         Calculate COMET score with multi-reference support (requires source text).
         
-        Per Unbabel's recommendation, compute COMET against each reference
-        individually and take the MAX score.
+        COMET is computed against each reference individually and the maximum is kept.
         """
         if 'comet' not in self.metric_handlers:
             return []
@@ -470,7 +471,7 @@ class Evaluator:
             source: Source text (required for COMET)
             
         Returns:
-            List of evaluation scores (using proper multi-reference methodology)
+            List of evaluation scores (multi-reference and per-reference)
         """
         all_scores = []
         
@@ -534,7 +535,7 @@ class Evaluator:
         include_per_reference: bool = True
     ) -> List[ChunkEvaluation]:
         """
-        Evaluate all model translations for a chunk using proper multi-reference methodology.
+        Evaluate all model translations for a chunk (multi-reference and per-reference scores).
         
         Args:
             chunk_id: Chunk identifier

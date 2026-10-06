@@ -1,7 +1,8 @@
 # Analyses: from the data to the tables
 
 This folder computes, from the data in this repository, every table and figure of the paper and the
-other numbers the paper reports from the data. It contains:
+other statistics the paper reports from these data (counts made by hand from the annotations are not
+computed here). It contains:
 
 - the analysis scripts, one per question (`01`–`11`), and one script per table or figure (`20`–`37`);
 - `data/`, the frozen inputs that are not part of the translation pipeline (see `data/README.md`);

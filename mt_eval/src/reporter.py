@@ -85,9 +85,9 @@ class Reporter:
         if methodology == 'multi-reference':
             lines.append("📋 METHODOLOGY")
             lines.append("-" * 80)
-            lines.append("  Multi-reference evaluation:")
-            lines.append("  • BLEU-4, chrF++, METEOR: n-grams matched against ANY reference")
-            lines.append("  • ROUGE-L, BERTScore, COMET: MAX across references")
+            lines.append("  Multi-reference scores:")
+            lines.append("  • BLEU-4: n-gram matches pooled over the references")
+            lines.append("  • chrF++, METEOR, ROUGE-L, BERTScore, COMET, BLEURT: the higher single-reference score")
             lines.append("")
         
         # Metadata

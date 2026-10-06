@@ -1,20 +1,20 @@
 # AI Translation Evaluation of Ancient Greek Medical Texts
 
-Code and data for evaluating AI-generated translations of Galen's medical works against expert human translations.
+Code and data for evaluating LLM translations of passages from two works of Galen: automated metrics scored against reference translations, and expert MQM evaluation of each translation without references.
 
 ## Source Texts
 
-Two works by Galen of Pergamon (129--c. 216 CE), each divided into 10 passage chunks:
+Ten passages from each of two works by Galen of Pergamum (c. 129–216 CE):
 
-- **De Compositione Medicamentorum** (*On the Composition of Drugs*) -- 10 chunks, 1 reference translation
-- **De Temperamentis** (*On Mixtures*) -- 10 chunks, 2 independent reference translations
+- **De compositione medicamentorum per genera** (*On the Composition of Drugs According to Kinds*): 10 passages, 1 reference translation (prepared for this study)
+- **De temperamentis** (*On Mixtures*): 10 passages, 2 published reference translations
 
 ## Models
 
 | Model | API Identifier | Snapshot Date | Settings (see `mt_eval/src/translator.py`) |
 |-------|---------------|---------------|----------|
 | GPT-5 | `gpt-5-2025-08-07` | August 7, 2025 | Responses API; reasoning effort "high"; verbosity "medium"; max output 16,000 tokens; no temperature parameter |
-| Claude 4.5 Sonnet | `claude-sonnet-4-5-20250929` | September 29, 2025 | Messages API; temperature 0.3; max 8,000 tokens; extended thinking off |
+| Claude Sonnet 4.5 | `claude-sonnet-4-5-20250929` | September 29, 2025 | Messages API; temperature 0.3; max 8,000 tokens; extended thinking off |
 | Gemini 2.5 Pro | `gemini-2.5-pro` | June 17, 2025 (GA stable) | temperature 0.3; max output 16,000 tokens; default (built-in) thinking |
 
 All 60 translations were generated on 29 October 2025: one generation per passage per model, each on the first attempt. No call enabled any tool (no web search, no search grounding).
@@ -30,7 +30,6 @@ galen_project/
 │   │   ├── translations/          # Raw and blinded translation JSONs
 │   │   └── evaluations/           # Per-chunk metric scores
 │   ├── config/env.example         # API key template
-│   ├── documents/                 # Pipeline documentation
 │   ├── pipeline.py                # Main workflow entry point
 │   └── requirements.txt
 │
@@ -43,13 +42,13 @@ galen_project/
 │   ├── outputs/                   # All results; INDEX.md says which script writes each file
 │   └── verify.py                  # Reruns everything and checks it matches outputs/
 │
-├── corpus_metrics/                # Lexical difficulty analysis
-│   ├── rebuild_difficulty_audit.py  # Zipf-based difficulty scoring
+├── corpus_metrics/                # The original rarity measure (superseded by analysis/07; see below)
+│   ├── rebuild_difficulty_audit.py  # The original measure's script
 │   ├── download_diorisis.sh       # Downloads the Diorisis Ancient Greek Corpus
 │   ├── comp.txt                   # De Compositione passage chunks (Greek; chunk 1 is the preface, see below)
 │   ├── mix.txt                    # De Temperamentis passage chunks (Greek)
 │   ├── diorisis_frequencies.json  # Cached lemma frequency dictionary
-│   └── passage_difficulty_zipf.csv  # Output: per-passage difficulty metrics
+│   └── passage_difficulty_zipf.csv  # The original measure's values
 │
 ├── LICENSE
 └── README.md
@@ -61,9 +60,9 @@ Seven metric families spanning lexical and neural approaches:
 
 | Metric | Type | Multi-Reference Strategy |
 |--------|------|--------------------------|
-| BLEU-4 | Lexical (n-gram precision) | Native multi-reference |
-| chrF++ | Lexical (character n-gram F-score) | Native multi-reference |
-| METEOR | Lexical (stems + synonyms) | Native multi-reference |
+| BLEU-4 | Lexical (n-gram precision) | n-gram matches pooled over both references (sacreBLEU) |
+| chrF++ | Lexical (character n-gram F-score) | Library multi-reference (sacreBLEU): the higher single-reference score |
+| METEOR | Lexical (stems + synonyms) | Library multi-reference (NLTK): the higher single-reference score |
 | ROUGE-L | Lexical (longest common subsequence) | Max across references |
 | BERTScore | Neural (contextual embeddings) | Max F1 across references |
 | COMET | Neural (trained on human judgments) | Max across references |
@@ -89,8 +88,9 @@ cp config/env.example .env        # Add your API keys
 
 source venv/bin/activate
 
-# Full pipeline (translate + evaluate + report)
-python3 pipeline.py input/on_mixtures.txt
+# Full pipeline (translate + evaluate + report) with all seven metrics; BLEURT needs the
+# BLEURT-20 checkpoint (set BLEURT_CHECKPOINT, or place it in mt_eval/models/BLEURT-20)
+python3 pipeline.py input/on_mixtures.txt --metrics bleu chrf meteor rouge bertscore comet bleurt
 
 # Select specific models
 python3 pipeline.py input/on_comp.txt --models openai claude
@@ -102,7 +102,7 @@ python3 pipeline.py input/on_comp.txt --metrics bleu rouge chrf
 python3 pipeline.py input/on_mixtures.txt --gpu
 ```
 
-### Corpus Difficulty Analysis
+### The original rarity measure (superseded)
 
 ```bash
 cd corpus_metrics
@@ -111,9 +111,9 @@ pip install -r requirements.txt
 python3 rebuild_difficulty_audit.py
 ```
 
-The difficulty analysis computes Zipf-based lexical rarity scores for each passage chunk against the full Diorisis Ancient Greek Corpus (820 texts, ~10M tokens). This quantifies how unusual Galen's vocabulary is relative to the broader Greek literary tradition.
+`rebuild_difficulty_audit.py` is the original rarity measure, kept for the record: Zipf-based rarity scores for each passage chunk against the Diorisis Ancient Greek Corpus (820 texts, ~10M tokens). The measure used now is computed in `analysis/`.
 
-`passage_difficulty_zipf.csv` holds the values of this original measure. `analysis/07_rarity_measure.py` reproduces them from Stanza's output and then corrects the measure in documented steps (numerals and symbols removed, weight abbreviations expanded, words that Stanza split at ῤῥ re-joined; a Stanza lemma that matches nothing in Diorisis replaced with the same lemma with normalised accents or case, or else with Diorisis's own lemma for the word form; disagreements between the two about rare and common decided by hand). It also measures the right first passage of Comp.: chunk 1 of `comp.txt` is Galen's preface to Book I, not the passage translated and evaluated (I.2, chunk 1 of `mt_eval/input/on_comp.txt`).
+`passage_difficulty_zipf.csv` holds the values of this original measure. `analysis/07_rarity_measure.py` reproduces them from Stanza's output and then corrects the measure in documented steps (numerals and symbols removed, weight abbreviations expanded, words that Stanza split at ῤῥ re-joined; a Stanza lemma that matches nothing in Diorisis replaced with the same lemma with normalized accents or case, or else with Diorisis's own lemma for the word form; disagreements between the two about rare and common decided by hand). It also measures the right first passage of Comp.: chunk 1 of `comp.txt` is Galen's preface to Book I, not the passage translated and evaluated (I.2, chunk 1 of `mt_eval/input/on_comp.txt`).
 
 ## Analyses
 
@@ -129,9 +129,9 @@ python analysis/verify.py     # confirm they match the committed outputs
 
 ## External Data
 
-The [Diorisis Ancient Greek Corpus](https://doi.org/10.6084/m9.figshare.6187256.v1) (Vatri & McGillivray, 2018) is required for the corpus difficulty analysis. It is downloaded automatically by `corpus_metrics/download_diorisis.sh` and is not included in this repository due to its size (2.3 GB uncompressed). The corpus is distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+The [Diorisis Ancient Greek Corpus](https://doi.org/10.6084/m9.figshare.6187256.v1) (Vatri & McGillivray, 2018) is needed only to rerun the original measure in `corpus_metrics/`; `analysis/` uses the frequency dictionary and the form index derived from it, which are included. The corpus is downloaded by `corpus_metrics/download_diorisis.sh` and is not included in this repository because of its size (2.3 GB uncompressed). The corpus is distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-> Vatri, A., & McGillivray, B. (2018). The Diorisis Ancient Greek Corpus. *Research Data Journal for the Humanities and Social Sciences*, 3(1), 55--65. https://doi.org/10.6084/m9.figshare.6187256.v1
+> Vatri, A., & McGillivray, B. (2018). The Diorisis Ancient Greek Corpus: Linguistics and Literature. *Research Data Journal for the Humanities and Social Sciences*, 3(1). https://doi.org/10.1163/24523666-01000013. Corpus: https://doi.org/10.6084/m9.figshare.6187256.v1
 
 ## License
 

@@ -1,30 +1,30 @@
 # Galen Translation Evaluation Pipeline
 
-A streamlined system for translating Ancient Greek texts and evaluating translation quality using state-of-the-art NLP metrics.
+Translates Ancient Greek passages with three LLMs and scores the translations with automated metrics against reference translations.
 
 ## 🎯 What This Does
 
 1. **Parses** your input document (Greek + reference translations)
 2. **Translates** Greek text using 3 AI models (OpenAI GPT, Claude, Gemini)
-3. **Evaluates** translations against references using 6 metric families
-4. **Reports** clear, actionable results
+3. **Evaluates** translations against references with seven metrics (BLEURT only when its checkpoint is installed)
+4. **Reports** the scores in a summary report
 
 ## 📁 Project Structure
 
 ```
-galen_eval/
-├── input/              # Place your input documents here
+mt_eval/
+├── input/              # Greek passages with reference translations (on_mixtures.txt, on_comp.txt)
 ├── output/            
 │   ├── translations/   # Raw translation outputs
 │   ├── evaluations/    # Evaluation scores
-│   └── reports/        # Human-readable reports
+│   └── reports/        # Summary reports (written by the pipeline; not tracked)
 ├── src/               
 │   ├── parser.py       # Parse input documents
 │   ├── translator.py   # Call translation APIs
 │   ├── evaluator.py    # Run evaluation metrics
 │   └── reporter.py     # Generate reports
 ├── config/
-│   └── .env            # API keys (not in git)
+│   └── env.example     # Template for the API keys (.env, not in git)
 ├── requirements.txt
 ├── pipeline.py         # Main workflow script
 └── README.md          # This file
@@ -35,12 +35,12 @@ galen_eval/
 ### 1. Setup (one time)
 
 ```bash
-cd galen_eval
+cd mt_eval
 
 # Run setup script (creates venv, installs dependencies)
 ./setup.sh
 
-# The pipeline will look for .env in project root (../.env) or config/.env
+# The pipeline looks for .env in mt_eval/, then in the repository root (../.env), then in config/
 # Make sure your .env file has your API keys
 ```
 
@@ -50,8 +50,8 @@ cd galen_eval
 # Activate virtual environment
 source venv/bin/activate
 
-# Run the full pipeline
-python3 pipeline.py input/10_chunks.txt
+# Run the full pipeline (add --metrics bleu chrf meteor rouge bertscore comet bleurt for all seven)
+python3 pipeline.py input/on_mixtures.txt
 
 # When done
 deactivate
@@ -151,8 +151,7 @@ Edit `pipeline.py` to customize:
 
 ## 💡 Tips
 
-- **For best results**: Keep chunks to 1-2 sentences (parser handles this)
-- **Multiple references**: Evaluating against 2 references increases reliability
+- **Two references**: the evaluation files keep each translation's score against each reference as well as the multi-reference scores
 - **GPU recommended**: For neural metrics (BERTScore, COMET)
 - **Rate limits**: Pipeline includes delays to respect API limits
 

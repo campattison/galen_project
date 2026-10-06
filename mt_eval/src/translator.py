@@ -4,7 +4,7 @@ Translation Module
 
 Translates Ancient Greek text using three AI models:
 - OpenAI (GPT-5)
-- Anthropic (Claude 4.5)
+- Anthropic (Claude Sonnet 4.5)
 - Google (Gemini 2.5 Pro)
 """
 
@@ -108,7 +108,7 @@ class Translator:
                 api_key = os.getenv('ANTHROPIC_API_KEY')
                 if api_key and api_key != 'your_anthropic_api_key_here':
                     self.clients['claude'] = anthropic.Anthropic(api_key=api_key)
-                    logger.info("✓ Claude client initialized (Claude 4.5)")
+                    logger.info("✓ Claude client initialized (Claude Sonnet 4.5)")
                 else:
                     logger.warning("Anthropic API key not configured")
                     self.models.remove('claude')
@@ -318,7 +318,7 @@ Ancient Greek text:
                     )
     
     def translate_claude(self, greek_text: str, chunk_id: str) -> Translation:
-        """Translate using Claude 4.5 with retry logic for overloads and rate limits."""
+        """Translate using Claude Sonnet 4.5 with retry logic for overloads and rate limits."""
         prompt = self._create_prompt(greek_text)
 
         max_retries = 5
@@ -327,7 +327,7 @@ Ancient Greek text:
         for attempt in range(max_retries):
             try:
                 response = self.clients['claude'].messages.create(
-                    model="claude-sonnet-4-5-20250929",  # Latest Claude 4.5
+                    model="claude-sonnet-4-5-20250929",  # Claude Sonnet 4.5
                     max_tokens=8000,  # Generous limit to avoid artificial constraints
                     temperature=0.3,
                     messages=[{"role": "user", "content": prompt}]
@@ -402,7 +402,7 @@ Ancient Greek text:
                     time.sleep(delay)
                 
                 response = self.clients['gemini'].models.generate_content(
-                    model="gemini-2.5-pro",  # Latest Gemini 2.5 Pro June 17, 2025 stable release: no changes from the 06-05 preview at time of use (October 29, 2025).
+                    model="gemini-2.5-pro",  # Gemini 2.5 Pro, stable release of June 17, 2025 (unchanged from the 06-05 preview); used October 29, 2025
                     contents=prompt,
                     config=types.GenerateContentConfig(
                         temperature=0.3,

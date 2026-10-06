@@ -1,7 +1,7 @@
 """22 Table 3: TQS of Mix. and of Comp. with passages excluded, and the Mix.-Comp. gap.
 
-Exclusions apply to Comp. only: all passages; without passages 8 and 10 (on which every model
-failed); without 3, 8 and 10; and without 8, 10 and ChatGPT's translation of passage 3.
+Exclusions apply to Comp. only: all passages; without passages 8 and 10; without 3, 8 and 10;
+and without 8, 10 and ChatGPT's translation of passage 3.
 Gap = mean TQS of Mix. minus mean TQS of the Comp. subset.
 
 Inputs : mqm/MQM SUMMARY TABLES - * Summary Sorted.csv
