@@ -4,19 +4,17 @@ For each step of the rarity measure (07), correlates passage rarity with passage
 TQS over the three models; total critical errors). For every step it computes Pearson and
 Spearman correlations, R^2 with a bootstrap CI (seed 0, 10,000 resamples), Cook's distance, the
 correlation without Comp. 8 and 10, and group means. For the final measure it also finds the
-rarity below which (almost) no model fails, correlates rarity with each type of error (over all
-ten Comp. passages and without 8 and 10), and checks whether the density of notation (numerals,
-symbols) predicts quality on its own. Steps 0 and 0b are the original measure and the original
-method with Comp. 1 the translated passage (see 07); the notation check compares step 1 with
-step 0b.
+rarity below which (almost) no model fails and correlates rarity with each type of error (over
+all ten Comp. passages and without 8 and 10). Steps 0 and 0b are the original measure and the
+original method with Comp. 1 the translated passage (see 07).
 
-Inputs : outputs/rarity_by_passage_steps.csv and outputs/rarity_tokens.csv (from 07), mqm/ summary sheets
+Inputs : outputs/rarity_by_passage_steps.csv (from 07), mqm/ summary sheets
 Outputs: rarity_stats_by_step.csv, rarity_correlations_by_step.csv, rarity_quality_by_passage.csv,
-         rarity_vs_error_type.csv, notation_check.csv, statistics_08_rarity_stats.csv
+         rarity_vs_error_type.csv, statistics_08_rarity_stats.csv
 """
 import pandas as pd
 
-from common import (CATASTROPHIC, FAIL_BELOW, LABEL, OUT, Statistics, bootstrap_r2, cooks_distance, f_r, load_mqm,
+from common import (CATASTROPHIC, FAIL_BELOW, OUT, Statistics, bootstrap_r2, cooks_distance, f_r, load_mqm,
                     passage_quality, pearson, spearman, stars, write_csv)
 
 STATS = Statistics(__file__)
@@ -29,7 +27,6 @@ err = mq.groupby(['text', 'chunk']).agg(term=('term', 'sum'), acc=('acc', 'sum')
 rows, by_step = [], []
 for step, s in steps.groupby('step', sort=True):
     d = s.merge(q, on=['text', 'chunk'])
-    d['absent_ratio'] = d.absent / d.tokens
     c = d[d.text == 'Comp'].sort_values('chunk').reset_index(drop=True)
     cx = c[~c.chunk.isin(CATASTROPHIC)]
     m = d[d.text == 'Mix']
@@ -54,7 +51,7 @@ for step, s in steps.groupby('step', sort=True):
                  'Comp over Mix multiple': c.rare_ratio.mean() / m.rare_ratio.mean(),
                  'Comp passages above every Mix passage': int((c.rare_ratio > m.rare_ratio.max()).sum()),
                  'mean TQS 8,10': cat.TQS.mean(), 'mean TQS other Comp': cx.TQS.mean()})
-    predictors = [('Rare-term ratio', 'rare_ratio'), ('Not-found ratio', 'absent_ratio'), ('Mean Zipf frequency', 'mean_zipf')]
+    predictors = [('Rare-term ratio', 'rare_ratio'), ('Mean Zipf frequency', 'mean_zipf')]
     for label, col in predictors:
         row = {'step': step, 'predictor': label}
         for tgt, frame, y in [('TQS (Comp.)', c, 'TQS'), ('TQS (All)', d, 'TQS'),
@@ -103,7 +100,7 @@ STATS.add('tqs_mean_cat', FIN['mean TQS 8,10'], 'mean TQS, Comp. 8 and 10')
 STATS.add('tqs_mean_other', FIN['mean TQS other Comp'], 'mean TQS, other Comp. passages')
 for tag in ['step0', 'final']:
     for _, r in by_step[by_step.step == STEP[tag]].iterrows():
-        pk = {'Rare-term ratio': 'rare', 'Not-found ratio': 'nf', 'Mean Zipf frequency': 'zipf'}[r.predictor]
+        pk = {'Rare-term ratio': 'rare', 'Mean Zipf frequency': 'zipf'}[r.predictor]
         for tgt, tk in [('TQS (Comp.)', 'tqs_comp'), ('TQS (All)', 'tqs_all'), ('Critical (Comp.)', 'crit_comp'),
                         ('Critical (All)', 'crit_all')]:
             STATS.add(f'rarity_corr_{tag}_{pk}_{tk}', r[f'{tgt} r'], f'{r.predictor} vs {tgt}, Pearson r ({LAB[tag]})')
@@ -156,37 +153,6 @@ for scope, sub, sfx, slab in [('Comp. (all)', e, '', 'Comp. passages'),
         STATS.add(f'err_{col}_prho{sfx}', ph, f'p for the Spearman rho, rarity vs {lab} ({slab})' if sfx else f'p for the Spearman rho, rarity vs {lab}')
 write_csv(pd.DataFrame(rows), 'rarity_vs_error_type.csv')
 
-# ---------------------------------------------------------------- the notation check
-# Notation density per passage (numerals, symbols and abbreviations among the tokens Stanza
-# counted), its correlation with quality and rarity, and the change in each passage's rare-term
-# ratio from step 0b to step 1.
-tok = pd.read_csv(OUT / 'rarity_tokens.csv')
-tok['notation'] = ~tok.included.astype(bool)
-nd = (tok.groupby(['text', 'chunk'])
-         .agg(tokens=('word', 'size'), notation=('notation', 'sum'))
-         .reset_index())
-nd['notation_density'] = nd.notation / nd.tokens
-nd = nd.merge(fin[['text', 'chunk', 'rare_ratio']], on=['text', 'chunk']).merge(q, on=['text', 'chunk'])
-step0b = steps[steps.step == '0b original method, Comp. 1 as translated'].set_index(['text', 'chunk']).rare_ratio
-one_step = steps[steps.step == '1 notation removed'].set_index(['text', 'chunk']).rare_ratio
-nd['ratio_change_notation_step'] = nd.set_index(['text', 'chunk']).index.map(one_step - step0b)
-write_csv(nd.sort_values(['text', 'chunk'], ascending=[False, True]), 'notation_check.csv')
-STEP1 = 'from step 0b to step 1 (numerals and symbols dropped, abbreviations expanded, words split at ῤῥ re-joined)'
-STATS.add('notation_step_rise', nd.ratio_change_notation_step.max(), f'largest rise in any rare-term ratio {STEP1}')
-worst = nd.loc[nd.ratio_change_notation_step.idxmin()]
-STATS.add('notation_step_worst', worst.ratio_change_notation_step,
-          f'largest fall in any rare-term ratio {STEP1} ({LABEL[worst.text]} {worst.chunk})')
-STATS.add('notation_step_mix_max', nd[nd.text == 'Mix'].ratio_change_notation_step.abs().max(),
-          f'largest change in the rare-term ratio of a Mix. passage {STEP1}')
-ndc = nd[nd.text == 'Comp']
-for y, lab in [('TQS', 'TQS'), ('critical', 'critical errors')]:
-    rr, pp = pearson(ndc.notation_density, ndc[y])
-    STATS.add(f'notation_{y}_r', rr, f'Comp. passages: notation density vs {lab}')
-rr, pp = pearson(ndc.notation_density, ndc.rare_ratio)
-STATS.add('notation_rarity_r', rr, 'Comp. passages: notation density vs the rare-term ratio')
-ndx = ndc[~ndc.chunk.isin(CATASTROPHIC)]
-rr, pp = pearson(ndx.notation_density, ndx.TQS)
-STATS.add('notation_TQS_rx', rr, 'Comp. passages other than 8 and 10: notation density vs TQS')
 STATS.save()
 show = st.set_index('step')[['r Comp', 'R2', 'R2 CI low', 'R2 CI high', 'rho Comp', 'p rho', 'Cook D 8', 'Cook D 10',
                              'r without 8,10', 'p without', 'mean ratio Comp', 'mean ratio Mix', 'ratio 8', 'ratio 10',

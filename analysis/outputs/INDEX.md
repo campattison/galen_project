@@ -19,7 +19,7 @@ Every file in this folder, and the script in `analysis/` that writes it. `run_al
 | Figure 1 | TQS of each of the 60 translations (the data of the figure) | `30_figure_tqs.py` | `figure_1.csv`, `statistics_30_figure_tqs.csv` |
 | Table SM1 | the 20 passages: location in the editions and length in words | `31_table_dataset.py` | `table_SM1.csv`, `table_SM1_values.csv`, `statistics_31_table_dataset.csv` |
 | Table SM2 | automated metric scores of Mix. under four ways of using its two references | `32_table_reference_protocols.py` | `table_SM2.csv`, `table_SM2_values.csv`, `correlations_by_protocol.csv`, `statistics_32_table_reference_protocols.csv` |
-| Table SM3 | input length limit of each automated metric and how much of each passage it reads | `33_table_input_limits.py` | `table_SM3.csv`, `cometkiwi_summary.csv`, `statistics_33_table_input_limits.csv` |
+| Table SM3 | input length limit of each automated metric and how much of each passage it reads | `33_table_input_limits.py` | `table_SM3.csv`, `statistics_33_table_input_limits.csv` |
 | Table SM4 | BLEU-4, BERTScore, COMET, TQS and rating of each of the 60 translations | `34_table_metric_scores_all.py` | `table_SM4.csv`, `table_SM4_values.csv`, `per_translation_scores.csv` |
 | Table SM5 | TQS, rating and errors by severity of each of the 60 translations | `35_table_mqm_scores_all.py` | `table_SM5.csv` |
 | Table SM6 | for each metric, how many Mix. translations score higher against each reference | `36_table_reference_preferences.py` | `table_SM6.csv`, `table_SM6_values.csv`, `statistics_36_table_reference_preferences.csv` |
@@ -32,11 +32,11 @@ Every file in this folder, and the script in `analysis/` that writes it. `run_al
 | `01_reference_asymmetry.py` | Two references for Mix., one for Comp.: how Mix. is scored, and what it does to the gap. | `like_for_like_gaps.csv`, `multi_reference_boost.csv`, `mix_per_reference_scores.csv`, `mix_reference_fix.csv`, `statistics_01_reference_asymmetry.csv` |
 | `02_surface_similarity.py` | Surface similarity of the LLM translations to the published English translations. | `surface_similarity_by_passage.csv`, `surface_similarity_by_model.csv`, `verbatim_runs.csv`, `statistics_02_surface_similarity.csv` |
 | `03_error_composition.py` | Error composition: terminology vs accuracy errors, by group of passages. | `error_composition.csv`, `critical_errors_by_passage.csv`, `statistics_03_error_composition.csv` |
-| `04_tqs_thresholds.py` | The TQS rating thresholds: error budgets, and sensitivity to severity weights and cut-offs. | `tqs_error_budget.csv`, `tqs_error_budget_by_severity.csv`, `pass_rates_by_cutoff.csv`, `band_composition.csv`, `severity_weight_sensitivity.csv`, `statistics_04_tqs_thresholds.csv` |
+| `04_tqs_thresholds.py` | The TQS rating thresholds as error budgets. | `tqs_error_budget.csv`, `tqs_error_budget_by_severity.csv`, `band_composition.csv`, `statistics_04_tqs_thresholds.csv` |
 | `05_model_comparisons.py` | Differences between the three models. | `model_tests.csv`, `scheme2_outcomes_comp.csv`, `statistics_05_model_comparisons.csv` |
 | `06_generation_metadata.py` | How the translations were generated: dates, attempts, model versions and API parameters. | `generation_metadata.csv`, `api_call_parameters.csv`, `statistics_06_generation_metadata.csv` |
 | `07_rarity_measure.py` | The rarity measure, rebuilt and corrected in documented steps from Stanza's output. | `rarity_tokens.csv`, `rarity_by_passage_steps.csv`, `rarity_by_passage_final.csv`, `original_measure_reproduction_check.csv`, `rarity_correction_summary.csv`, `statistics_07_rarity_measure.csv` |
-| `08_rarity_stats.py` | Rarity and translation quality. | `rarity_stats_by_step.csv`, `rarity_correlations_by_step.csv`, `rarity_quality_by_passage.csv`, `rarity_vs_error_type.csv`, `notation_check.csv`, `statistics_08_rarity_stats.csv` |
+| `08_rarity_stats.py` | Rarity and translation quality. | `rarity_stats_by_step.csv`, `rarity_correlations_by_step.csv`, `rarity_quality_by_passage.csv`, `rarity_vs_error_type.csv`, `statistics_08_rarity_stats.csv` |
 | `09_lemma_check.py` | Hand check of a sample of the repaired lemmas. | `lemma_check_summary.csv`, `statistics_09_lemma_check.csv` |
 | `10_rarity_sensitivity.py` | How much could remaining lemma errors move the rarity result? | `rarity_sensitivity.csv`, `statistics_10_rarity_sensitivity.csv` |
 | `11_quality_by_group.py` | Translation quality of groups of translations. | `quality_by_group.csv`, `statistics_11_quality_by_group.csv` |
