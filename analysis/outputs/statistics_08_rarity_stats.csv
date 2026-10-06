@@ -81,10 +81,6 @@ rarity_corr_step0_rare_tqs_comp,-0.968878,"Rare-term ratio vs TQS (Comp.), Pears
 rarity_corr_step0_rare_tqs_all,-0.931409,"Rare-term ratio vs TQS (All), Pearson r (original measure)"
 rarity_corr_step0_rare_crit_comp,0.922009,"Rare-term ratio vs Critical (Comp.), Pearson r (original measure)"
 rarity_corr_step0_rare_crit_all,0.899784,"Rare-term ratio vs Critical (All), Pearson r (original measure)"
-rarity_corr_step0_nf_tqs_comp,-0.956701,"Not-found ratio vs TQS (Comp.), Pearson r (original measure)"
-rarity_corr_step0_nf_tqs_all,-0.937847,"Not-found ratio vs TQS (All), Pearson r (original measure)"
-rarity_corr_step0_nf_crit_comp,0.911824,"Not-found ratio vs Critical (Comp.), Pearson r (original measure)"
-rarity_corr_step0_nf_crit_all,0.907248,"Not-found ratio vs Critical (All), Pearson r (original measure)"
 rarity_corr_step0_zipf_tqs_comp,0.958578,"Mean Zipf frequency vs TQS (Comp.), Pearson r (original measure)"
 rarity_corr_step0_zipf_tqs_all,0.951237,"Mean Zipf frequency vs TQS (All), Pearson r (original measure)"
 rarity_corr_step0_zipf_crit_comp,-0.908607,"Mean Zipf frequency vs Critical (Comp.), Pearson r (original measure)"
@@ -93,10 +89,6 @@ rarity_corr_final_rare_tqs_comp,-0.942676,"Rare-term ratio vs TQS (Comp.), Pears
 rarity_corr_final_rare_tqs_all,-0.897161,"Rare-term ratio vs TQS (All), Pearson r (final measure)"
 rarity_corr_final_rare_crit_comp,0.889407,"Rare-term ratio vs Critical (Comp.), Pearson r (final measure)"
 rarity_corr_final_rare_crit_all,0.858043,"Rare-term ratio vs Critical (All), Pearson r (final measure)"
-rarity_corr_final_nf_tqs_comp,-0.905355,"Not-found ratio vs TQS (Comp.), Pearson r (final measure)"
-rarity_corr_final_nf_tqs_all,-0.876896,"Not-found ratio vs TQS (All), Pearson r (final measure)"
-rarity_corr_final_nf_crit_comp,0.884111,"Not-found ratio vs Critical (Comp.), Pearson r (final measure)"
-rarity_corr_final_nf_crit_all,0.858631,"Not-found ratio vs Critical (All), Pearson r (final measure)"
 rarity_corr_final_zipf_tqs_comp,0.947029,"Mean Zipf frequency vs TQS (Comp.), Pearson r (final measure)"
 rarity_corr_final_zipf_tqs_all,0.939686,"Mean Zipf frequency vs TQS (All), Pearson r (final measure)"
 rarity_corr_final_zipf_crit_comp,-0.893468,"Mean Zipf frequency vs Critical (Comp.), Pearson r (final measure)"
@@ -123,10 +115,3 @@ err_acc_r_x810,0.712151,"Comp. passages other than 8 and 10: rarity vs Accuracy 
 err_acc_rho_x810,0.634742,"Comp. passages other than 8 and 10: rarity vs Accuracy errors, Spearman rho"
 err_acc_p_x810,0.047494,"p for the Pearson r, rarity vs Accuracy errors (Comp. passages other than 8 and 10)"
 err_acc_prho_x810,0.090890,"p for the Spearman rho, rarity vs Accuracy errors (Comp. passages other than 8 and 10)"
-notation_step_rise,0.001428,"largest rise in any rare-term ratio from step 0b to step 1 (numerals and symbols dropped, abbreviations expanded, words split at ῤῥ re-joined)"
-notation_step_worst,-0.054843,"largest fall in any rare-term ratio from step 0b to step 1 (numerals and symbols dropped, abbreviations expanded, words split at ῤῥ re-joined) (Comp. 8)"
-notation_step_mix_max,0.001428,"largest change in the rare-term ratio of a Mix. passage from step 0b to step 1 (numerals and symbols dropped, abbreviations expanded, words split at ῤῥ re-joined)"
-notation_TQS_r,-0.899898,Comp. passages: notation density vs TQS
-notation_critical_r,0.824242,Comp. passages: notation density vs critical errors
-notation_rarity_r,0.956259,Comp. passages: notation density vs the rare-term ratio
-notation_TQS_rx,-0.430421,Comp. passages other than 8 and 10: notation density vs TQS

@@ -48,7 +48,7 @@ table's file.
 | `01_reference_asymmetry.py` | Mix. has two references and Comp. one: scores Mix. against each reference and as the mean of the two, and recomputes the Mix.–Comp. gap under each way of scoring |
 | `02_surface_similarity.py` | how close the LLM translations are to the published English translations (sentence BLEU; longest shared runs of words) |
 | `03_error_composition.py` | terminology and accuracy errors by group of passages |
-| `04_tqs_thresholds.py` | what the TQS rating thresholds mean in errors per translation, and how the ratings move under other thresholds and severity weights |
+| `04_tqs_thresholds.py` | what the TQS rating thresholds mean in errors per translation |
 | `05_model_comparisons.py` | differences between the three models (Friedman, Wilcoxon, Brown–Forsythe) |
 | `06_generation_metadata.py` | how the translations were generated: dates, attempts, model versions, API parameters |
 | `07_rarity_measure.py` – `10_rarity_sensitivity.py` | the rarity measure of each passage's vocabulary, rebuilt step by step from Stanza's output (07); its correlation with translation quality (08); the hand check of the repaired lemmas (09); how far remaining lemma errors could move the result (10) |

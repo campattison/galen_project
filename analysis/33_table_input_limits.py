@@ -4,8 +4,7 @@ Three of the seven automated metrics cap their input, and at the passage lengths
 binds. The table states each metric's cap, how it encodes its input, how many scored pairs it
 truncates and how much of the texts it actually reads. COMET-Kiwi, a reference-free metric, joins
 candidate and source with the candidate first, so the Greek is what is discarded, and more of it
-for Comp. than for Mix.; the COMET-Kiwi scores are summarised beside reference-based COMET in
-cometkiwi_summary.csv.
+for Comp. than for Mix.
 
 Inputs: the token counts of every text under each metric's own tokenizer and, for each scored pair,
 what each metric keeps (data/token_counts_passages.csv, data/token_counts_pairs.csv; see
@@ -21,7 +20,7 @@ windows of BLEURT-20 and COMET-Kiwi are given whole (512).
 
 Inputs : the three files above, mt_eval/input/*.txt, mt_eval/output/translations/*.json, mqm/ (TQS),
          mt_eval/output/evaluations/*.json (COMET), the values file of the gap table (from 23_table_metric_gap.py)
-Outputs: table_SM3.csv (as printed), cometkiwi_summary.csv, statistics_33_table_input_limits.csv
+Outputs: table_SM3.csv (as printed), statistics_33_table_input_limits.csv
 """
 import unicodedata
 
@@ -29,8 +28,8 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-from common import (DATA, LABEL, MODELS, OUT, Statistics, load_mqm, load_texts, load_translations, metric_scores,
-                    pearson, write_csv)
+from common import (DATA, LABEL, OUT, Statistics, load_mqm, load_texts, load_translations, metric_scores,
+                    pearson)
 from tables import filename, write_table
 
 STATS = Statistics(__file__)
@@ -238,17 +237,5 @@ STATS.add('kiwi_r_tqs', r_tqs, 'COMET-Kiwi vs TQS, Pearson r (60 translations)')
 STATS.add('kiwi_partial_r', partial, 'COMET-Kiwi vs TQS with the share read held constant, partial r (60 translations)')
 STATS.add('kiwi_partial_p', p_partial, 'p for that partial r (df = 57)')
 
-# COMET-Kiwi beside reference-based COMET, by model: mean (± SD) x 100
-rows = []
-for t in ('Mix', 'Comp'):
-    for model in MODELS + ['Aggregate']:
-        g = kc[t] if model == 'Aggregate' else kc[t][kc[t].model == model]
-        rows.append({'Text': LABEL[t] if model == MODELS[0] else '', 'Model': model,
-                     'COMET-Kiwi (no reference)': f'{g.cometkiwi.mean() * 100:.1f} (± {g.cometkiwi.std(ddof=1) * 100:.1f})',
-                     'COMET (reference-based)': f'{g.COMET.mean() * 100:.1f} (± {g.COMET.std(ddof=1) * 100:.1f})',
-                     'Greek retained by COMET-Kiwi': pct(g.kiwi_src_kept_frac.mean())})
-summary = pd.DataFrame(rows)
-write_csv(summary, 'cometkiwi_summary.csv')
 STATS.save()
 print(table.to_string(index=False))
-print(summary.to_string(index=False))
