@@ -14,14 +14,14 @@ from common import LABEL, RATING_ABBR, ROW_MODELS, f_num, load_mqm, rating_s1
 from tables import write_table
 
 mq = load_mqm()
-COLS = ['Text', 'Ch.', 'Model', 'TQS', 'Rating', 'Crit.?', 'N', 'Mi', 'Ma', 'Cr']
+COLS = ['Text', 'Passage', 'Model', 'TQS', 'Rating', 'Crit.?', 'N', 'Mi', 'Ma', 'Cr']
 rows = []
 for text in ('Mix', 'Comp'):
     rows.append({c: (LABEL[text] if c == 'Text' else '') for c in COLS})      # a row naming the text
     for n in range(1, 11):
         for model in ROW_MODELS:
             r = mq[(mq.text == text) & (mq.chunk == n) & (mq.model == model)].iloc[0]
-            rows.append({'Text': '', 'Ch.': str(n), 'Model': model,
+            rows.append({'Text': '', 'Passage': str(n), 'Model': model,
                          'TQS': f_num(r.TQS, 1), 'Rating': RATING_ABBR[rating_s1(r.TQS)], 'Crit.?': 'Yes' if r.critical else 'No',
                          'N': str(r.neutral), 'Mi': str(r.minor), 'Ma': str(r.major), 'Cr': str(r.critical)})
 table = pd.DataFrame(rows, columns=COLS)

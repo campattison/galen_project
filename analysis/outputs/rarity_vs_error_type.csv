@@ -1,3 +1,5 @@
-errors,r,p,rho,p rho
-Terminology errors,0.847610,0.001955,0.425534,0.220179
-Accuracy errors,-0.460889,0.180051,-0.103660,0.775664
+passages,n,errors,r,p,rho,p rho
+Comp. (all),10,Terminology errors,0.847610,0.001955,0.425534,0.220179
+Comp. (all),10,Accuracy errors,-0.460889,0.180051,-0.103660,0.775664
+"Comp. (excl. 8, 10)",8,Terminology errors,-0.222178,0.596922,-0.107786,0.799460
+"Comp. (excl. 8, 10)",8,Accuracy errors,0.712151,0.047494,0.634742,0.090890
