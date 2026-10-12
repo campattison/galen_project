@@ -136,3 +136,5 @@ The [Diorisis Ancient Greek Corpus](https://doi.org/10.6084/m9.figshare.6187256.
 ## License
 
 Code: [MIT License](LICENSE)
+
+Data: the Greek text of Galen is in the public domain. The two published English translations of *On Mixtures* in `mt_eval/input/on_mixtures.txt` and `analysis/data/mixtures_pre_fix/on_mixtures.txt` (Johnston; Singer and van der Eijk) remain under their publishers' copyright and are reproduced here only so that the evaluation can be rerun and checked; they are not covered by the MIT License. The model translations and the annotation data are released under the MIT License with the code.

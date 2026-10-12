@@ -49,3 +49,10 @@ mt_eval copy/
 # Scratch output of analysis/optional/ scripts
 analysis/outputs/optional/
 analysis/outputs_comet_kiwi/
+
+# Private material that must not be published (manuscript, letters, handoff packages)
+*.zip
+*.numbers
+HANDOFF*.md
+FOR_JAMES*.md
+manuscript_kit*/
