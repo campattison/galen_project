@@ -7,6 +7,5 @@ sacrebleu==2.5.1
 
 # Only for the scripts in optional/ (not needed for run_all.sh):
 #   optional/regenerate_stanza_lemmas.py  -> stanza==1.11.0
-#   optional/comet_kiwi.py                -> unbabel-comet==2.2.7 (and a Hugging Face login)
-#   optional/render_figure1.py            -> matplotlib
+\1#   optional/token_counts.py              -> transformers==4.57.6, bert-score==0.3.12, sentencepiece==0.2.1 (and the BLEURT-20 model)\n#   optional/render_figure1.py            -> matplotlib
 #   optional/build_diorisis_form_index.py -> the Diorisis corpus (corpus_metrics/download_diorisis.sh)

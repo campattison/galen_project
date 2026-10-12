@@ -86,4 +86,5 @@ the statistical tests and the number formats. `greek.py` and `rarity.py` hold th
 - `regenerate_stanza_lemmas.py` reruns Stanza 1.11.0 and compares with the frozen Stanza output;
 - `build_diorisis_form_index.py` rebuilds the Diorisis form index from the corpus;
 - `comet_kiwi.py` rescores the translations with COMET-Kiwi and compares with the frozen scores;
+- `token_counts.py` recounts the texts with each metric's tokenizer and compares with the frozen token counts;
 - `render_figure1.py` draws Figure 1 from `outputs/figure_1.csv`.

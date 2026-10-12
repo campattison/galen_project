@@ -2,8 +2,8 @@
 
 These files are inputs to the analyses, not outputs. They record exactly what was used; do not
 regenerate and overwrite them with other software versions. The scripts in `../optional/` rerun the
-software that made the Stanza output, the Diorisis form index and the COMET-Kiwi scores and compare
-with these files, without overwriting them; the script that made the token counts is not included.
+software that made the Stanza output, the Diorisis form index, the COMET-Kiwi scores and the token
+counts and compare with these files, without overwriting them.
 
 ## The rarity measure
 
@@ -24,7 +24,7 @@ with these files, without overwriting them; the script that made the token count
 | `mt_eval_aggregates.csv` | Means and SDs of the same scores by text and model | Exported with them; `01_reference_asymmetry.py` checks the scores against it |
 | `mixtures_pre_fix/` | The Mix. input file and its evaluation file before the fix | see `mixtures_pre_fix/README.md` |
 | `comet_kiwi_scores.csv`, `comet_kiwi_run_info.txt` | The COMET-Kiwi (`Unbabel/wmt22-cometkiwi-da`) score of each of the 60 translations against its Greek source, with the token counts of the model's input window, and the settings of the run | Run by C. Pattison, 21 Sept 2026 (unbabel-comet 2.2.7, CPU, batch size 8, NFC-normalised inputs). `../optional/comet_kiwi.py` scores the translations with the same settings and compares its results with this file. `33_table_input_limits.py` checks the file's token counts against `token_counts_*.csv` and its COMET and TQS columns against this package's. |
-| `token_counts_passages.csv`, `token_counts_pairs.csv`, `token_counts_README.md` | Every text (20 Greek sources, 60 translations, 30 references) counted with each metric's own tokenizer, and for each scored pair what COMET, COMET-Kiwi, BERTScore and BLEURT keep of it | Made by C. Pattison, 24 Sept 2026 (the script is not included); `token_counts_README.md` gives the tokenizers, their versions and the library code behind each rule. `33_table_input_limits.py` re-applies every truncation rule to the raw counts and checks the word counts against the texts in this repository before using them. |
+| `token_counts_passages.csv`, `token_counts_pairs.csv`, `token_counts_README.md` | Every text (20 Greek sources, 60 translations, 30 references) counted with each metric's own tokenizer, and for each scored pair what COMET, COMET-Kiwi, BERTScore and BLEURT keep of it | Made by C. Pattison, 24 Sept 2026 (`../optional/token_counts.py`); `token_counts_README.md` gives the tokenizers, their versions and the library code behind each rule. `33_table_input_limits.py` re-applies every truncation rule to the raw counts and checks the word counts against the texts in this repository before using them. |
 
 ## The passages
 
