@@ -3,7 +3,7 @@
 Every text of the evaluation (20 Greek sources, 60 translations, 30 reference translations) counted
 with each metric's own tokenizer, and for each scored pair how much of it each metric with an input
 limit keeps. Made 24 Sept 2026 from the inputs of the pipeline (`mt_eval/`); nothing was entered by
-hand; the script that made them is not included. `33_table_input_limits.py` re-applies every rule
+hand; `../optional/token_counts.py` remakes them. `33_table_input_limits.py` re-applies every rule
 below to the raw counts, checks the word counts against the texts, and builds the input-limits table
 from these files.
 
