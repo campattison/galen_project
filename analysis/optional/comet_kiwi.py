@@ -88,8 +88,12 @@ def main():
         tok = model.encoder.tokenizer
         n_src = [len(tok(i['src'])['input_ids']) for i in items]
         n_mt = [len(tok(i['mt'])['input_ids']) for i in items]
+        # On a Mac with Apple's GPU backend present, unbabel-comet 2.2.7 passes a multiprocessing
+        # context to the data loader even for a CPU run, which torch rejects with num_workers=0.
+        num_workers = 1 if torch.backends.mps.is_available() else 0
         scores = list(model.predict([{'src': i['src'], 'mt': i['mt']} for i in items],
-                                    batch_size=args.batch_size, gpus=args.gpus, progress_bar=True).scores)
+                                    batch_size=args.batch_size, gpus=args.gpus, num_workers=num_workers,
+                                    progress_bar=True).scores)
         info += [f'unbabel-comet: {comet_version}', f'torch: {torch.__version__}', f'checkpoint: {ckpt}',
                  'unicode normalization: NFC (source and hypothesis)']
 
