@@ -17,8 +17,9 @@ The corrected input is `mt_eval/input/on_mixtures.txt` (sha256 `5e6c7c7a…`); `
 files is empty, i.e. the two blank lines are the whole of the change. The scores of the new evaluation
 are in `../mt_eval_scores.csv` and `../mt_eval_scores_per_reference.csv`; `common.load_eval` applies
 them and checks that nothing outside Mix. 2 and 4 changes. The evaluation file in the pipeline's output
-folder, `mt_eval/output/evaluations/on_mixtures_evaluation.json`, is still the one computed before the
-fix (identical to the copy here); `common.load_eval` applies the new scores to it.
+folder, `mt_eval/output/evaluations/on_mixtures_evaluation.json`, is the one computed after the fix;
+`common.load_eval` checks it against the scores in `../mt_eval_scores.csv` and
+`../mt_eval_scores_per_reference.csv`.
 
 ## What changed
 
