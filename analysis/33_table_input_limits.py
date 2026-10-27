@@ -21,14 +21,15 @@ Inputs : the three files above, mt_eval/input/*.txt, mt_eval/output/translations
          mt_eval/output/evaluations/*.json (COMET), the values file of the gap table (from 23_table_metric_gap.py)
 Outputs: table_SM3.csv (as printed), statistics_33_table_input_limits.csv
 """
+import sys
 import unicodedata
 
 import numpy as np
 import pandas as pd
 from scipy import stats
 
-from common import (DATA, LABEL, OUT, Statistics, load_mqm, load_texts, load_translations, metric_scores,
-                    pearson)
+from common import (DATA, LABEL, NO_MIX_REFERENCES, OUT, Statistics, load_mqm, load_texts, load_translations,
+                    metric_scores, mix_references_present, pearson)
 from tables import filename, write_table
 
 STATS = Statistics(__file__)
@@ -53,7 +54,13 @@ def text_of(r):
     return tr[(r.text, r.chunk, r.label)]['translation']
 
 
+mix_refs = mix_references_present(texts)
+if not mix_refs:
+    print(f'SKIPPED: 33_table_input_limits.py, word-count check of the Mix. references: {NO_MIX_REFERENCES}.',
+          file=sys.stderr)
 for r in P.itertuples():                  # word counts: NFC, split at whitespace
+    if r.role == 'ref' and r.text == 'Mix' and not mix_refs:
+        continue
     assert len(unicodedata.normalize('NFC', text_of(r)).split()) == r.words, (r.text, r.chunk, r.role, r.label)
 assert ((P.xlmr_tokens_with_specials - P.xlmr_tokens) == 2).all()
 

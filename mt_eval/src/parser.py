@@ -9,6 +9,7 @@ Parses input documents containing:
 Handles the format of input/on_mixtures.txt and input/on_comp.txt.
 """
 
+import os
 import re
 from typing import Dict, List, Tuple
 from dataclasses import dataclass
@@ -168,8 +169,9 @@ class InputParser:
             return None
         
         if len(references) == 0:
-            logger.warning(f"Chunk {chunk_number}: No reference translations found")
-            return None
+            # Kept with its Greek: the published English of on_mixtures.txt is not distributed
+            # (input/REFERENCES.md), so its chunks have no reference
+            logger.debug(f"Chunk {chunk_number}: No reference translations found")
         
         if len(references) > 2:
             logger.warning(f"Chunk {chunk_number}: Found {len(references)} reference translations (expected 1-2)")
@@ -301,6 +303,28 @@ class InputParser:
             greek_preview = chunk.greek_text[:80] + "..." if len(chunk.greek_text) > 80 else chunk.greek_text
             print(f"  Preview: {greek_preview}")
             print()
+
+
+REFERENCES_NOT_DISTRIBUTED = ("SKIPPED: the reference English of {name} is not distributed (see mt_eval/input/REFERENCES.md); "
+                              "the saved outputs in this repository are used.")
+EXPECTED_REFERENCES = {'on_mixtures.txt': 2, 'on_comp.txt': 1}   # reference translations per passage in this study
+
+
+def references_missing(chunks: List[ParsedChunk], file_name: str = None) -> bool:
+    """True if no chunk has a reference translation, as in on_mixtures.txt as distributed (the
+    published English is not included; input/REFERENCES.md says how to put it back). False if every
+    chunk has its references: 2 in on_mixtures.txt, 1 in on_comp.txt, and in other files as many as
+    the chunk with the most. Raises ValueError, naming the chunks, otherwise (a partly rebuilt file)."""
+    counts = {c.chunk_id: len(c.reference_translations) for c in chunks}
+    if counts and not any(counts.values()):
+        return True
+    expected = EXPECTED_REFERENCES.get(os.path.basename(file_name or ''), max(counts.values(), default=0))
+    wrong = ', '.join(f'{c} ({n})' for c, n in counts.items() if n != expected)
+    if wrong:
+        raise ValueError(f"{file_name or 'input'} is only partly rebuilt: chunk(s) {wrong} do not have {expected} "
+                         "reference translation(s) (number found in brackets). Rebuild it as input/REFERENCES.md "
+                         "describes and check it with input/check_references.py.")
+    return False
 
 
 def main():

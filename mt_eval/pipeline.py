@@ -51,7 +51,7 @@ except ImportError:
 # Add src to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
-from parser import InputParser
+from parser import REFERENCES_NOT_DISTRIBUTED, InputParser, references_missing
 from translator import Translator
 from evaluator import Evaluator
 from reporter import Reporter
@@ -137,6 +137,15 @@ class Pipeline:
         
         if not parsed_chunks:
             logger.error("No chunks parsed! Check input file format.")
+            return {}
+        
+        # Stop before any API call if the references are absent or only partly rebuilt (input/REFERENCES.md)
+        try:
+            if references_missing(parsed_chunks, input_file):
+                logger.error(REFERENCES_NOT_DISTRIBUTED.format(name=Path(input_file).name))
+                return {}
+        except ValueError as e:
+            logger.error(str(e))
             return {}
         
         self.parser.print_summary(parsed_chunks)
@@ -315,6 +324,17 @@ Examples:
     # Check input file exists
     if not os.path.exists(args.input_file):
         logger.error(f"Input file not found: {args.input_file}")
+        return 1
+    
+    # The published English of on_mixtures.txt is not distributed (input/REFERENCES.md): without
+    # references nothing can be evaluated, and the saved outputs in output/ stand. A partly rebuilt
+    # file stops here too, before any API call.
+    try:
+        if references_missing(InputParser().parse_file(args.input_file), args.input_file):
+            print(REFERENCES_NOT_DISTRIBUTED.format(name=os.path.basename(args.input_file)))
+            return 0
+    except ValueError as e:
+        logger.error(f"{e} Stopped before any API call.")
         return 1
     
     # Run pipeline

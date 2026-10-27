@@ -5,11 +5,16 @@ than those translations are to each other? Sentence BLEU (sacreBLEU, effective o
 as in the pipeline) per passage, plus the longest run of identical words shared with
 a reference.
 
+The published English is not distributed (mt_eval/input/REFERENCES.md). Without it the script prints a
+line beginning SKIPPED: and writes nothing; the saved outputs stand, and verify.py checks them against
+their SHA-256 checksums (on every run).
+
 Inputs : mt_eval/input/*.txt (references), mt_eval/output/translations/*_translations.json
 Outputs: surface_similarity_by_passage.csv, surface_similarity_by_model.csv, verbatim_runs.csv,
          statistics_02_surface_similarity.csv
 """
 import re
+import sys
 from difflib import SequenceMatcher
 
 import numpy as np
@@ -17,10 +22,14 @@ import pandas as pd
 from sacrebleu.metrics import BLEU
 from scipy import stats
 
-from common import MODELS, Statistics, load_texts, load_translations, write_csv
+from common import (MODELS, NO_MIX_REFERENCES, Statistics, load_texts, load_translations, mix_references_present,
+                    write_csv)
 
 STATS = Statistics(__file__)
 tx, tr = load_texts(), load_translations()
+if not mix_references_present(tx):
+    print(f'SKIPPED: 02_surface_similarity.py: {NO_MIX_REFERENCES}; its saved outputs are used.', file=sys.stderr)
+    sys.exit(0)
 mt = {k: v['translation'] for k, v in tr.items()}
 bleu = BLEU(effective_order=True)
 sb = lambda hyp, ref: bleu.sentence_score(hyp, [ref]).score

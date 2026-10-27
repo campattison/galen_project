@@ -593,6 +593,15 @@ class Evaluator:
         """
         all_evaluations = []
         
+        # Every chunk must have the same number of references (at least one): otherwise the scores would
+        # mix single- and multi-reference results (the published English of on_mixtures.txt is not
+        # distributed; see input/REFERENCES.md)
+        counts = {chunk.chunk_id: len(chunk.reference_translations) for chunk in parsed_chunks}
+        if len(set(counts.values())) > 1 or 0 in counts.values():
+            raise ValueError("Refusing to evaluate: the chunks do not all have the same number of reference "
+                             "translations (" + ', '.join(f'{c}: {n}' for c, n in counts.items()) + "); "
+                             "see input/REFERENCES.md")
+        
         for chunk in parsed_chunks:
             chunk_id = chunk.chunk_id
             
@@ -655,9 +664,15 @@ class Evaluator:
                 for metric, score_val in ref_scores.items():
                     per_ref_by_model_metric[model][metric][ref_id].append(score_val)
         
+        # Label the scores by the number of references they were computed against; never call a
+        # single-reference score multi-reference, and refuse a mixture of the two
+        n_refs = {len(e.per_reference_scores) for e in evaluations if e.per_reference_scores}
+        if len(n_refs) > 1:
+            raise ValueError(f"Refusing to aggregate scores computed against different numbers of references ({sorted(n_refs)})")
+        
         # Calculate aggregates
         summary = {
-            'methodology': 'multi-reference',
+            'methodology': 'single-reference' if n_refs == {1} else 'multi-reference',
             'methodology_details': {
                 'bleu-4': 'multi-reference (n-grams matched against any reference)',
                 'chrf++': 'multi-reference (native support, includes word bigrams)',
@@ -759,7 +774,7 @@ def main():
     import os
     # Ensure we import our parser, not Python's built-in
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-    from parser import InputParser
+    from parser import REFERENCES_NOT_DISTRIBUTED, InputParser, references_missing
     
     parser = argparse.ArgumentParser(description="Evaluate translations")
     parser.add_argument('input_file', help='Input file with Greek and references')
@@ -780,6 +795,13 @@ def main():
     # Parse input
     input_parser = InputParser()
     chunks = input_parser.parse_file(args.input_file)
+    try:
+        if references_missing(chunks, args.input_file):
+            print(REFERENCES_NOT_DISTRIBUTED.format(name=os.path.basename(args.input_file)))
+            return 0
+    except ValueError as e:
+        logger.error(str(e))
+        return 1
     
     # Load translations
     with open(args.translations_file, 'r', encoding='utf-8') as f:

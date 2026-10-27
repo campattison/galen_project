@@ -214,6 +214,25 @@ def load_texts():
     return out
 
 
+NO_MIX_REFERENCES = 'the reference English of Mix. is not distributed (see mt_eval/input/REFERENCES.md)'
+
+
+def mix_references_present(texts):
+    """True if every Mix. passage has its two reference translations; False if none has any, as
+    distributed (the published translations are not included; mt_eval/input/REFERENCES.md says how to
+    put them back), and the scripts that need them then keep the saved outputs. Stops the script, naming
+    the passages, if only some have them (a partly rebuilt file)."""
+    counts = {n: len(v['refs']) for n, v in texts['Mix'].items()}
+    if sorted(counts) != list(range(1, 11)):
+        raise SystemExit(f'mt_eval/input/on_mixtures.txt: expected Mix. passages 1-10, found {sorted(counts)}')
+    if set(counts.values()) in ({0}, {2}):
+        return set(counts.values()) == {2}
+    bad = ', '.join(f'{n} ({c})' for n, c in sorted(counts.items()) if c != 2)
+    raise SystemExit(f'mt_eval/input/on_mixtures.txt is only partly rebuilt: Mix. passages {bad} do not have the two '
+                     'reference translations (number found in brackets). Rebuild it as mt_eval/input/REFERENCES.md '
+                     'describes and check it with mt_eval/input/check_references.py.')
+
+
 def load_translations():
     """{(text, chunk, model): record} from the translation files."""
     out = {}

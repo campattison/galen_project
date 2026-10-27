@@ -13,7 +13,7 @@ import ast
 import re
 from pathlib import Path
 
-from common import OUT, write_text
+from common import OUT, load_texts, mix_references_present, write_text
 from tables import TABLES, filename, label
 
 HERE = Path(__file__).resolve().parent
@@ -36,6 +36,8 @@ for s in scripts:
         assert f not in listed, f'{f} is listed by {listed[f]} and {s}'
         listed[f] = s
 present = {p.name for p in OUT.iterdir() if p.is_file()} | {'INDEX.md'}
+if not mix_references_present(load_texts()):   # 02 cannot rerun without the Mix. references: its saved outputs stand
+    present |= {f for f, s in listed.items() if s == '02_surface_similarity.py' and (HERE / 'outputs' / f).is_file()}
 assert set(listed) == present, (sorted(set(listed) - present), sorted(present - set(listed)))
 
 lines = ['# Index of the outputs', '',

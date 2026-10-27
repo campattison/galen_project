@@ -13,7 +13,7 @@ Translates Ancient Greek passages with three LLMs and scores the translations wi
 
 ```
 mt_eval/
-├── input/              # Greek passages with reference translations (on_mixtures.txt, on_comp.txt)
+├── input/              # Greek passages with reference translations (on_mixtures.txt, on_comp.txt; see input/REFERENCES.md)
 ├── output/            
 │   ├── translations/   # Raw translation outputs
 │   ├── evaluations/    # Evaluation scores
@@ -62,6 +62,12 @@ This will:
 - Get translations from all 3 APIs
 - Evaluate against both reference translations
 - Generate a comprehensive report
+
+The two published reference translations of `input/on_mixtures.txt` are not distributed
+(`input/REFERENCES.md` says how to put them back). Without them, `pipeline.py` (before translating) and
+`src/evaluator.py` print a line beginning `SKIPPED:` and stop, and the saved outputs in `output/` stand;
+`on_comp.txt` runs as before. If the file is only partly rebuilt (a passage with fewer than its two
+references), they stop with an error naming the passages, before any API call.
 
 ## 📊 Evaluation Metrics
 

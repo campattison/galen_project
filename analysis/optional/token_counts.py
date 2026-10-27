@@ -47,6 +47,10 @@ Run:
 
 Outputs go to analysis/outputs/optional/ (never to data/): token_counts_passages.csv and
 token_counts_pairs.csv. Exit status 0 only if both are byte-identical to the files in data/.
+
+The reference English of Mix. is not distributed (mt_eval/input/REFERENCES.md). Without it the script
+prints a line beginning SKIPPED: and exits 0 without counting; the files in data/ stand, and verify.py
+checks their checksums. A partly rebuilt on_mixtures.txt stops it with an error naming the passages.
 """
 from __future__ import annotations
 
@@ -106,15 +110,22 @@ def main():
     ap.add_argument("--out", type=Path, default=HERE / "outputs" / "optional", help="output folder")
     args = ap.parse_args()
 
+    sys.path.insert(0, str(MT / "src"))
+    import logging
+    logging.disable(logging.CRITICAL)
+    from parser import REFERENCES_NOT_DISTRIBUTED, InputParser, references_missing
+
+    try:
+        if references_missing(InputParser().parse_file(str(MT / "input" / "on_mixtures.txt")), "on_mixtures.txt"):
+            print(REFERENCES_NOT_DISTRIBUTED.format(name="on_mixtures.txt"))
+            sys.exit(0)
+    except ValueError as e:
+        sys.exit(str(e))
+
     if not BLEURT_SENTPIECE.is_file():
         sys.exit(f"BLEURT-20 SentencePiece model not found at {BLEURT_SENTPIECE}.\n"
                  "Download https://storage.googleapis.com/bleurt-oss-21/BLEURT-20.zip, unzip it into "
                  "mt_eval/models/, or set BLEURT_SENTPIECE to the path of its sent_piece.model.")
-
-    sys.path.insert(0, str(MT / "src"))
-    import logging
-    logging.disable(logging.CRITICAL)
-    from parser import InputParser
 
     # --- tokenizers -----------------------------------------------------------------------------
     import bert_score

@@ -29,6 +29,14 @@ every random seed, so the outputs are the same on every run (on another machine,
 can differ in the sixth decimal, which `verify.py` allows and reports). A single script can be run on its
 own (`python analysis/23_table_metric_gap.py`), once the scripts it reads from have run.
 
+The two published English translations of Mix. are not distributed (`mt_eval/input/REFERENCES.md` says
+how to put them back). Without them, `02_surface_similarity.py` prints a line beginning `SKIPPED:` and
+writes nothing, `33_table_input_limits.py` does not check the word counts of those references (also
+reported with `SKIPPED:`), and `verify.py` does not recompute the saved files that need them. On every
+run, with or without the English, `verify.py` checks those saved files against stored SHA-256 checksums
+(reported as "checksum"). A partly rebuilt `on_mixtures.txt` stops the scripts with an error naming the
+passages.
+
 ## What the scripts write
 
 | File | Contents |
