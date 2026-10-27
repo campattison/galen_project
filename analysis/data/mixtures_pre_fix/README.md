@@ -21,6 +21,10 @@ folder, `mt_eval/output/evaluations/on_mixtures_evaluation.json`, is the one com
 `common.load_eval` checks it against the scores in `../mt_eval_scores.csv` and
 `../mt_eval_scores_per_reference.csv`.
 
+The English of both input files is not distributed: in this repository each reference paragraph is a
+pointer to `mt_eval/input/REFERENCES.md`, which says how to put the translations back. The sha256 values
+above are those of the files with the English.
+
 ## What changed
 
 `01_reference_asymmetry.py` lists every Mix. score before and after the fix

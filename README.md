@@ -7,7 +7,7 @@ Code and data for evaluating LLM translations of passages from two works of Gale
 Ten passages from each of two works by Galen of Pergamum (c. 129–216 CE):
 
 - **De compositione medicamentorum per genera** (*On the Composition of Drugs According to Kinds*): 10 passages, 1 reference translation (prepared for this study)
-- **De temperamentis** (*On Mixtures*): 10 passages, 2 published reference translations
+- **De temperamentis** (*On Mixtures*): 10 passages, 2 published reference translations (Johnston 2020; Singer and van der Eijk 2018), not distributed: see `mt_eval/input/REFERENCES.md`
 
 ## Models
 
@@ -25,7 +25,7 @@ All 60 translations were generated on 29 October 2025: one generation per passag
 galen_project/
 ├── mt_eval/                       # Translation + automated evaluation pipeline
 │   ├── src/                       # Core modules (parser, translator, evaluator, reporter)
-│   ├── input/                     # Greek source texts with reference translations
+│   ├── input/                     # Greek source texts; the Comp. reference translation; REFERENCES.md for the Mix. ones
 │   ├── output/
 │   │   ├── translations/          # Raw and blinded translation JSONs
 │   │   └── evaluations/           # Per-chunk metric scores
@@ -137,4 +137,13 @@ The [Diorisis Ancient Greek Corpus](https://doi.org/10.6084/m9.figshare.6187256.
 
 Code: [MIT License](LICENSE)
 
-Data: the Greek text of Galen is in the public domain. The two published English translations of *On Mixtures* in `mt_eval/input/on_mixtures.txt` and `analysis/data/mixtures_pre_fix/on_mixtures.txt` (Johnston; Singer and van der Eijk) remain under their publishers' copyright and are reproduced here only so that the evaluation can be rerun and checked; they are not covered by the MIT License. The model translations and the annotation data are released under the MIT License with the code.
+Data:
+
+- The Greek text of Galen is in the public domain. The passages of *On Mixtures* are from Helmreich's edition, those of *On the Composition of Drugs According to Kinds* from Kühn's, and the locators also give Kühn's pages for *On Mixtures*: Helmreich, Georg (1904), *Galeni De Temperamentis Libri III* (Leipzig: Teubner); Kühn, Karl Gottlob, *Claudii Galeni Opera Omnia*, vol. 1 (1821) and vol. 13 (1827) (Leipzig: Knobloch).
+- The two published English translations of *On Mixtures* used as references, Johnston (2020; Loeb Classical Library 546, Harvard University Press) and Singer and van der Eijk (2018; Cambridge University Press), remain under their publishers' copyright and are not distributed. [`mt_eval/input/REFERENCES.md`](mt_eval/input/REFERENCES.md) gives the locator, word count and checksums of each passage, so that anyone with the books can rebuild `mt_eval/input/on_mixtures.txt` and check the result.
+- The English reference translation of *On the Composition of Drugs According to Kinds* in `mt_eval/input/on_comp.txt` was made for this study: © Manuela Marai, released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- The model translations and the annotation data are released under the MIT License with the code.
+
+## Repository history
+
+The history of this repository was rewritten on 2026-10-27 to remove the copyrighted reference translations, so commit hashes differ from those of earlier clones. The `submitted` tag still marks the state of the code at submission.
